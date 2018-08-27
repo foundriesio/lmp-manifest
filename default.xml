@@ -13,13 +13,13 @@
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="9bc8e34a806388e42c536a8609916c6e87c95f18" />
   <project name="meta-intel" path="layers/meta-intel" revision="8bca950b8a89500782148f0fcbeae14ae9ba30fd" />
   <project name="meta-linaro" path="layers/meta-linaro" revision="fca140e5e15831e31bb4d3916d191b4b3176fc5c" />
-  <project name="meta-lmp" path="layers/meta-lmp" remote="subscriber-microplatforms" revision="7b08891e8661e83a826de3e81009043e9a52300d" />
+  <project name="meta-lmp" path="layers/meta-lmp" remote="subscriber-microplatforms" revision="4e27de3f6098814692eb8e89807bfa867f02aab2" />
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="a001e465293b36c03d4ca4500857fe0a67d13e20" />
   <project name="meta-qcom" path="layers/meta-qcom" revision="660c13c516b525d2cfa83f33631ade06862b3db8" />
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="2e23e17666e0bdda98205429803fad72f21aba1d" />
   <project name="meta-riscv" path="layers/meta-riscv" revision="2cf991cc3191c1df88edc4ec7883429c43933b7e" />
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="9a5f962cb1822c6b4e9e9d13c30c29eb9e0988bd" />
-  <project name="meta-updater" path="layers/meta-updater" remote="subscriber-microplatforms" revision="cb3ed7f4459b8d496ef77c9ef6b0910abf573232" />
+  <project name="meta-updater" path="layers/meta-updater" remote="subscriber-microplatforms" revision="c4902394cc6673b07ad5ee87570e02afbdf7b022" />
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="f5f8849df623ed5d33d091d42c7b9504b3ce77c5" />
   <project name="meta-yocto" path="layers/meta-yocto" revision="0b78254b373c23f2c1a2bf7db0108a350266ab85">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment" />

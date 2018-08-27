@@ -1,3 +1,23 @@
+- update: "0.27"
+  highlights:
+    - Always boot latest OSTree rootfs revision on RISC-V
+  summary: |
+   Always boot latest OSTree rootfs revision on RISC-V as there is no
+   traditional bootloader support (e.g. u-boot) for Freedom-U540 and
+   QEMU RISCV64 yet.
+  parts:
+    - name: Linux microPlatform
+      summary: |
+        Core layer updates.
+      projects:
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                Prefer disabling null pointer optimization on mozjs.
+                Always fetch OSTree hash from the last entry on RISC-V.
+
 - update: "0.26"
   highlights:
     - Binutils updated to the 2.31 release branch.
