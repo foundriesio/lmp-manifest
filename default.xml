@@ -1,9 +1,9 @@
 <manifest>
   <remote fetch="https://source.foundries.io" name="subscriber-microplatforms" />
   <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors" />
-
+  
   <default remote="lmp-mirrors" revision="master" sync-j="4" />
-
+  
   <project name="bitbake" revision="8e482342c652e298b5f5ea58eda72c5eb14ce2bd" />
   <project name="core-containers" path="containers/core-containers" remote="subscriber-microplatforms" revision="c1210bf5971f37b162156d95b92eacdfdd0e3e30" />
   <project name="extra-containers" path="containers/extra-containers" remote="subscriber-microplatforms" revision="8ed7fc11e4e4ff8825174a725bc5b956f5e202a6" />
