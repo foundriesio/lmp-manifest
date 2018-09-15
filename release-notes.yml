@@ -1,11 +1,13 @@
 - update: "0.30"
   highlights:
+    - OSF Unified Linux Kernel updated to 4.18.10.
     - Binutils updated to the 2.31.1 release.
     - Busybox updated to the 1.29.2 release.
     - Glibc updated to the 2.28 release.
     - Openssl 1.1.x is now the default version.
     - Python3 updated to the 3.5.6 release.
   summary: |
+   OSF Unified Linux Kernel updated to the 4.18.10 stable release.
    Core layer updates based on the latest OE/Yocto master changes.
   parts:
     - name: Linux microPlatform
@@ -240,6 +242,14 @@
               summary: |
                 Gdb updated to the latest RISC-V fork.
                 Qemu-riscv removed in favor of the upstream version.
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                OSF Unified Linux Kernel updated to 4.18.10.
+                U-boot autoboot disabled for DragonBoard 410c and 820c to avoid boot
+                failures caused by serial noise without the UART adapter.
 
 - update: "0.29"
   highlights:
