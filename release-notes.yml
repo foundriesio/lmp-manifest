@@ -221,6 +221,12 @@
             - heading: Layer Update
               summary: |
                 Intel-microcode updated to 20180807.
+        - name: Meta Qualcomm
+          manifest_project: meta-qcom
+          features:
+            - heading: Layer Update
+              summary: |
+                Updated bootrr, qmic, qrtr and rmtfs to the latest revision available.
 
 - update: "0.29"
   highlights:
