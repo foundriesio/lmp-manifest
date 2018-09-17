@@ -198,6 +198,23 @@
                 is not checked, leading to a decryption oracle.
               cves:
                 - 2018-14526
+        - name: Meta Freescale
+          manifest_project: meta-freescale
+          features:
+            - heading: Layer Update
+              summary: |
+                Added i.MX 8 support for imx-kobs, imx-test, pulseaudio, u-boot-imx,
+                imx-gpu-viv, alsa-state and gstreamer1.0.
+                EULA updated to the v24 revision.
+                Firmware-imx updated to 7.6, with support for BCM4356 and BCM89359.
+                Imx-codec, imx-vpuwrap and imx-parser updated to v4.4.0.
+                Imx-dpu-g2d updated to 1.4.6.
+                Imx-gpu-g2d updated to 6.2.4.p1.6.
+                Imx-gpu-viv updated to 6.2.4.p1.6.
+                Imx-vpu-hantro updated to 1.7.0.
+                Kernel-module-imx-gpu-viv updated to 6.2.4.p1.6.
+                New machine definition for imx8mqevk, imx8qmmek and imx8qxpmek.
+                U-boot-fslc updated to the 1e13b91a revision.
 
 - update: "0.29"
   highlights:
