@@ -22,7 +22,7 @@
   <project name="meta-qcom" path="layers/meta-qcom" revision="660c13c516b525d2cfa83f33631ade06862b3db8"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="2cf991cc3191c1df88edc4ec7883429c43933b7e"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="9a5f962cb1822c6b4e9e9d13c30c29eb9e0988bd"/>
-  <project name="bitbake" path="bitbake" revision="8e482342c652e298b5f5ea58eda72c5eb14ce2bd"/>
+  <project name="bitbake" path="bitbake" revision="e72be96cfa9f05fda5f420c7cfa8bcfa9304b884"/>
   <project name="meta-linaro" path="layers/meta-linaro" revision="fca140e5e15831e31bb4d3916d191b4b3176fc5c"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="a001e465293b36c03d4ca4500857fe0a67d13e20"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="f6634581fa0a81c4d68dc9179a755ad7b9d99357"/>
