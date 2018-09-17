@@ -227,6 +227,12 @@
             - heading: Layer Update
               summary: |
                 Updated bootrr, qmic, qrtr and rmtfs to the latest revision available.
+        - name: Meta RaspberryPi
+          manifest_project: meta-raspberrypi
+          features:
+            - heading: Layer Update
+              summary: |
+                Firmware updated to 20180817.
 
 - update: "0.29"
   highlights:
