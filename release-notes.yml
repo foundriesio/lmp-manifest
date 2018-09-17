@@ -180,6 +180,24 @@
                 Buffer overrun in the NTLM authentication code.
               cves:
                 - 2018-14618
+        - name: Meta OpenEmbedded Layer
+          manifest_project: meta-openembedded
+          features:
+            - heading: Layer Update
+              summary: |
+                Efibootmgr updated to 0.16.
+                Efivar updated to 0.36.
+                Fuse updated to 2.9.8.
+                Python3-certifi updated to 2018.8.13.
+                Python3-cython updated to 0.28.5.
+                Python3-pip updated to 18.0.
+          bug_fixes:
+            - heading: hostapd
+              summary: |
+                Under certain conditions, the integrity of EAPOL-Key messages
+                is not checked, leading to a decryption oracle.
+              cves:
+                - 2018-14526
 
 - update: "0.29"
   highlights:
