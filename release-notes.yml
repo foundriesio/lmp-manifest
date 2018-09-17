@@ -215,6 +215,12 @@
                 Kernel-module-imx-gpu-viv updated to 6.2.4.p1.6.
                 New machine definition for imx8mqevk, imx8qmmek and imx8qxpmek.
                 U-boot-fslc updated to the 1e13b91a revision.
+        - name: Meta Intel
+          manifest_project: meta-intel
+          features:
+            - heading: Layer Update
+              summary: |
+                Intel-microcode updated to 20180807.
 
 - update: "0.29"
   highlights:
