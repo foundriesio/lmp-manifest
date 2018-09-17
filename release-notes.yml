@@ -233,6 +233,13 @@
             - heading: Layer Update
               summary: |
                 Firmware updated to 20180817.
+        - name: Meta RISC-V
+          manifest_project: meta-riscv
+          features:
+            - heading: Layer Update
+              summary: |
+                Gdb updated to the latest RISC-V fork.
+                Qemu-riscv removed in favor of the upstream version.
 
 - update: "0.29"
   highlights:
