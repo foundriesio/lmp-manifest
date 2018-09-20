@@ -13,7 +13,7 @@
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="9bc8e34a806388e42c536a8609916c6e87c95f18" />
   <project name="meta-intel" path="layers/meta-intel" revision="8bca950b8a89500782148f0fcbeae14ae9ba30fd" />
   <project name="meta-linaro" path="layers/meta-linaro" revision="fca140e5e15831e31bb4d3916d191b4b3176fc5c" />
-  <project name="meta-lmp" path="layers/meta-lmp" remote="subscriber-microplatforms" revision="4e27de3f6098814692eb8e89807bfa867f02aab2" />
+  <project name="meta-lmp" path="layers/meta-lmp" remote="subscriber-microplatforms" revision="420d96bfa6c623c25c67471f1557584d83285047" />
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="a001e465293b36c03d4ca4500857fe0a67d13e20" />
   <project name="meta-qcom" path="layers/meta-qcom" revision="660c13c516b525d2cfa83f33631ade06862b3db8" />
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="2e23e17666e0bdda98205429803fad72f21aba1d" />

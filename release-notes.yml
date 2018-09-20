@@ -1,3 +1,32 @@
+- update: "0.29"
+  highlights:
+    - Linux LMP config fragments now available via external lmp-kernel-cache metadata repository
+  summary: |
+   Similarly as how Yocto upstream manages the multiple configuration fragments
+   via the yocto-kernel-cache repository, Linux microPlatform now supports its
+   own metadata repository for kernel configuration fragments, reducing the
+   amount of machine-specific configuration from the meta-lmp layer.
+   Check https://www.yoctoproject.org/docs/2.5/kernel-dev/kernel-dev.html#kernel-dev-advanced
+   for more information on how to manage and work with the fragments metadata.
+  parts:
+    - name: Linux microPlatform
+      summary: |
+        Core layer updates.
+      projects:
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                Kernel configuration fragments now available via external
+                lmp-kernel-cache metadata repository.
+                Linux LMP recipe clean ups.
+
+- update: "0.28"
+  highlights:
+    - No changes have gone into the LMP since 0.27.
+  summary: No changes have gone into the LMP since 0.27.
+
 - update: "0.27"
   highlights:
     - Always boot latest OSTree rootfs revision on RISC-V
