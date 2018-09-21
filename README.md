@@ -1,7 +1,7 @@
 Linux microPlatform Manifest
 ============================
 
-Open Source Foundries Linux microPlatform manifest.
+Foundries.io Linux microPlatform manifest.
 
 This directory contains a Repo manifest and setup scripts for the
 Linux microPlatform build system. If you want to modify, extend or port Linux
@@ -30,12 +30,6 @@ To check out the latest LMP subscriber continuous release:
 
 ```
 repo init -u https://source.foundries.io/lmp-manifest
-```
-
-To check out the latest LMP public release:
-
-```
-repo init -u https://github.com/OpenSourceFoundries/lmp-manifest
 ```
 
 When prompted, configure Repo with your real name and email address.
@@ -75,7 +69,7 @@ repo sync -j1
 Setup Environment
 -----------------
 
-Supported **MACHINE** targets (officially tested by OSF):
+Supported **MACHINE** targets (officially tested by FIO):
 * beaglebone
 * cl-som-imx7
 * cubox-i
@@ -85,10 +79,11 @@ Supported **MACHINE** targets (officially tested by OSF):
 * raspberrypi3
 
 Supported image targets:
+* lmp-mini-image
 * lmp-gateway-image
 
 The default distribution (DISTRO) variable is automatically set to `lmp`,
-which is provided by the `meta-osf` layer.
+which is provided by the `meta-lmp` layer.
 
 Setup the work environment by using the `setup-environment` script:
 
@@ -109,4 +104,4 @@ Issues and Support
 ------------------
 
 Please report any bugs, issues or suggestions at
-https://opensourcefoundries.freshdesk.com.
+https://support.foundries.io.
