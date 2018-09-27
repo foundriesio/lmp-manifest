@@ -7,9 +7,6 @@
 
   <project name="meta-96boards" path="layers/meta-96boards" revision="80c26c1e41c3a963c59d135beffea520a3d7744f"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="0736ea5ba478929e2aaca7ea1d65beb8eb18a35b"/>
-  <project name="core-containers" path="containers/core-containers" remote="fio-lmp" revision="c1210bf5971f37b162156d95b92eacdfdd0e3e30"/>
-  <project name="extra-containers" path="containers/extra-containers" remote="fio-lmp" revision="8ed7fc11e4e4ff8825174a725bc5b956f5e202a6"/>
-  <project name="gateway-containers" path="containers/gateway-containers" remote="fio-lmp" revision="0c9787bd8c8aaf7834c52779f1f5cfa2727953a6"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="501b840982a51311feef3efdfa548ca2efcf4a31"/>
   <project name="meta-intel" path="layers/meta-intel" revision="bdb69f05961f04e3dae1de10db16a43e578f19b4"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="ab8a44d655386bdac50224832585266a52ccaaf8"/>
