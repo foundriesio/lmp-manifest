@@ -1,3 +1,256 @@
+- update: "0.30"
+  highlights:
+    - OSF Unified Linux Kernel updated to 4.18.10.
+    - Binutils updated to the 2.31.1 release.
+    - Busybox updated to the 1.29.2 release.
+    - Glibc updated to the 2.28 release.
+    - Openssl 1.1.x is now the default version.
+    - Python3 updated to the 3.5.6 release.
+  summary: |
+   OSF Unified Linux Kernel updated to the 4.18.10 stable release.
+   Core layer updates based on the latest OE/Yocto master changes.
+  parts:
+    - name: Linux microPlatform
+      summary: |
+        Core layer updates.
+      projects:
+        - name: OpenEmbedded-Core Layer
+          manifest_project: openembedded-core
+          features:
+            - heading: Layer Update
+              summary: |
+                Acpid updated to 2.0.30.
+                Binutils updated to 2.31.1.
+                Boost updated to 1.68.0.
+                Busybox updated to 1.29.2.
+                Ca-certificates updated to 20180409.
+                Cmake updated to 3.12.1.
+                Dbus updated to 1.12.10.
+                Distcc updated to 3.3.2.
+                Dtc updated to 1.4.7.
+                Elfutils updated to 0.173.
+                Expat updated to 2.2.6.
+                File updated to 5.34.
+                Freetype updated to 2.9.1.
+                Gdb updated to 8.2.
+                Gdbm updated to 1.18.
+                Glib updated to 2.58.0.
+                Glibc updated to 2.28.
+                Gnutls updated to 3.6.3.
+                Gobject-introspection updated to 1.58.0.
+                Gptfdisk updated to 1.0.4.
+                Gtk-doc updated to 1.29.
+                Icu updated to 61.1.
+                Iproute2 updated to 4.18.0.
+                Libc-headers updated to 4.18.
+                Libpng updated to 1.6.35.
+                Libsolv updated to 0.6.35.
+                Libxcrypt updated to 4.1.1.
+                Linux-firmware updated to the feb25f3e revision.
+                Meson updated to 0.47.2.
+                Mpfr updated to 4.0.1.
+                Musl updated to 1.1.20.
+                OpenSSH updated to 7.8p1+git.
+                OpenSSL updated to 1.1.1 and 1.0.2p.
+                Pciutils updated to 3.6.2.
+                Pcmciautils removed from OE-Core, now available in meta-openembedded.
+                Python3 updated to 3.5.6.
+                Python3-pip updated to 18.0.
+                Qemu updated to 3.0.
+                Re2c updated to 1.0.1.
+                Rpm updated to 4.14.2.
+                SERIAL_CONSOLE updated to SERIAL_CONSOLES.
+                Strace updated to 4.24.
+                Sysprof updated to 3.30.0 and enabled for aarch64.
+                Util-linux updated to 2.32.1.
+                Vala updated to 0.42.0.
+                Yasm removed from OE-core.
+          bug_fixes:
+            - heading: libxml2
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-14404
+                - 2018-9251
+                - 2018-14567
+            - heading: libvorbis
+              summary: |
+                Multiple issues.
+              cves:
+                - 2017-14160
+                - 2018-10393
+                - 2018-10392
+            - heading: openssl
+              summary: |
+                Client DoS due to large DH parameter.
+              cves:
+                - 2018-0732
+            - heading: unzip
+              summary: |
+                Heap-based buffer overflow in password protected ZIP archives.
+              cves:
+                - 2018-1000035
+            - heading: nasm
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-8882
+                - 2018-8883
+                - 2018-10316
+            - heading: flac
+              summary: |
+                Fix memory leak in stream_decoder.c.
+              cves:
+                - 2017-6888
+            - heading: u-boot
+              summary: |
+                Improper Input Validation vulnerability in Verified boot
+                signature validation that can result in Bypass verified boot.
+              cves:
+                - 2018-1000205
+            - heading: libsndfile1
+              summary: |
+                Multiple issues.
+              cves:
+                - 2017-14245
+                - 2017-14246
+                - 2017-14634
+            - heading: libsndfile1
+              summary: |
+                Multiple issues.
+              cves:
+                - 2017-14245
+                - 2017-14246
+                - 2017-14634
+            - heading: libarchive
+              summary: |
+                Multiple issues.
+              cves:
+                - 2017-14501
+                - 2017-14503
+            - heading: perl
+              summary: |
+                Archive::Tar module allows remote attackers to bypass a
+                directory-traversal protection mechanism, and overwrite
+                arbitrary files, via an archive file containing a symlink
+                and a regular file with the same name.
+              cves:
+                - 2018-12015
+            - heading: patch
+              summary: |
+                Double free in the another_hunk function in pch.c
+              cves:
+                - 2018-6952
+            - heading: wpa-supplicant
+              summary: |
+                Under certain conditions, the integrity of EAPOL-Key messages
+                is not checked, leading to a decryption oracle.
+              cves:
+                - 2018-14526
+            - heading: elfutils
+              summary: |
+                Out-of-bounds read in the way elfutils reads DWARF address
+                ranges information.
+              cves:
+                - 2018-16062
+            - heading: busybox
+              summary: |
+                User enumeration vulnerability in authentication requests.
+              cves:
+                - 2018-16062
+            - heading: qemu
+              summary: |
+                qemu-seccomp.c in QEMU might allow local OS guest users to cause
+                a denial of service (guest crash) by leveraging mishandling of
+                the seccomp policy for threads other than the main thread.
+              cves:
+                - 2018-15746
+            - heading: bind
+              summary: |
+                Named could crash during recursive processing of DNAME records
+                when "deny-answer-aliases" was in use.
+              cves:
+                - 2018-5740
+            - heading: lrzsz
+              summary: |
+                Integer overflow in src/zm.c:zsdata causes crash in sz and can
+                leak information to receiver.
+              cves:
+                - 2018-10195
+            - heading: curl
+              summary: |
+                Buffer overrun in the NTLM authentication code.
+              cves:
+                - 2018-14618
+        - name: Meta OpenEmbedded Layer
+          manifest_project: meta-openembedded
+          features:
+            - heading: Layer Update
+              summary: |
+                Efibootmgr updated to 0.16.
+                Efivar updated to 0.36.
+                Fuse updated to 2.9.8.
+                Python3-certifi updated to 2018.8.13.
+                Python3-cython updated to 0.28.5.
+                Python3-pip updated to 18.0.
+          bug_fixes:
+            - heading: hostapd
+              summary: |
+                Under certain conditions, the integrity of EAPOL-Key messages
+                is not checked, leading to a decryption oracle.
+              cves:
+                - 2018-14526
+        - name: Meta Freescale
+          manifest_project: meta-freescale
+          features:
+            - heading: Layer Update
+              summary: |
+                Added i.MX 8 support for imx-kobs, imx-test, pulseaudio, u-boot-imx,
+                imx-gpu-viv, alsa-state and gstreamer1.0.
+                EULA updated to the v24 revision.
+                Firmware-imx updated to 7.6, with support for BCM4356 and BCM89359.
+                Imx-codec, imx-vpuwrap and imx-parser updated to v4.4.0.
+                Imx-dpu-g2d updated to 1.4.6.
+                Imx-gpu-g2d updated to 6.2.4.p1.6.
+                Imx-gpu-viv updated to 6.2.4.p1.6.
+                Imx-vpu-hantro updated to 1.7.0.
+                Kernel-module-imx-gpu-viv updated to 6.2.4.p1.6.
+                New machine definition for imx8mqevk, imx8qmmek and imx8qxpmek.
+                U-boot-fslc updated to the 1e13b91a revision.
+        - name: Meta Intel
+          manifest_project: meta-intel
+          features:
+            - heading: Layer Update
+              summary: |
+                Intel-microcode updated to 20180807.
+        - name: Meta Qualcomm
+          manifest_project: meta-qcom
+          features:
+            - heading: Layer Update
+              summary: |
+                Updated bootrr, qmic, qrtr and rmtfs to the latest revision available.
+        - name: Meta RaspberryPi
+          manifest_project: meta-raspberrypi
+          features:
+            - heading: Layer Update
+              summary: |
+                Firmware updated to 20180817.
+        - name: Meta RISC-V
+          manifest_project: meta-riscv
+          features:
+            - heading: Layer Update
+              summary: |
+                Gdb updated to the latest RISC-V fork.
+                Qemu-riscv removed in favor of the upstream version.
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                OSF Unified Linux Kernel updated to 4.18.10.
+                U-boot autoboot disabled for DragonBoard 410c and 820c to avoid boot
+                failures caused by serial noise without the UART adapter.
+
 - update: "0.29"
   highlights:
     - Linux LMP config fragments now available via external lmp-kernel-cache metadata repository

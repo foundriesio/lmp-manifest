@@ -2,7 +2,7 @@
 # -*- mode: shell-script-mode; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
 #
 # Copyright (C) 2012-13 O.S. Systems Software LTDA.
-# Copyright (C) 2017 Open Source Foundries Ltd.
+# Copyright (C) 2017-2018 Foundries.io
 # Authored-by:  Otavio Salvador <otavio@ossystems.com.br>
 # Adopted to Angstrom:  Khem Raj <raj.khem@gmail.com>
 #
@@ -273,7 +273,10 @@ fi
 
 cat <<EOF
 
-Welcome to Open Source Foundries Linux microPlatform (OSF LMP)
+Welcome to Foundries.io Linux microPlatform (FIO LMP)
+
+For more information about Linux microPlatform see:
+    https://app.foundries.io/docs/latest/
 
 For more information about OpenEmbedded see their website:
     http://www.openembedded.org/
@@ -287,6 +290,7 @@ Your build environemnt has been configured with:
 You can now run 'bitbake <target>'
 
 Some of common targets are:
+    lmp-mini-image
     lmp-gateway-image
 
 EOF
