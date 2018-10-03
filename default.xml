@@ -15,7 +15,7 @@
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio-lmp" revision="51028679d5967d2d1cd464bcc9536e2c3ac50c58"/>
-  <project name="meta-updater" path="layers/meta-updater" remote="fio-lmp" revision="f12efe18a25397ef2c7d1514321b9bf7b2cef2e7"/>
+  <project name="meta-updater" path="layers/meta-updater" remote="fio-lmp" revision="801a715c2d8247441c705877b6bcc14ccb7152a4"/>
   <project name="meta-qcom" path="layers/meta-qcom" revision="f1ced39e1d89874c78097009df122d45b5c26b0b"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="3048b416520d3607bbe3909002175f952c40e1a4"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="5c6f98ff80b7d187d30293f46646fbe72dd00601"/>
