@@ -9,7 +9,7 @@
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="0736ea5ba478929e2aaca7ea1d65beb8eb18a35b"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="501b840982a51311feef3efdfa548ca2efcf4a31"/>
   <project name="meta-intel" path="layers/meta-intel" revision="bdb69f05961f04e3dae1de10db16a43e578f19b4"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="ab8a44d655386bdac50224832585266a52ccaaf8"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="30200f75d60a6bd041410ac2cc885c1fadfac132"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="cea8ca7c9c92f5cccc2dc4725d0e7de934f9c100"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="a75ad2e4227f715146fc1e07f9abef4e80c1aa12">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
