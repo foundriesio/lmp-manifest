@@ -1,3 +1,102 @@
+- update: "0.31"
+  highlights:
+    - LMP Unified Linux Kernel updated to 4.18.13.
+    - Support for upstream-based Linux Kernel trees (useful for development).
+  summary: |
+   LMP Unified Linux Kernel updated to the 4.18.13 stable release.
+   Meta-lmp now supports upstream-based Linux Kernel trees, facilitating upstream CI/CD and development.
+   Core layer updates based on the latest OE/Yocto master changes (just before transitioning to thud).
+  parts:
+    - name: Linux microPlatform
+      summary: |
+        This update includes the usual kernel and core layer updates plus
+        additional support for building Linux microPlatform with upstream-based
+        Linux Kernel trees.
+
+        As a consequence of supporting additional kernel recipes, the default
+        kernel provider choice now needs to be set at conf/auto.conf or
+        conf/local.conf. If you use a custom conf/local.conf and still wants to
+        build LMP with linux-lmp as the default kernel provider, make sure to
+        set PREFERRED_PROVIDER_virtual/kernel to "linux-lmp". No changes are
+        required on a clean build environment as the default conf/local.conf
+        already defines linux-lmp as the preferred kernel provider.
+      projects:
+        - name: Meta 96boards
+          manifest_project: meta-96boards
+          features:
+            - heading: Layer Update
+              summary: |
+                Edk2-hikey updated to include device tree from kernel 4.18.
+        - name: Meta Updater Layer
+          manifest_project: meta-updater
+          features:
+            - heading: Layer Update
+              summary: |
+                Aktualizr updated to the 512ad74c0b revision.
+                Initial support for update rollback on Raspberry Pi (not yet enabled in LMP).
+                Libp11 updated to 0.4.9.
+        - name: Meta RaspberryPi
+          manifest_project: meta-raspberrypi
+          features:
+            - heading: Layer Update
+              summary: |
+                Rpi-config now sets VC4DTBO to vc4-kms-v3d for raspberrypi3-64 by default.
+        - name: Meta Freescale 3rdparty
+          manifest_project: meta-freescale-3rdparty
+          features:
+            - heading: Layer Update
+              summary: |
+                U-boot-boundary updated to v2018.07.
+        - name: Meta Intel
+          manifest_project: meta-intel
+          features:
+            - heading: Layer Update
+              summary: |
+                Igt-gpu-tools updated to 1.23.
+                Ixgbe updated to 5.3.8.
+                Ixgbevf updated to 4.3.6.
+                Libyami and libyami-utils updated to 1.3.1.
+                Thermald updated to 1.8.
+        - name: Meta Qualcomm
+          manifest_project: meta-qcom
+          features:
+            - heading: Layer Update
+              summary: |
+                Diag updated to fix SDM845 support and to build with musl.
+        - name: OpenEmbedded-Core Layer
+          manifest_project: openembedded-core
+          features:
+            - heading: Layer Update
+              summary: |
+                Cmake updated to 3.12.2.
+                Improved support for kernel fitimage.
+                Libarchive updated to 3.3.3.
+                Linux-firmware updated to 44d4fca.
+                Musl updated with patches post 1.20 release.
+                P11-kit updated to 0.23.14.
+        - name: Meta OpenEmbedded Layer
+          manifest_project: meta-openembedded
+          features:
+            - heading: Layer Update
+              summary: |
+                Mozjs updated to 52.9.1.
+        - name: Meta Virtualization
+          manifest_project: meta-virtualization
+          features:
+            - heading: Layer Update
+              summary: |
+                Libvirt updated to v4.7.0.
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                Added wpanusb recipe.
+                Added linux-lmp-dev recipe, to track upstream/development kernel trees.
+                Jool updated for compatibility with kernel 4.19.
+                LMP Unified Linux Kernel updated to 4.18.13.
+                ModemManager updated to 1.8.2.
+
 - update: "0.30"
   highlights:
     - OSF Unified Linux Kernel updated to 4.18.10.
