@@ -10,7 +10,7 @@
   <project name="meta-freescale" path="layers/meta-freescale" revision="501b840982a51311feef3efdfa548ca2efcf4a31"/>
   <project name="meta-intel" path="layers/meta-intel" revision="438ccc27c2a7522a2b0482ea53c0bbbcfff58fb6"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="30200f75d60a6bd041410ac2cc885c1fadfac132"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="cea8ca7c9c92f5cccc2dc4725d0e7de934f9c100"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="7224fdf98a25de02000ff101aeeb1569d70a8e64"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="a75ad2e4227f715146fc1e07f9abef4e80c1aa12">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
