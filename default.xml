@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors"/>
   <remote fetch="https://git.foundries.io/development/microplatforms/linux" name="fio-lmp"/>
-
+  <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors"/>
+  
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
-
+  
+  <project name="bitbake" revision="7d5af23d560b38fb5558d4ac51c3c9611d6d904f"/>
   <project name="meta-96boards" path="layers/meta-96boards" revision="21e877c66bab6847ce87f46a21f24a9a3486bad7"/>
-  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="f5573c6b9c8d89cc5362fd95c762f1fab1aff191"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="501b840982a51311feef3efdfa548ca2efcf4a31"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="f5573c6b9c8d89cc5362fd95c762f1fab1aff191"/>
   <project name="meta-intel" path="layers/meta-intel" revision="438ccc27c2a7522a2b0482ea53c0bbbcfff58fb6"/>
+  <project name="meta-linaro" path="layers/meta-linaro" revision="fca140e5e15831e31bb4d3916d191b4b3176fc5c"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio-lmp" revision="0fe05e63e87813cfe6d4bd3dc5e449f231e368e5"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="0b663c4f9ae0fc2d6b2d7cda4baff4b00059a52d"/>
+  <project name="meta-qcom" path="layers/meta-qcom" revision="a38028357962542f80a3075b7ec2e089fcc5d321"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="30200f75d60a6bd041410ac2cc885c1fadfac132"/>
+  <project name="meta-riscv" path="layers/meta-riscv" revision="3048b416520d3607bbe3909002175f952c40e1a4"/>
+  <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="5c6f98ff80b7d187d30293f46646fbe72dd00601"/>
+  <project name="meta-updater" path="layers/meta-updater" remote="fio-lmp" revision="801a715c2d8247441c705877b6bcc14ccb7152a4"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="7224fdf98a25de02000ff101aeeb1569d70a8e64"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="a75ad2e4227f715146fc1e07f9abef4e80c1aa12">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio-lmp" revision="0fe05e63e87813cfe6d4bd3dc5e449f231e368e5"/>
-  <project name="meta-updater" path="layers/meta-updater" remote="fio-lmp" revision="801a715c2d8247441c705877b6bcc14ccb7152a4"/>
-  <project name="meta-qcom" path="layers/meta-qcom" revision="a38028357962542f80a3075b7ec2e089fcc5d321"/>
-  <project name="meta-riscv" path="layers/meta-riscv" revision="3048b416520d3607bbe3909002175f952c40e1a4"/>
-  <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="5c6f98ff80b7d187d30293f46646fbe72dd00601"/>
-  <project name="bitbake" path="bitbake" revision="7d5af23d560b38fb5558d4ac51c3c9611d6d904f"/>
-  <project name="meta-linaro" path="layers/meta-linaro" revision="fca140e5e15831e31bb4d3916d191b4b3176fc5c"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="0b663c4f9ae0fc2d6b2d7cda4baff4b00059a52d"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="f010915f06c1b6c72089b56fb610f60e4fbc5065"/>
 </manifest>
