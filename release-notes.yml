@@ -1,3 +1,116 @@
+- update: "0.32"
+  highlights:
+    - LMP Unified Linux Kernel updated to 4.18.16.
+    - Core layer series now compatible with the OE/Yocto thud release.
+    - OE-Core build security flags are now enabled by default in LMP.
+    - Initial support for the HiKey960 board.
+  summary: |
+   LMP Unified Linux Kernel updated to the 4.18.16 stable release.
+   Core layer updates based on the latest OE/Yocto master/thud changes.
+   Initial support for the 96Boards HiKey960 board.
+  parts:
+    - name: Linux microPlatform
+      summary: |
+        Core layer updates.
+      projects:
+        - name: Meta Freescale
+          manifest_project: meta-freescale
+          features:
+            - heading: Layer Update
+              summary: |
+                Linux-fslc updated to 4.18.
+                NXP BSP updated to L4.9.123-2.3.0_8mm_ga.
+                New machine definition for for imx8mmevk.
+                Qoriq BSP updated to LSK v18.09.
+                U-boot-fslc updated to the 2018.09-based fork.
+        - name: Meta Virtualization
+          manifest_project: meta-virtualization
+          features:
+            - heading: Layer Update
+              summary: |
+                LXC updated to 3.0.2.
+        - name: Meta RISC-V
+          manifest_project: meta-riscv
+          features:
+            - heading: Layer Update
+              summary: |
+                Initial u-boot support for qemuriscv64.
+        - name: Meta Yocto
+          manifest_project: meta-yocto
+          features:
+            - heading: Layer Update
+              summary: |
+                Linux-yocto updated to 4.18.
+        - name: OpenEmbedded-Core Layer
+          manifest_project: openembedded-core
+          features:
+            - heading: Layer Update
+              summary: |
+                Bash updated to 4.4.23.
+                Go 1.10 recipes removed in favor of 1.11.1.
+                Glibc updated to the 2.8-044c96f0d5 revision.
+                Valgrind updated to 3.14.0.
+          bug_fixes:
+            - heading: elfutils
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-16402
+                - 2018-16403
+            - heading: libsndfile1
+              summary: |
+                Stack-based buffer overflow in psf_memset in common.c in libsndfile 1.0.28.
+              cves:
+                - 2018-13139
+            - heading: qemu
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-17958
+                - 2018-17962
+                - 2018-17963
+            - heading: binutils
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-17358
+                - 2018-17359
+                - 2018-17360
+        - name: Meta OpenEmbedded Layer
+          manifest_project: meta-openembedded
+          features:
+            - heading: Layer Update
+              summary: |
+                Dracut updated to 049.
+                Hwdata updated to 0.316.
+                Udisks2 updated to 2.7.8.
+                Wireshark updated to 2.6.4.
+          bug_fixes:
+            - heading: python3-requests
+              summary: |
+                The Requests package before 2.20.0 for Python sends an HTTP Authorization
+                header to an http URI upon receiving a same-hostname https-to-http redirect,
+                which makes it easier for remote attackers to discover credentials by
+                sniffing the network.
+              cves:
+                - 2018-16402
+        - name: Meta Updater Layer
+          manifest_project: meta-updater
+          features:
+            - heading: Layer Update
+              summary: |
+                Added support for setting custom OSTree commit subject and body.
+                Aktualizr updated to the 39acfec48d revision.
+                Otaimg image renamed to ota-ext4 in order to simplify the image build process.
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                Added initial support for the HiKey960 board.
+                LMP Unified Linux Kernel updated to 4.18.16.
+                OE-Core security flags are now enabled by default in LMP.
+
 - update: "0.31"
   highlights:
     - LMP Unified Linux Kernel updated to 4.18.13.
