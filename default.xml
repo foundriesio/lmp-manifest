@@ -9,7 +9,7 @@
   <project name="meta-96boards" path="layers/meta-96boards" revision="15893f7f0e7cddcdc2c197feb1a27eed05582ebd"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="5684872b435eacf0616c4375ba386fa13fa3103a"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="9ff090335d6229b0364ac243d1beee57cb8977b4"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="847dcbb866bb48c3a051967dd0b46b452aa9d5c4"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="b639f225503953945c1ebbc9dfcac6a30294a948"/>
   <project name="meta-linaro" path="layers/meta-linaro" revision="7e7f09b731ac8ec09cc87ed058908c8479b8c7ab"/>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio-lmp" revision="37ed4a55c1ac1a0c97ad3a308d83839820f16751"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="a5591f7aee24a4ad792d7dd0dea0f7252a68c7a8"/>
