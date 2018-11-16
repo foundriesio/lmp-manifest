@@ -1,3 +1,149 @@
+- update: 34
+  highlights:
+    - LMP Unified Linux Kernel updated to 4.18.18.
+    - Docker updated to the 18.09.0 release.
+    - Docker Compose updated to the 1.23.1 release.
+    - Default golang version updated to the 1.11 series.
+    - Support for the official Raspberry Pi Touch Display.
+    - Core layer series now fully based on the OE/Yocto thud release.
+  summary: |
+   LMP Unified Linux Kernel updated to the 4.18.18 stable release.
+   Core layer updates based on the latest OE/Yocto master/thud changes.
+  parts:
+    - name: Linux microPlatform
+      summary: |
+        Core layer updates based on the latest OE/Yocto master/thud changes.
+      projects:
+        - name: Meta Freescale
+          manifest_project: meta-freescale
+          features:
+            - heading: Layer Update
+              summary: |
+                Linux-fslc updated to 4.18.12.
+                Initial NXP BSP support for i.MX 8.
+        - name: Meta RISC-V
+          manifest_project: meta-riscv
+          features:
+            - heading: Layer Update
+              summary: |
+                Riscv-pk updated to the latest revision (7bee30c1ff).
+        - name: Meta Virtualization
+          manifest_project: meta-virtualization
+          features:
+            - heading: Layer Update
+              summary: |
+                Ceph update to 13.2.2.
+                Cri-o updated to 1.12.
+                Docker updated to 18.09.0.
+                Kubernetes updated to v1.12.
+        - name: Meta OpenEmbedded Layer
+          manifest_project: meta-openembedded
+          features:
+            - heading: Layer Update
+              summary: |
+                Adduser updated to 3.118.
+                Libgit2 updated to 0.27.5.
+                Libssh updated to 0.8.4.
+                Mbedtls updated to 2.13.0.
+        - name: OpenEmbedded-Core Layer
+          manifest_project: openembedded-core
+          features:
+            - heading: Layer Update
+              summary: |
+                Default golang version updated to the 1.11 series.
+                Elfutils updated to 0.174.
+                Git updated to 2.18.1.
+                Glide updated to 0.13.2.
+                Tzcode and tzdata updated to 2018g.
+          bug_fixes:
+            - heading: binutils
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-18309
+                - 2018-18605
+                - 2018-18606
+                - 2018-18607
+            - heading: curl
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-16839
+                - 2018-16840
+                - 2018-16842
+            - heading: qemu
+              summary: |
+                Qemu emulator built with the NE2000 NIC emulation support is vulnerable
+                to an integer overflow, which could lead to buffer overflow issue.
+              cves:
+                - 2018-10839
+            - heading: systemd
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-15686
+                - 2018-15687
+                - 2018-15688
+            - heading: unzip
+              summary: |
+                Buffer overflow in list.c, when a ZIP archive has a crafted relationship
+                between the compressed-size value and the uncompressed-size value.
+              cves:
+                - 2018-18384
+            - heading: nasm
+              summary: |
+                Memory corruption (crashed) of nasm when handling a crafted file due to
+                function assemble_file(inname, depend_ptr) at asm/nasm.c:482.
+              cves:
+                - 2018-1000667
+            - heading: elfutils
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-18520
+                - 2018-18521
+                - 2018-18310
+            - heading: ghostscript
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-17961
+                - 2018-18073
+                - 2018-18284
+            - heading: openssl
+              summary: |
+                Multiple issues.
+              cves:
+                - 2018-0734
+                - 2018-0735
+        - name: Meta Updater Layer
+          manifest_project: meta-updater
+          features:
+            - heading: Layer Update
+              summary: |
+                Aktualizr updated to the 3c1c77c005 revision.
+        - name: Meta Linaro
+          manifest_project: meta-linaro
+          features:
+            - heading: Layer Update
+              summary: |
+                Optee OS, client and test updated to v3.3.0.
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                LMP Unified Linux Kernel updated to 4.18.18.
+                Python3-docker updated to 3.5.1.
+                Python3-docker-compose updated to 1.23.1.
+                Python3-requests updated to 2.20.
+                Support for the official Raspberry Pi Touch Display.
+
+- update: 33
+  highlights:
+    - No changes have gone into the LMP since 0.32.
+  summary: No changes have gone into the LMP since 0.32.
+
 - update: "0.32"
   highlights:
     - LMP Unified Linux Kernel updated to 4.18.16.
