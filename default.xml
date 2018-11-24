@@ -19,7 +19,7 @@
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="5c6f98ff80b7d187d30293f46646fbe72dd00601"/>
   <project name="meta-updater" path="layers/meta-updater" remote="fio-lmp" revision="c684c3474cb580a8f58b8299e9e901440ebf56d0"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="4ef7f8b758a5c5f105cdf5724e4cf567f968867f"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="b5aa0db24dae27e4e66773767ea72f0e3c7c57de">
+  <project name="meta-yocto" path="layers/meta-yocto" revision="951184fd62b3ab14266f300defd47d3c5c09ad9b">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   <project name="openembedded-core" path="layers/openembedded-core" revision="f0394e80a37f1da47042a1aa0487594f390603f9"/>
