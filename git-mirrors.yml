@@ -46,6 +46,9 @@ meta-riscv:
 meta-rtlwifi:
   url: "https://github.com/EmbeddedAndroid/meta-rtlwifi.git"
 
+meta-updater:
+  url: "https://github.com/advancedtelematic/meta-updater.git"
+
 # These are repositories needed to produce the OTA community edition server/client
 ota-community-edition:
   url: "https://github.com/advancedtelematic/ota-community-edition"
