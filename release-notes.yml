@@ -1,3 +1,115 @@
+- update: 35
+  highlights:
+    - NetworkManager updated to the 1.14.4 release.
+    - Core layer updates based on the latest OE/Yocto master changes.
+  summary: |
+   Core layer updates based on the latest OE/Yocto master changes.
+  parts:
+    - name: Linux microPlatform
+      summary: |
+        Core layer updates based on the latest OE/Yocto master changes.
+      projects:
+        - name: Meta RaspberryPi
+          manifest_project: meta-raspberrypi
+          features:
+            - heading: Layer Update
+              summary: |
+                Bcm sdio.txt linux-firmware files updated based on latest from raspbian.
+                Firmware updated to 20180924.
+                Userland updated to the latest master (d574b51a60).
+        - name: Meta Freescale
+          manifest_project: meta-freescale
+          features:
+            - heading: Layer Update
+              summary: |
+                Imx-dpu-g2d updated to 1.4.8.
+                Imx-gpu-g2d updated to 6.2.4.p1.8.
+                Imx-gpu-viv updated to 6.2.4.p1.8.
+                Kernel-module-imx-gpu-viv updated to 6.2.4.p1.8.
+        - name: Meta Freescale 3rdparty
+          manifest_project: meta-freescale-3rdparty
+          features:
+            - heading: Layer Update
+              summary: |
+                Linux-boundary updated to a141bcc8.
+                U-boot-boundary updated to ca185fc7.
+        - name: Meta RISC-V
+          manifest_project: meta-riscv
+          features:
+            - heading: Layer Update
+              summary: |
+                Riscv-fesvr updated to 8d108a0a64.
+                Riscv-pk updated to 6ebd0f2a46.
+                Riscv-spike updated to 65c8ac48af.
+        - name: Meta Updater Layer
+          manifest_project: meta-updater
+          features:
+            - heading: Layer Update
+              summary: |
+                Aktualizr updated to the 348822d914 revision.
+                Selftest qemu KVM support via QEMU_USE_KVM.
+        - name: OpenEmbedded-Core Layer
+          manifest_project: openembedded-core
+          features:
+            - heading: Layer Update
+              summary: |
+                Bind updated to latest lts 9.11.5.
+                Dmidecode updated to 3.2.
+                Elfutils updated to 0.175.
+                Ethtool updated to 4.19.
+                Gnupg updated to 2.2.11.
+                Gnutls updated to 3.6.4.
+                Gobject-introspection updated to 1.58.1.
+                Gpgme updated to 1.12.0.
+                Gstreamer1.0 updated to 1.14.3.
+                Harfbuzz updated to 2.1.3.
+                Iproute2 updated to 4.19.0
+                Libgcrypt updated to 1.8.4.
+                Libpcre2 updated to 10.32.
+                Libsolv updated to 0.7.1.
+                Libva updated to 2.3.0.
+                Ltp updated to 20180926.
+                Man-db updated 2.8.4.
+                Mtools updated to 4.0.19.
+                Nasm updated to 2.14.
+                Ncurses updated to 6.1+20181013.
+                Nspr updated to 4.20.
+                Openssh updated to 7.9p1.
+                Openssl10 updated to 1.0.2q.
+                Rng-tools updated to 6.6.
+                Rpcbind updated to 1.2.5.
+                Sqlite3 updated to 3.25.3.
+                Strace updated to 4.25.
+                Tiff updated to 4.0.10.
+                Vala updated to 0.42.3.
+          bug_fixes:
+            - heading: bind
+              summary: |
+                A denial of service flaw was discovered in bind versions that
+                include the "deny-answer-aliases" feature. This flaw may allow
+                a remote attacker to trigger an INSIST assert in named leading
+                to termination of the process and a denial of service condition.
+              cves:
+                - 2018-5740
+            - heading: gettext
+              summary: |
+                Double free in default_add_message in read-catalog.c.
+              cves:
+                - 2018-18751
+        - name: Meta OpenEmbedded Layer
+          manifest_project: meta-openembedded
+          features:
+            - heading: Layer Update
+              summary: |
+                NetworkManager updated to 1.14.4.
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                Aktualizr-runtime-prov removed as it is not required anymore.
+                Pi-bluetooth changed to force hciattach with noflow on RaspberryPi.
+
 - update: 34
   highlights:
     - LMP Unified Linux Kernel updated to 4.18.18.
