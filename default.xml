@@ -8,7 +8,7 @@
   <project name="bitbake" revision="7414b3537e8adfb41a9581d70bf8296c4f7d38c0"/>
   <project name="meta-96boards" path="layers/meta-96boards" revision="46b6024c0c12e6fef7bce51d5443de720da886ea"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="15a354ee592866a61a893562760ef84bf8fe5e4d"/>
-  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="4c2970233fe68aa6fcaec894c9c92844d1aa71f9"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="6e2ad96fce82bb7a12bba506ac15511752c4f007"/>
   <project name="meta-intel" path="layers/meta-intel" revision="a7d94d8fecd31af7c58ba5e3d4bd80e3f134f9d3"/>
   <project name="meta-linaro" path="layers/meta-linaro" revision="edb7ffc2a121df7596385595abe75180296103e0"/>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio-lmp" revision="3d5fa5cf27ac180091fb1c1b1ff81a28ed8ce1d7"/>
