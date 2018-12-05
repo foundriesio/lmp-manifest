@@ -1,3 +1,81 @@
+- update: 36
+  highlights:
+    - U-Boot updated to the 2018.11 release.
+    - U-Boot-Fslc updated to the 2018.11-based release.
+    - Docker Compose updated to the 1.23.2 release.
+    - Core layer updates based on the latest OE/Yocto master changes.
+  summary: |
+   Core layer updates based on the latest OE/Yocto master changes.
+  parts:
+    - name: Linux microPlatform
+      summary: |
+        Core layer updates based on the latest OE/Yocto master changes.
+      projects:
+        - name: Meta Freescale
+          manifest_project: meta-freescale
+          features:
+            - heading: Layer Update
+              summary: |
+                Linux-fslc updated to the 4.19-based fork.
+                U-boot-fslc updated to the 2018.11-based fork.
+        - name: Meta Freescale 3rdparty
+          manifest_project: meta-freescale-3rdparty
+          features:
+            - heading: Layer Update
+              summary: |
+                Baseboard support for PICO-Pi and PICO-Hobbit.
+        - name: Meta Intel
+          manifest_project: meta-intel
+          features:
+            - heading: Layer Update
+              summary: |
+                Ixgbe updated to 5.5.2.
+        - name: Meta RISC-V
+          manifest_project: meta-riscv
+          features:
+            - heading: Layer Update
+              summary: |
+                Gdb updated to use the mainline tree.
+                Machine support for qemuriscv32.
+        - name: Meta Updater Layer
+          manifest_project: meta-updater
+          features:
+            - heading: Layer Update
+              summary: |
+                Sota.conf now requires usrmerge.
+        - name: Meta 96boards
+          manifest_project: meta-96boards
+          features:
+            - heading: Layer Update
+              summary: |
+                Ptable generation fixed for HiKey.
+        - name: Meta Virtualization
+          manifest_project: meta-virtualization
+          features:
+            - heading: Layer Update
+              summary: |
+                Lxc updated to 3.0.3.
+                Libvirt updated to v4.9.0.
+                Openvswitch updated to 2.10.1.
+        - name: OpenEmbedded-Core Layer
+          manifest_project: openembedded-core
+          features:
+            - heading: Layer Update
+              summary: |
+                Gstreamer1.0 updated to 1.14.4.
+                Libva-utils updated to 2.3.0.
+                Openssl updated to 1.1.1a.
+                U-Boot updated to the 2018.11 release.
+        - name: Meta LMP Layer
+          manifest_project: meta-lmp
+          features:
+            - heading: Layer Update
+              summary: |
+                Python3-docker updated to 3.6.0.
+                Python3-docker-compose updated to 1.23.2.
+                Python3-docker-pycreds updated to 0.4.0.
+                Python3-requests updated to 2.20.1.
+
 - update: 35
   highlights:
     - NetworkManager updated to the 1.14.4 release.
