@@ -29,10 +29,8 @@ will be placed within your working directory.
 To check out the latest LMP subscriber continuous release:
 
 ```
-repo init -u https://source.foundries.io/lmp-manifest
+repo init -u https://github.com/foundriesio/lmp-manifest
 ```
-
-When prompted, configure Repo with your real name and email address.
 
 A successful initialization will end with a message stating that Repo
 is initialized in your working directory. Your client directory should
