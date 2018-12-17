@@ -12,7 +12,7 @@
   <project name="meta-linaro" path="layers/meta-linaro" revision="edb7ffc2a121df7596385595abe75180296103e0" />
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="853cd7966e8a31fdee54eb1f827e23d55d01b575" />
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="9a64b3805de82c813d89de92163129a84c2ebf97" />
-  <project name="meta-qcom" path="layers/meta-qcom" revision="a38028357962542f80a3075b7ec2e089fcc5d321" />
+  <project name="meta-qcom" path="layers/meta-qcom" revision="b03212707cec5c49bde4e1d6afb58513e1731318" />
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="c8a05f2fcf17ca2556f8a56086ea36da2e777d0f" />
   <project name="meta-riscv" path="layers/meta-riscv" revision="9fa432afcf4a09340cf0a3511b95e2b2360aaf8b" />
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="5c6f98ff80b7d187d30293f46646fbe72dd00601" />
