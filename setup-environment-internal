@@ -289,7 +289,7 @@ Your build environemnt has been configured with:
 
 You can now run 'bitbake <target>'
 
-Some of common targets are:
+Some common targets are:
     lmp-mini-image
     lmp-gateway-image
 
