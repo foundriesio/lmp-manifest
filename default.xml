@@ -6,7 +6,7 @@
 
   <project name="bitbake" revision="f02114cb70e8f6f1d32e19c02b758fe0aadecd19" />
   <project name="meta-96boards" path="layers/meta-96boards" revision="5b7f9e844b376a0abcf90563547f981ba9e28e50" />
-  <project name="meta-freescale" path="layers/meta-freescale" revision="1ec2c308da65f7ad49b99a3100912ae0b5e1dac3" />
+  <project name="meta-freescale" path="layers/meta-freescale" revision="6d961d928db7ea5f214dc815f9bbb9547608b6cf" />
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="56021ac593b6a3f4ed7be351d8f4358a19d8e87a" />
   <project name="meta-intel" path="layers/meta-intel" revision="5bd939d746126a22af5e52139a54d1696578f902" />
   <project name="meta-linaro" path="layers/meta-linaro" revision="edb7ffc2a121df7596385595abe75180296103e0" />
