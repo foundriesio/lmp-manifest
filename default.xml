@@ -5,7 +5,7 @@
   <default remote="lmp-mirrors" revision="master" sync-j="4" />
 
   <project name="bitbake" revision="0ec98c01ae50f95c9c74acf53013ac59e0e72b08" />
-  <project name="meta-96boards" path="layers/meta-96boards" revision="5b7f9e844b376a0abcf90563547f981ba9e28e50" />
+  <project name="meta-96boards" path="layers/meta-96boards" revision="2114050bae9bd685e1dd6226cddc2a144e6c0dea" />
   <project name="meta-freescale" path="layers/meta-freescale" revision="6d961d928db7ea5f214dc815f9bbb9547608b6cf" />
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="47848bff9478999019947f69a719b3d2c2a6b558" />
   <project name="meta-intel" path="layers/meta-intel" revision="2e1a194b115e03bd81bb550a94569b4b7496aaf1" />
