@@ -1,5 +1,4 @@
-FROM ubuntu:16.04
-MAINTAINER Andy Doan <andy@opensourcefoundries.com>
+FROM ubuntu:18.04
 
 # bitbake requires a utf8 filesystem encoding
 ENV LANG en_US.UTF-8
@@ -24,7 +23,7 @@ RUN apt-get update \
 		android-tools-fsutils ca-certificates chrpath cpio diffstat \
 		file gawk g++ iproute2 iputils-ping less libmagickwand-dev \
 		libmath-prime-util-perl libsdl1.2-dev libssl-dev locales \
-		openjdk-9-jre openssh-client perl-modules python2.7 python-requests python3 \
+		openjdk-11-jre openssh-client perl-modules python2.7 python-requests python3 \
 		repo sudo texinfo vim-tiny wget whiptail libelf-dev \
 	&& apt-get autoremove -y \
 	&& apt-get clean \
