@@ -13,7 +13,7 @@
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="a496d83cbf1f11701ff1a4235ccfe675b882a444" />
   <project name="meta-qcom" path="layers/meta-qcom" revision="a9f51f0bfe41e518136995e43ffb78e815047332" />
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="2586881ce673480118e2ba3dc40d9f2673d17897" />
-  <project name="meta-riscv" path="layers/meta-riscv" revision="841a445b6027e8a1118ae144ebf8abe5c026dd04" />
+  <project name="meta-riscv" path="layers/meta-riscv" revision="d77546d36e14c3cbcc5eaaaa45cc9115fe5194fb" />
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="fd7ca0ca47c7095ced62a5a7cdef040dff87fb76" />
   <project name="meta-updater" path="layers/meta-updater" revision="bf827e6261caa7e78a98e7448daa2afb3e8d4001" />
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="8354c9cec435a5c00026f26880709bb9c9061354" />
