@@ -160,6 +160,12 @@ sha512sum "${MANIFESTS}"/setup-environment-internal 2>&1 > conf/checksum
 if [ ! -f "conf/local.conf" ]; then
     cp "${MANIFESTS}"/conf/local.conf conf/local.conf
 fi
+# Copy default development keys if not set by the user
+mkdir -p conf/keys
+if [ ! -f "conf/keys/dev.key" -a ! -f "conf/keys/dev.crt" ]; then
+    ln -sf "${MANIFESTS}"/conf/keys/dev.key conf/keys/dev.key
+    ln -sf "${MANIFESTS}"/conf/keys/dev.crt conf/keys/dev.crt
+fi
 ln -sf "${MANIFESTS}"/conf/bblayers.conf conf/bblayers.conf
 ln -sf "${MANIFESTS}"/README.md README.md
 
