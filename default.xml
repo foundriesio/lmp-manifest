@@ -1,5 +1,6 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio" />
+  <remote fetch="https://github.com/ricardosalveti" name="rsalveti" />
   <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors" />
 
   <default remote="lmp-mirrors" revision="master" sync-j="4" />
@@ -9,7 +10,7 @@
   <project name="meta-freescale" path="layers/meta-freescale" revision="ad02a20608b0bbb184fe633bd8a50c785d2002cd" />
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="40a05f3b8c34a4451de3482718ec9730ee92013b" />
   <project name="meta-intel" path="layers/meta-intel" revision="b92f5cbfe6d0e1b2bd02975d5d23ea0ead6fc684" />
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="7fe860b7d06d6ba7bb9575eb1504e84d72c96004" />
+  <project name="meta-lmp" path="layers/meta-lmp" remote="rsalveti" revision="74513770589475f83173dde62a3ffb22cb73f8e0" />
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="1ecd8b43645883cd4fa652826e93137c942dd82c" />
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="7059c374512f1c1c0df9ecab0703d11438bdf78b" />
   <project name="meta-riscv" path="layers/meta-riscv" revision="bb370a5a304f8fe1d7d9ca67717faddf1b518450" />
