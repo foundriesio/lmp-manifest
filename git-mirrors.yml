@@ -4,9 +4,6 @@
 # so that subscribers understand where the code comes from and internal
 # mirroring services know what to track.
 
-meta-96boards:
-  url: "https://github.com/96boards/meta-96boards"
-
 meta-freescale-3rdparty:
   url: "https://github.com/Freescale/meta-freescale-3rdparty"
 
