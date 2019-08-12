@@ -72,13 +72,9 @@ Supported **MACHINE** targets (officially tested by FIO):
 * cl-som-imx7
 * colibri-imx7
 * cubox-i
-* dragonboard-410c
-* dragonboard-820c
 * freedom-u540
-* hikey
 * intel-corei7-64
 * qemuriscv64
-* raspberrypi0-wifi
 * raspberrypi3-64
 
 Supported image targets:
