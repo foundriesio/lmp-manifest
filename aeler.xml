@@ -1,0 +1,10 @@
+<manifest>
+  <include name="default.xml" />
+
+  <remote fetch="https://source.foundries.io/factories/aeler"
+          name="subscriber-overrides" />
+
+  <project name="meta-subscriber-overrides"
+           path="layers/meta-subscriber-overrides"
+           remote="subscriber-overrides"/>
+</manifest>
