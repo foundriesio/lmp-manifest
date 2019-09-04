@@ -11,7 +11,7 @@
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="d0cbaddcb4e00f5e122753a715db4689db929c31" />
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="3061ead8cf38c47ff81d7622cbcf2b8602012212" />
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="866ccc829f728f722f623571b24305d2bc9d8b17" />
-  <project name="meta-riscv" path="layers/meta-riscv" revision="cb0857efe5fb3550c036ee05378e5c4098099914" />
+  <project name="meta-riscv" path="layers/meta-riscv" revision="11504e23cfbdaecd268d2253521b33ef0bd0a07b" />
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="3d920444e433ceddecb7809da0ebab278d57e1ef" />
   <project name="meta-updater" path="layers/meta-updater" revision="f13dd347107648176bc54458ce65c9cdf68730c8" />
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="c6e7bf94debb7bdd7a2b52b222a4b0da732a24b4" />
