@@ -9,7 +9,7 @@
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="cc6475e9a620da6fce022bf5cc59b6a8c8fcd81d" />
   <project name="meta-intel" path="layers/meta-intel" revision="e92b588839dd40e561e201f6fc21df31db202508" />
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="d0cbaddcb4e00f5e122753a715db4689db929c31" />
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="e71751bf3cd209f07b986bb2c6289902546d3666" />
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="3061ead8cf38c47ff81d7622cbcf2b8602012212" />
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="18544d447173ca762a0661fd0fe8ba72b21d0579" />
   <project name="meta-riscv" path="layers/meta-riscv" revision="cb0857efe5fb3550c036ee05378e5c4098099914" />
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="3d920444e433ceddecb7809da0ebab278d57e1ef" />
