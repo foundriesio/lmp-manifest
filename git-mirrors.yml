@@ -46,6 +46,9 @@ meta-rtlwifi:
 meta-updater:
   url: "https://github.com/advancedtelematic/meta-updater.git"
 
+meta-selinux:
+  url: "https://git.yoctoproject.org/git/meta-selinux.git"
+
 # These are repositories needed to produce the OTA community edition server/client
 ota-community-edition:
   url: "https://github.com/advancedtelematic/ota-community-edition"
