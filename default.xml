@@ -17,7 +17,7 @@
   <project name="meta-selinux" path="layers/meta-selinux" revision="10d4a50fc5b4d6da9dc74247ad5ab5ca0eda68bb"/>
   <project name="meta-updater" path="layers/meta-updater" revision="943de02a39d021aae6337736468b03c29cb96161"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="ab382e2453d652181eb7a6fb4dcf201d4b33b94a"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="00fdefff55717331a220fe624f29c387970d31d7">
+  <project name="meta-yocto" path="layers/meta-yocto" revision="a058af8c82738620c9aab784118fd9680abfcf55">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
   <project name="openembedded-core" path="layers/openembedded-core" revision="86b8a1d534bfcd70775c6e2b59eabe10de29f526"/>
