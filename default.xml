@@ -6,12 +6,12 @@
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
   <project name="bitbake" revision="9a1bf4ba9ec00c2a222d820f8f83d1f056b021d6"/>
-  <project name="meta-freescale" path="layers/meta-freescale" revision="a1b81241bc3ed8efcbcf5395db0c3eb5b0834d72"/>
-  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="e6b784734ab5c15e16c71f8775471dc6435f8a91"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="70d414ce566d07f1fe09ccf7e945ce42c1e73dd9"/>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="aafa3596f3f7ec27c1b7b500d1ac2e71e5e0ee2b"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="89f70e07ef36237511964125dc3ba97294cdb50c"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="aea3771baa77e74762358ceb673d407e36637e5f"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="f247a8a3b6e75b67f9de7e21fbecf7834125b174"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="39de862de5e2ba12ea06e0ba07fe39aa8a1b896c"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="1849429a791457250236778793c36a12f0df3194"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="d34e054d5140792150d2a7ae3c0264eb254c8aa3"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="e050601d868df6f7b38812ca930e30a6a4cff135"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="270c8cb7c110cae7bbff88bab677167350d05b6c"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="3d920444e433ceddecb7809da0ebab278d57e1ef"/>
   <project name="meta-selinux" path="layers/meta-selinux" revision="b40dafeb6d049c8f50ee8e6b165cb3f34a057b96"/>
