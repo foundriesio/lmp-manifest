@@ -6,5 +6,6 @@
 
   <project name="meta-subscriber-overrides"
            path="layers/meta-subscriber-overrides"
+           revision="devel"
            remote="subscriber-overrides"/>
 </manifest>
