@@ -20,5 +20,5 @@
   <project name="meta-yocto" path="layers/meta-yocto" revision="a058af8c82738620c9aab784118fd9680abfcf55">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="aff2d1264030a8061fc1b31dae0f369bfd76826b"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="0ad21fe63f6873805762880cca4c37dbe71ee473"/>
 </manifest>
