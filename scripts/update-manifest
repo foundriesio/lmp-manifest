@@ -1,0 +1,67 @@
+#!/bin/sh
+# -*- mode: shell-script-mode; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+#
+# Copyright (C) 2019 Foundries.io
+
+# set default params
+latest=$1
+
+# break on errors
+set -e
+
+function abort_merge {
+    errno=$1
+    git merge --abort || true
+    echo -e "\nUnable to perform automatic update.  Restoring previous state."
+
+    if [ "$errno" != "128" ]; then
+        echo -e "\nOne of these commits is probably causing a conflict:"
+        git log --no-merges --format=oneline FETCH_HEAD..HEAD
+    fi
+    exit -1
+}
+
+# fetch tags from upstream
+git fetch --tags --quiet https://github.com/foundriesio/lmp-manifest
+
+# if no tag parameter was supplied use latest upstream tag
+if [ -z "$latest" ]; then
+    # assign last upstream tag to latest
+    latest=$(git tag --list --points-at FETCH_HEAD)
+fi
+
+# check to see if last upstream tag is already included in HEAD (if so exit)
+errno=0
+git merge-base --is-ancestor $latest HEAD || errno=$?
+# found tag as ancestor, no updates
+if [ "$errno" == "0" ]; then
+    echo "No new releases found upstream"
+    exit 0
+# unhandled error (invalid object name)
+elif [ "$errno" -gt 1 ]; then
+    exit -1
+fi
+
+echo -e "New upstream release(s) have been found.\nMerging local code with upstream release: $latest"
+
+# merge to the last upstream tag
+git merge --no-edit $latest || abort_merge $?
+
+echo -e "\nAutomatic update successful!"
+
+# determine which branch we are on
+local_branch=$(git branch --show-current)
+remote_branch=$(git config --get branch.${local_branch}.merge)
+if [ -z "$remote_branch" ]; then
+    # no remote branch is tracked for the current branch
+    # if local_branch is "default", let's assume it's a repo checkout
+    # and the remote branch is supposed to be master, otherwise abort
+    if [ "$local_branch" == "default" ]; then
+        remote_branch="refs/heads/master"
+    else
+        echo -e "fatal: The current branch default has no upstream branch."
+        exit -1
+    fi
+fi
+
+git push origin HEAD:${remote_branch} && git push --tags origin
