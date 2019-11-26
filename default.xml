@@ -14,7 +14,7 @@
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="ed6b75ba692b5d6bafd770f6669492db9cf97e37"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="0d5a7c956fcc2ccd56d477ea546b272af4db4c37"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="069a9fa127a7fefc7cf5ffaa51c9771a624eccf5"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="b98cd8c8a088588b05e1ea38eef81b14606ece37"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="b0af1cc9a9c4197e4b045dc3c87aad06929280be"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="79fb488a7071bbfafb8656adf7826a57b2ef6cd4"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="edf4ab9bd70216ae0f3736fd8562938a103da3b2">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
