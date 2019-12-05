@@ -22,21 +22,3 @@ Verification index = 0
 Target index = 2
 File = "@@KEY_ROOT@@/IMG_1_crt.pem"
 
-[Authenticate Data]
-Verification index = 2
-#
-# The Block = information can be obtained from SPL.log
-# using the HAB Blocks line:
-#
-# Example of SPL.log output:
-#   Image Type:   Freescale IMX Boot Image
-#   Image Ver:    2 (i.MX53/6/7 compatible)
-#   Mode:         DCD
-#   Data Size:    102496 Bytes = 100.09 KiB = 0.10 MiB
-#   Load Address: 2f010420
-#   Entry Point:  2f011000
-#   HAB Blocks:   0x2f010400 0x00000000 0x00016c00
-#   DCD Blocks:   0x00910000 0x0000002c 0x00000258
-#
-#
-#Blocks = 0x2f010400 0x00000000 0x00016c00 "SPL"
