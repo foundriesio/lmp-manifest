@@ -8,7 +8,7 @@
   <project name="bitbake" revision="5d83d828cacb58ccb7c464e799c85fd2d2a50ccc"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="67648f33b15ddeb27597e38f1c3c12c5f274f735"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="fdc6360b8f803257e9ad74a3ce150d6e2393fa8a"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="86b5fea26a0f868bf348d130cb915c758584e930"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="369d0a0dc3666a757fb0a0069090287f8c023f75"/>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="84860316c81333bdd9e9abf350523ad239c4a2d8"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="b2baaae2711d098c06423858662e29a8375fe6b8"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="c3b3cd6efd300cd2f9ef0e952d2ebd5077bb17af"/>
