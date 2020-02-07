@@ -26,7 +26,7 @@ DISPLAY_USAGE=0
 SIGN_SPL=0
 SIGN_M4APP=0
 
-function parse_args()
+parse_args()
 {
     while [ ${#} -gt 0 ]
     do
@@ -79,7 +79,7 @@ function parse_args()
 
 parse_args "$@"
 
-if [ "${DISPLAY_USAGE}" == "1" ]; then
+if [ "${DISPLAY_USAGE}" = "1" ]; then
     echo "usage for: ${0}"
     echo "  --cst: set cst binary path/filename   [default: ${CST_BINARY}]"
     echo "  --csf-template: set CSF template file [default: ${CSF_TEMPLATE}]"
@@ -95,12 +95,12 @@ if [ -z "${WORK_FILE}" ]; then
     echo 1
 fi
 
-if [ "${SIGN_M4APP}" == "1" ] && [ "${DCD_CLEAR}" == "1" ]; then
+if [ "${SIGN_M4APP}" = "1" ] && [ "${DCD_CLEAR}" = "1" ]; then
     echo "ERROR: --fix-sdp-dcd is incompatible with --m4app"
     echo 1
 fi
 
-if [ "${DCD_CLEAR}" == "1" ]; then
+if [ "${DCD_CLEAR}" = "1" ]; then
     FIX_SDP_DCD="yes"
 else
     FIX_SDP_DCD="no"
@@ -113,7 +113,7 @@ echo "CST BINARY    : ${CST_BINARY}"
 echo "CSF TEMPLATE  : ${CSF_TEMPLATE}"
 echo "BINARY FILE   : ${WORK_FILE}"
 echo "KEYS DIRECTORY: ${KEY_DIR}"
-if [ "${SIGN_SPL}" == "1" ]; then
+if [ "${SIGN_SPL}" = "1" ]; then
     echo "FIX-SDP-DCD   : ${FIX_SDP_DCD}"
 fi
 echo ""
@@ -125,14 +125,14 @@ sed "s/@@KEY_ROOT@@/${KEY_DIR}/g" ${CSF_TEMPLATE} > ${CSF_TEMPLATE}.csf-config
 cp ${WORK_FILE} ${WORK_FILE}.mod
 
 # for M4 application: pad binary to 0x1000 alignment
-if [ "${SIGN_M4APP}" == "1" ]; then
+if [ "${SIGN_M4APP}" = "1" ]; then
     BINARY_LEN=$(od -An -t x4 -j 0x1024 -N 0x4 ${WORK_FILE}.mod | cut -d' ' -f2)
     BINARY_LEN=$(printf "%08x" $(((0x${BINARY_LEN} / 0x1000 + 1) * 0x1000)))
     objcopy -I binary -O binary --pad-to 0x${BINARY_LEN} --gap-fill=0x5A ${WORK_FILE}.mod ${WORK_FILE}.mod
 fi
 
 # DCD address must be cleared for signature, as SDP will clear it.
-if [ "${DCD_CLEAR}" == "1" ]; then
+if [ "${DCD_CLEAR}" = "1" ]; then
     # generate a NULL address for the DCD
     dd if=/dev/zero of=zero.bin bs=1 count=4
     # replace the DCD address with the NULL address
@@ -155,7 +155,7 @@ if [ "${DCD_CLEAR}" == "1" ]; then
 fi
 
 # get HAB block info using od
-if [ "${SIGN_M4APP}" == "1" ]; then
+if [ "${SIGN_M4APP}" = "1" ]; then
 	HAB_IVT_SELF=$(od -An -t x4 -j 0x1014 -N 0x4 ${WORK_FILE}.mod | cut -d' ' -f2)
 else
 	HAB_IVT_SELF=$(od -An -t x4 -j 0x14 -N 0x4 ${WORK_FILE}.mod | cut -d' ' -f2)
@@ -166,14 +166,14 @@ HAB_LEN=$(printf "0x%08x" `stat -c "%s" ${WORK_FILE}.mod`)
 
 # insert CSF offset into m4app binary (as it isn't set by default)
 # adjust boot data size to include CSF
-if [ "${SIGN_M4APP}" == "1" ]; then
+if [ "${SIGN_M4APP}" = "1" ]; then
     # remove header from HAB length
     HAB_LEN=$(printf "0x%08x" $((${HAB_LEN} - 0x1000)))
     # insert CSF offset
     HAB_CSF_OFFSET=$(printf "%08x" $((0x${HAB_IVT_SELF} + ${HAB_LEN})))
     # generate binary in bigendian
     HAB_CSF_OFFSET_BIN=$(echo $HAB_CSF_OFFSET | awk '{print "\\x"substr($0,7,2)"\\x"substr($0,5,2)"\\x"substr($0,3,2)"\\x"substr($0,1,2)}')
-    echo -n -e ${HAB_CSF_OFFSET_BIN} > ${WORK_FILE}.csf_offset
+    printf ${HAB_CSF_OFFSET_BIN} > ${WORK_FILE}.csf_offset
     # write the CSF_OFFSET to binary @ 0x1018
     dd if=${WORK_FILE}.csf_offset of=${WORK_FILE}.mod seek=4120 bs=1 conv=notrunc
     rm ${WORK_FILE}.csf_offset
@@ -182,17 +182,19 @@ if [ "${SIGN_M4APP}" == "1" ]; then
     BOOT_DATA_SIZE=$(printf "%08x" $((${HAB_LEN} + 0x2000)))
     # generate binary in bigendian
     BOOT_DATA_SIZE_BIN=$(echo $BOOT_DATA_SIZE | awk '{print "\\x"substr($0,7,2)"\\x"substr($0,5,2)"\\x"substr($0,3,2)"\\x"substr($0,1,2)}')
-    echo -n -e ${BOOT_DATA_SIZE_BIN} > ${WORK_FILE}.boot_data
+    printf ${BOOT_DATA_SIZE_BIN} > ${WORK_FILE}.boot_data
     # write the modified boot_data size to binary @ 0x1024
     dd if=${WORK_FILE}.boot_data of=${WORK_FILE}.mod seek=4132 bs=1 conv=notrunc
     rm ${WORK_FILE}.boot_data
 fi
 
 # generate HAB block information
-if [ "${SIGN_M4APP}" == "1" ]; then
-HAB_BLOCKS="0x${HAB_IVT_SELF} 0x00001000 ${BINARY_LEN}"
+if [ "${SIGN_M4APP}" = "1" ]; then
+    # adjust signed length for the offset
+    BINARY_LEN=$(printf "0x%08x" $((0x${BINARY_LEN} - 0x1000)))
+    HAB_BLOCKS="0x${HAB_IVT_SELF} 0x00001000 ${BINARY_LEN}"
 else
-HAB_BLOCKS="0x${HAB_IVT_SELF} 0x00000000 ${HAB_LEN}"
+    HAB_BLOCKS="0x${HAB_IVT_SELF} 0x00000000 ${HAB_LEN}"
 fi
 echo "FOUND HAB Blocks ${HAB_BLOCKS}"
 
@@ -206,7 +208,7 @@ echo "Blocks = ${HAB_BLOCKS} \"${WORK_FILE}.mod\"" >> ${CSF_TEMPLATE}.csf-config
 ${CST_BINARY} --o ${WORK_FILE}_csf.bin --i ${CSF_TEMPLATE}.csf-config
 
 # for m4app binary combine padded .mod file w/ CSF offset written
-if [ "${SIGN_M4APP}" == "1" ]; then
+if [ "${SIGN_M4APP}" = "1" ]; then
     cat ${WORK_FILE}.mod ${WORK_FILE}_csf.bin > ${WORK_FILE}.signed
 else
     cat ${WORK_FILE} ${WORK_FILE}_csf.bin > ${WORK_FILE}.signed
