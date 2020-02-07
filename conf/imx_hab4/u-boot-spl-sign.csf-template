@@ -1,6 +1,5 @@
 [Header]
 Version = 4.1
-Security Configuration = Open
 Hash Algorithm = sha256
 Engine Configuration = 0
 Certificate Format = X509
