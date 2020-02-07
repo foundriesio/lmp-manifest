@@ -13,16 +13,19 @@ latest=${1}
 # break on errors
 set -e
 
-function abort_merge {
+abort_merge()
+{
     errno=${1}
     git merge --abort || true
-    echo -e "\nUnable to perform automatic update.  Restoring previous state."
+    echo ""
+    echo "Unable to perform automatic update.  Restoring previous state."
 
     if [ "${errno}" != "128" ]; then
-        echo -e "\nOne of these last few commits is probably causing a conflict:"
+        echo ""
+        echo "One of these last few commits is probably causing a conflict:"
         git log --no-merges --max-count=10 --format=oneline FETCH_HEAD..HEAD
     fi
-    exit -1
+    exit 1
 }
 
 # get current branch
@@ -33,12 +36,13 @@ remote_branch=$(git config --get branch.${local_branch}.merge || true)
 if [ -z "${remote_branch}" ]; then
     # if local_branch is "default" and pwd is a repo checkout:
     # the remote branch can default to master, otherwise abort
-    if [ "${local_branch}" == "default" ] && [[ "$(pwd)" == *.repo/manifests*  ]]; then
+    local_dir=$(pwd)
+    if [ "${local_branch}" = "default" ] && [ -z "${local_dir##*".repo/manifests"*}" ]; then
         remote_branch="refs/heads/master"
     else
-        echo -e "fatal: The current branch has no upstream branch.\nTo set the upstream tracking branch, use"
-        echo -e "git branch -u <remote>/<branch>"
-        exit -1
+        echo "fatal: The current branch has no upstream branch."
+        echo "To set the upstream tracking branch, use: git branch -u <remote>/<branch>"
+        exit 1
     fi
 fi
 
@@ -55,19 +59,21 @@ fi
 errno=0
 git merge-base --is-ancestor ${latest} HEAD || errno=$?
 # found tag as ancestor, no updates
-if [ "${errno}" == "0" ]; then
+if [ "${errno}" -eq 0 ]; then
     echo "No new releases found upstream"
     exit 0
 # unhandled error (invalid object name)
 elif [ "${errno}" -gt 1 ]; then
-    exit -1
+    exit 1
 fi
 
-echo -e "New upstream release(s) have been found.\nMerging local code with upstream release: ${latest}"
+echo "New upstream release(s) have been found."
+echo "Merging local code with upstream release: ${latest}"
 
 # merge to the last upstream tag
 git merge --no-edit -m "update-manifest: merge LmP ${latest}" ${latest} || abort_merge $?
 
-echo -e "\nAutomatic update successful!"
+echo ""
+echo "Automatic update successful!"
 
 git push origin HEAD:${remote_branch} && git push --tags origin
