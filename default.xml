@@ -15,7 +15,7 @@
   <project name="meta-riscv" path="layers/meta-riscv" revision="0d5a7c956fcc2ccd56d477ea546b272af4db4c37"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="174c9bacc4af9873bfbecf618e331c6d464540bf"/>
   <project name="meta-updater" path="layers/meta-updater" revision="88e00ad4e16c5a5ed78026557ded2f9e86aa688a"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="f4262ab75d36a06c528cc1630b48b817fb0acf8f"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="3ab5647d7cfa9d46a155be80934e0bc8a44dbf4b"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="1fd5a106ed22e1c932ec25b5bbd977440cdb2232">
     <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
   </project>
