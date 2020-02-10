@@ -10,11 +10,11 @@ ARG DEV_USER_NAME=Builder
 ARG DEV_USER=builder
 ARG DEV_USER_PASSWD=builder
 
-# OSF PPA for additional dependencies and newer packages
+# FIO PPA for additional dependencies and newer packages
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 	   software-properties-common \
-	&& add-apt-repository ppa:osf-maintainers/ppa \
+	&& add-apt-repository ppa:fio-maintainers/ppa \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
