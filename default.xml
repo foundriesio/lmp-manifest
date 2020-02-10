@@ -6,6 +6,9 @@
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
   <project name="bitbake" revision="8569ccb5e9fbdeaaf96b78bd02a263b26de54059"/>
+  <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
+    <linkfile dest="setup-environment" src="setup-environment"/>
+  </project>
   <project name="meta-freescale" path="layers/meta-freescale" revision="610f109acc264d5b0bd79aefcfa61b72456da90a"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="aea3771baa77e74762358ceb673d407e36637e5f"/>
   <project name="meta-intel" path="layers/meta-intel" revision="b04e1edb9300a57e200a187a3255f67b50519202"/>
@@ -16,8 +19,6 @@
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="174c9bacc4af9873bfbecf618e331c6d464540bf"/>
   <project name="meta-updater" path="layers/meta-updater" revision="88e00ad4e16c5a5ed78026557ded2f9e86aa688a"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="3ab5647d7cfa9d46a155be80934e0bc8a44dbf4b"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="f9fe37c5dca3e3fd384b70d2f5e7a890271d8d70">
-    <linkfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
-  </project>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="f9fe37c5dca3e3fd384b70d2f5e7a890271d8d70"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="832588c287d47604d8f717adfed6cc2ecd8c755e"/>
 </manifest>
