@@ -49,6 +49,9 @@ meta-updater:
 meta-selinux:
   url: "https://git.yoctoproject.org/git/meta-selinux.git"
 
+meta-security:
+  url: "https://git.yoctoproject.org/git/meta-security.git"
+
 # These are repositories needed to produce the OTA community edition server/client
 ota-community-edition:
   url: "https://github.com/advancedtelematic/ota-community-edition"
