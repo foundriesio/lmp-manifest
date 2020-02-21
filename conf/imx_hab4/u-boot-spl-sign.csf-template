@@ -15,10 +15,13 @@ File = "@@KEY_ROOT@@/CSF_1_crt.pem"
 
 [Authenticate CSF]
 
+[Unlock]
+Engine = CAAM
+Features = MID, RNG
+
 [Install Key]
 # Key slot index used to authenticate the key to be installed
 Verification index = 0
 # Key to install
 Target index = 2
 File = "@@KEY_ROOT@@/IMG_1_crt.pem"
-
