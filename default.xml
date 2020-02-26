@@ -20,6 +20,6 @@
   <project name="meta-security" path="layers/meta-security" revision="0d8cee5029bcb47c3f72e059a3cca3a342857c99"/>
   <project name="meta-updater" path="layers/meta-updater" revision="9ac941e5536bbaf30436826983fca579c2df2ef5"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="b10bc80808a72195b894f5f6e69bbc3ffddc42d2"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="aa691d49ceb6700eb1881b789fe34f8369bcb0ef"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="4d8122bca9e5a8788521537610411fe59b1ba8a6"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="23ad05b98a2e1ced47aac3b1d7689c7146ff8c91"/>
 </manifest>
