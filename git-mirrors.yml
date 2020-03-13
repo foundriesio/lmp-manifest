@@ -52,6 +52,12 @@ meta-selinux:
 meta-security:
   url: "https://git.yoctoproject.org/git/meta-security.git"
 
+meta-toradex-bsp-common:
+  url: "https://git.toradex.com/meta-toradex-bsp-common.git"
+
+meta-toradex-nxp:
+  url: "https://git.toradex.com/meta-toradex-nxp.git"
+
 # These are repositories needed to produce the OTA community edition server/client
 ota-community-edition:
   url: "https://github.com/advancedtelematic/ota-community-edition"
