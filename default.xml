@@ -18,6 +18,8 @@
   <project name="meta-riscv" path="layers/meta-riscv" revision="0cc3fb1439892c69cc1ee253b828f7e13d5569d9"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="d70fb882a32df439319c25a0220219e14d5e1038"/>
   <project name="meta-security" path="layers/meta-security" revision="0d8cee5029bcb47c3f72e059a3cca3a342857c99"/>
+  <project name="meta-toradex-bsp-common" path="layers/meta-toradex-bsp-common" revision="319f84b395d5b129c7dca90554746589d2bb9f52"/>
+  <project name="meta-toradex-nxp" path="layers/meta-toradex-nxp" revision="d41445c7815ccecda7edd6e5660581133c83c2a7"/>
   <project name="meta-updater" path="layers/meta-updater" revision="9ac941e5536bbaf30436826983fca579c2df2ef5"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="b10bc80808a72195b894f5f6e69bbc3ffddc42d2"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="4d8122bca9e5a8788521537610411fe59b1ba8a6"/>
