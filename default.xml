@@ -21,7 +21,7 @@
   <project name="meta-toradex-bsp-common" path="layers/meta-toradex-bsp-common" revision="319f84b395d5b129c7dca90554746589d2bb9f52"/>
   <project name="meta-toradex-nxp" path="layers/meta-toradex-nxp" revision="d41445c7815ccecda7edd6e5660581133c83c2a7"/>
   <project name="meta-updater" path="layers/meta-updater" revision="9ac941e5536bbaf30436826983fca579c2df2ef5"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="db8e3306dbce7df2a2b8a5a1ff590568442b409d"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="540afb9d9d32d7d8678095cbbe9c10468923f638"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="4d8122bca9e5a8788521537610411fe59b1ba8a6"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="23ad05b98a2e1ced47aac3b1d7689c7146ff8c91"/>
 </manifest>
