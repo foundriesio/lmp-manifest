@@ -172,8 +172,11 @@ if [ "${SIGN_M4APP}" = "1" ]; then
     # insert CSF offset
     HAB_CSF_OFFSET=$(printf "%08x" $((0x${HAB_IVT_SELF} + ${HAB_LEN})))
     # generate binary in bigendian
-    HAB_CSF_OFFSET_BIN=$(echo $HAB_CSF_OFFSET | awk '{print "\\x"substr($0,7,2)"\\x"substr($0,5,2)"\\x"substr($0,3,2)"\\x"substr($0,1,2)}')
-    printf ${HAB_CSF_OFFSET_BIN} > ${WORK_FILE}.csf_offset
+    HAB_CSF_OFFSET_OCT_1=$(printf "%o" $(echo "$HAB_CSF_OFFSET" | awk '{print "0x"substr($0,7,2)}'))
+    HAB_CSF_OFFSET_OCT_2=$(printf "%o" $(echo "$HAB_CSF_OFFSET" | awk '{print "0x"substr($0,5,2)}'))
+    HAB_CSF_OFFSET_OCT_3=$(printf "%o" $(echo "$HAB_CSF_OFFSET" | awk '{print "0x"substr($0,3,2)}'))
+    HAB_CSF_OFFSET_OCT_4=$(printf "%o" $(echo "$HAB_CSF_OFFSET" | awk '{print "0x"substr($0,1,2)}'))
+    printf "\\${HAB_CSF_OFFSET_OCT_1}\\${HAB_CSF_OFFSET_OCT_2}\\${HAB_CSF_OFFSET_OCT_3}\\${HAB_CSF_OFFSET_OCT_4}" > ${WORK_FILE}.csf_offset
     # write the CSF_OFFSET to binary @ 0x1018
     dd if=${WORK_FILE}.csf_offset of=${WORK_FILE}.mod seek=4120 bs=1 conv=notrunc
     rm ${WORK_FILE}.csf_offset
@@ -181,8 +184,11 @@ if [ "${SIGN_M4APP}" = "1" ]; then
     # increase boot data size to include csf
     BOOT_DATA_SIZE=$(printf "%08x" $((${HAB_LEN} + 0x2000)))
     # generate binary in bigendian
-    BOOT_DATA_SIZE_BIN=$(echo $BOOT_DATA_SIZE | awk '{print "\\x"substr($0,7,2)"\\x"substr($0,5,2)"\\x"substr($0,3,2)"\\x"substr($0,1,2)}')
-    printf ${BOOT_DATA_SIZE_BIN} > ${WORK_FILE}.boot_data
+    BOOT_DATA_SIZE_OCT_1=$(printf "%o" $(echo "$BOOT_DATA_SIZE" | awk '{print "0x"substr($0,7,2)}'))
+    BOOT_DATA_SIZE_OCT_2=$(printf "%o" $(echo "$BOOT_DATA_SIZE" | awk '{print "0x"substr($0,5,2)}'))
+    BOOT_DATA_SIZE_OCT_3=$(printf "%o" $(echo "$BOOT_DATA_SIZE" | awk '{print "0x"substr($0,3,2)}'))
+    BOOT_DATA_SIZE_OCT_4=$(printf "%o" $(echo "$BOOT_DATA_SIZE" | awk '{print "0x"substr($0,1,2)}'))
+    printf "\\${BOOT_DATA_SIZE_OCT_1}\\${BOOT_DATA_SIZE_OCT_2}\\${BOOT_DATA_SIZE_OCT_3}\\${BOOT_DATA_SIZE_OCT_4}" > ${WORK_FILE}.boot_data
     # write the modified boot_data size to binary @ 0x1024
     dd if=${WORK_FILE}.boot_data of=${WORK_FILE}.mod seek=4132 bs=1 conv=notrunc
     rm ${WORK_FILE}.boot_data
