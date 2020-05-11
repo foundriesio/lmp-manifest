@@ -68,14 +68,22 @@ Setup Environment
 -----------------
 
 Supported **MACHINE** targets (officially tested by FIO):
+* a5ds
+* apalis-imx6
+* apalis-imx8
 * beaglebone-yocto
-* cl-som-imx7
-* colibri-imx7
+* colibri-imx7-emmc
+* corstone700
 * cubox-i
 * freedom-u540
+* imx6ullevk
+* imx8mmevk
 * intel-corei7-64
+* qemuarm64
 * qemuriscv64
 * raspberrypi3-64
+* raspberrypi4-64
+* stm32mp1-disco
 
 Supported image targets:
 * lmp-mini-image
