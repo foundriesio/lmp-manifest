@@ -29,7 +29,7 @@ abort_merge()
 }
 
 # get current branch
-local_branch=$(git branch --show-current)
+local_branch=$(git rev-parse --abbrev-ref HEAD)
 
 # look for a remote tracking branch
 remote_branch=$(git config --get branch.${local_branch}.merge || true)
