@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 # bitbake requires a utf8 filesystem encoding
 ENV LANG en_US.UTF-8
@@ -20,11 +20,11 @@ RUN apt-get update \
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
-		android-tools-fsutils ca-certificates chrpath cpio diffstat \
-		file gawk g++ iproute2 iputils-ping less libmagickwand-dev \
+		android-sdk-libsparse-utils android-sdk-ext4-utils ca-certificates \
+		chrpath cpio diffstat file gawk g++ iproute2 iputils-ping less libmagickwand-dev \
 		libmath-prime-util-perl libsdl1.2-dev libssl-dev locales \
-		openjdk-11-jre openssh-client perl-modules python2.7 python-requests python3 \
-		repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs \
+		openjdk-11-jre openssh-client perl-modules python3 python3-requests \
+		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev \
 	&& apt-get autoremove -y \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
