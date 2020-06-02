@@ -9,7 +9,7 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-freescale" path="layers/meta-freescale" revision="41c93da5a6998328e8aa1670c9e76b146d959b2d"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="507c9025f8f906c0b7d3db55286409284933e223"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="d6effb049b6f635dd6307d0d0f3cc578d076d7de"/>
   <project name="meta-intel" path="layers/meta-intel" revision="c9662bdc0093be03c70e69afa8d2ac12bf6c27bb"/>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="510abc05b8a22ebcea6a3a47189b92619c3c5b67"/>
