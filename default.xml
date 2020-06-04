@@ -12,7 +12,7 @@
   <project name="meta-freescale" path="layers/meta-freescale" revision="507c9025f8f906c0b7d3db55286409284933e223"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="32b1269f5f0e2c4de68ac0aa750514ff638aa42c"/>
   <project name="meta-intel" path="layers/meta-intel" revision="37bf23766d41810f0eb86b4cbe3d5f2c900bb53c"/>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="def4ba7def0d87c60e3a63881d23a546bacbd3a1"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="d22b4f65839b404c48f072d7f5ea4eded0810eaa"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="e413c1ef621688e69bb7830bb3151ed23b30b73e"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="8066fac91d4167504147886fe0caf429e7271466"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="5cc6fe363256120fe5e7ed4170147ebac187c9c8"/>
