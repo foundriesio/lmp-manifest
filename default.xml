@@ -23,5 +23,5 @@
   <project name="meta-updater" path="layers/meta-updater" revision="62fbb2b1ba053635f154e5a041eb4c797f501514"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="5c2de3daedd3f65171b9debf938683ce6e7746ea"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="9d7966cf2fb33d827c999fbb88872d8437d8f0c7"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="c88cf750f26f6786d6ba5b4f1f7e5d4f0c800e6e"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="d9de155f6452f916edd3131addd0c2eebaf4d639"/>
 </manifest>
