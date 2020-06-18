@@ -17,7 +17,7 @@
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="ac717473e89b835da2eb418b0507644d71aa61c2"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="5cc6fe363256120fe5e7ed4170147ebac187c9c8"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="91dd94630dad98389bfe4e15207e771754bde75c"/>
-  <project name="meta-security" path="layers/meta-security" revision="95fe86eb98bc401dae8183326048f50ce7985bda"/>
+  <project name="meta-security" path="layers/meta-security" revision="d83f7cb0c90666fedd127d5173e6c8b972755c32"/>
   <project name="meta-toradex-bsp-common" path="layers/meta-toradex-bsp-common" revision="c61542ba4b1cf250459cc2e68e8739902492c613"/>
   <project name="meta-toradex-nxp" path="layers/meta-toradex-nxp" revision="77838d06a7e27b9cc0d9d572d0924a562a634862"/>
   <project name="meta-updater" path="layers/meta-updater" revision="62fbb2b1ba053635f154e5a041eb4c797f501514"/>
