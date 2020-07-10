@@ -10,7 +10,7 @@
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
   <project name="meta-freescale" path="layers/meta-freescale" revision="901b192ff8652236607f423386aee496e3ae2730"/>
-  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="f57de4d2d9b9cd342e0d01fd1b15be3e842ccd34"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="340a581013eb136ba44a0857fe55ca44e4917ca8"/>
   <project name="meta-intel" path="layers/meta-intel" revision="b940cd9d23ae21ddc0d68882ffbbd4d0dc29d5a5"/>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="76ac1cb6356bdb7e4463aa5308d0e951c29adbad"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="ed2e3e44fd3bb739d30583ee968232dccf0a1217"/>
