@@ -16,7 +16,7 @@
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="ed2e3e44fd3bb739d30583ee968232dccf0a1217"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="64bd47fe588e1684b1ec49fa01d1e1176d93d697"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="6f495435ed9269030e16b9051b9012ce42038c04"/>
-  <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="91dd94630dad98389bfe4e15207e771754bde75c"/>
+  <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="7b556aa2265cfc41e6e5fda7085619436fe9a385"/>
   <project name="meta-security" path="layers/meta-security" revision="95fe86eb98bc401dae8183326048f50ce7985bda"/>
   <project name="meta-toradex-bsp-common" path="layers/meta-toradex-bsp-common" revision="c61542ba4b1cf250459cc2e68e8739902492c613"/>
   <project name="meta-toradex-nxp" path="layers/meta-toradex-nxp" revision="77838d06a7e27b9cc0d9d572d0924a562a634862"/>
