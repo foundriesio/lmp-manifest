@@ -15,7 +15,7 @@
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="13d1c1c423489a3939404d3e0bbd9be0933edbf4"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="76b83194b31ca57790fdffb43c81c8cb0131f527"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="64bd47fe588e1684b1ec49fa01d1e1176d93d697"/>
-  <project name="meta-riscv" path="layers/meta-riscv" revision="d067333e5b4204a55935cbb780dd44121269e438"/>
+  <project name="meta-riscv" path="layers/meta-riscv" revision="4354bf2888149a3641ef2eeb05a73918616e154b"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="7b556aa2265cfc41e6e5fda7085619436fe9a385"/>
   <project name="meta-security" path="layers/meta-security" revision="98ff502d4096331e2b8a8e4044860b23bf6f8ea5"/>
   <project name="meta-toradex-bsp-common" path="layers/meta-toradex-bsp-common" revision="76e40e33856c0b8f187aaba3f2b42a23eb62d2b8"/>
