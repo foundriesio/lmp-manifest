@@ -11,8 +11,6 @@ BSPLAYERS = " \
   ${OEROOT}/layers/meta-rtlwifi \
   ${OEROOT}/layers/meta-intel \
   ${OEROOT}/layers/meta-yocto/meta-yocto-bsp \
-  ${OEROOT}/layers/meta-toradex-bsp-common \
-  ${OEROOT}/layers/meta-toradex-nxp \
   ${OEROOT}/layers/meta-lmp/meta-lmp-bsp \
 "
 
