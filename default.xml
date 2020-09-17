@@ -10,7 +10,7 @@
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
   <project name="meta-arm" path="layers/meta-arm" revision="553654ece79f3187aa4ff6749276035e43207e3d"/>
-  <project name="meta-freescale" path="layers/meta-freescale" remote="fio" revision="9de9ef9a82da7b9dcfa1a85c949477677dba2794"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="98eb5673ba2ae2b6cb91dd760511e3bcaae11c1d"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="c15c74ad1c973724e6b83b2c1ad862c7caf9ed32"/>
   <project name="meta-intel" path="layers/meta-intel" revision="9e9b9fd332ab259db05578b0ae36b28a2fd8bd92"/>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="dfdb62ddfe55c7e04e3827a6767499caf7500dc5"/>
