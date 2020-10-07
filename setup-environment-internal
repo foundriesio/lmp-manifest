@@ -291,16 +291,17 @@ For more information about Linux microPlatform see:
 For more information about OpenEmbedded see their website:
     http://www.openembedded.org/
 
-Your build environemnt has been configured with:
+Your build environment has been configured with:
 
     MACHINE = ${MACHINE}
-    SDKMACHINE = ${SDKMACHINE}
     DISTRO = ${DISTRO}
 
 You can now run 'bitbake <target>'
 
 Some common targets are:
-    lmp-mini-image
-    lmp-gateway-image
+    lmp-mini-image          - minimal OSTree + OTA capable image
+    lmp-base-console-image  - mini-image + Docker container runtime
+    lmp-gateway-image       - base-console-image + edge gateway related utilities
+    lmp-factory-image       - default (and only available) at FoundriesFactory
 
 EOF
