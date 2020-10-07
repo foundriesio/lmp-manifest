@@ -25,7 +25,7 @@ RUN apt-get update \
 		libmath-prime-util-perl libsdl1.2-dev libssl-dev locales \
 		openjdk-11-jre openssh-client perl-modules python3 python3-requests \
 		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs \
-		socket corkscrew curl xz-utils \
+		socket corkscrew curl xz-utils tcl libtinfo5 device-tree-compiler \
 	&& apt-get autoremove -y \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
