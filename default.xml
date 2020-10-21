@@ -20,7 +20,7 @@
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="ae22ff34ab50321977b8c6e646ef25b93b8a079f"/>
   <project name="meta-security" path="layers/meta-security" revision="ab56b1df52c5b28680656fc00bfe143a7e069097"/>
   <project name="meta-updater" path="layers/meta-updater" revision="d73639e72b336341e7014614c4e556f3ba520d25"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="d898bd1ca5de7e7084f3473106300b9ffef06761"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="7a8167fa82621dd606260450b1e648e50a1d79ab"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="c601f5bd5ddfe8e8be709a4541b95c772a0d3b6f"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="ea5128fde10eb9be7fefbbb87ae6181edd2bcdff"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" revision="fa72812585023bba487502d89b16656246ce6086"/>
