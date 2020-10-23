@@ -19,6 +19,7 @@
   <project name="meta-riscv" path="layers/meta-riscv" revision="d9b156970327c405ee380baf20af01a53b334401"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="ae22ff34ab50321977b8c6e646ef25b93b8a079f"/>
   <project name="meta-security" path="layers/meta-security" revision="ab56b1df52c5b28680656fc00bfe143a7e069097"/>
+  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="7a1ab80ccb655e9cd28c9ea8a4a83fca48c48b11"/>
   <project name="meta-updater" path="layers/meta-updater" revision="d73639e72b336341e7014614c4e556f3ba520d25"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="7a8167fa82621dd606260450b1e648e50a1d79ab"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="c601f5bd5ddfe8e8be709a4541b95c772a0d3b6f"/>
