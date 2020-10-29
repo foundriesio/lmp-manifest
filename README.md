@@ -73,21 +73,27 @@ Supported **MACHINE** targets (officially tested by FIO):
 * apalis-imx8
 * beaglebone-yocto
 * colibri-imx7-emmc
-* corstone700
+* corstone700-fvp
+* corstone700-mps3
 * cubox-i
 * freedom-u540
 * imx6ullevk
+* imx7ulpea-ucom
 * imx8mmevk
 * intel-corei7-64
+* qemuarm
 * qemuarm64
 * qemuriscv64
 * raspberrypi3-64
 * raspberrypi4-64
 * stm32mp1-disco
+* uz3eg-iocc
 
 Supported image targets:
-* lmp-mini-image
-* lmp-gateway-image
+* lmp-mini-image          - minimal OSTree + OTA capable image
+* lmp-base-console-image  - mini-image + Docker container runtime
+* lmp-gateway-image       - base-console-image + edge gateway related utilities
+* lmp-factory-image       - default (and only available) at FoundriesFactory
 
 The default distribution (DISTRO) variable is automatically set to `lmp`,
 which is provided by the `meta-lmp` layer.
@@ -101,10 +107,10 @@ Setup the work environment by using the `setup-environment` script:
 If **MACHINE** is not provided, the script will list all possible machines and
 force one to be selected.
 
-To build the Linux microPlatform gateway image:
+To build the Linux microPlatform base console image:
 
 ```
-bitbake lmp-gateway-image
+bitbake lmp-base-console-image
 ```
 
 Issues and Support
