@@ -75,7 +75,6 @@ Supported **MACHINE** targets (officially tested by FIO):
 * colibri-imx7-emmc
 * corstone700-fvp
 * corstone700-mps3
-* cubox-i
 * freedom-u540
 * imx6ullevk
 * imx7ulpea-ucom
