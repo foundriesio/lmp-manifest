@@ -21,7 +21,7 @@
   <project name="meta-security" path="layers/meta-security" revision="ab56b1df52c5b28680656fc00bfe143a7e069097"/>
   <project name="meta-updater" path="layers/meta-updater" revision="d73639e72b336341e7014614c4e556f3ba520d25"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="7a8167fa82621dd606260450b1e648e50a1d79ab"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="c601f5bd5ddfe8e8be709a4541b95c772a0d3b6f"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="269f81c2b2ac64219c65953bc56bd41317a8db0f"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="b1eb390bbcb995c0da70478e17f9170721c75341"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" revision="fa72812585023bba487502d89b16656246ce6086"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="d7b24fdfaa7627b90bf8e94eddd00f2a74cb585a"/>
