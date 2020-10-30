@@ -24,5 +24,5 @@
   <project name="meta-yocto" path="layers/meta-yocto" revision="269f81c2b2ac64219c65953bc56bd41317a8db0f"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="b1eb390bbcb995c0da70478e17f9170721c75341"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" revision="faebb5c98aed8a1ad10b598858073ece6c7f7cdc"/>
-  <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="d7b24fdfaa7627b90bf8e94eddd00f2a74cb585a"/>
+  <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="01dafcfbb1afa9a87a7d10310dfe959153069b85"/>
 </manifest>
