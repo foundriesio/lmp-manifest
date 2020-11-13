@@ -171,6 +171,11 @@ if [ ! -e "conf/imx_hab4" ]; then
     ln -sf "${MANIFESTS}"/conf/imx_hab4 conf/keys/imx_hab4
 fi
 ln -sf "${MANIFESTS}"/conf/bblayers.conf conf/bblayers.conf
+ln -sf "${MANIFESTS}"/conf/bblayers-base.inc conf/bblayers-base.inc
+ln -sf "${MANIFESTS}"/conf/bblayers-bsp.inc conf/bblayers-bsp.inc
+if [ -f "${MANIFESTS}"/conf/bblayers-factory.inc ]; then
+    ln -sf "${MANIFESTS}"/conf/bblayers-factory.inc conf/bblayers-factory.inc
+fi
 ln -sf "${MANIFESTS}"/README.md README.md
 
 ln -sf "${MANIFESTS}" "${OEROOT}"/layers/
