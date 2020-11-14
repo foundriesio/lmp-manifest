@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors"/>
+
+  <default remote="lmp-mirrors" revision="master" sync-j="4"/>
+
+  <project name="meta-arm" path="layers/meta-arm" revision="45d7cf50a41dd5d806a3d00ed9d1b1ded21a1755"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="3ca9a41ee610bceb5f4d3025a2a4c799b8576db4"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="b85d08a55cb833bfc4e8b5034ff804286c67620e"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="8089e92d77bc11051463580eb0b0687e768bc8d2"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="09a3c11696c75593f8e475da5dfb401016c6aaca"/>
+  <project name="meta-riscv" path="layers/meta-riscv" revision="9a75ffbb21ebee61782576d524a454d04a9f91e2"/>
+  <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="ccf8cdc0e2282cf3989d35504989dc404bbe1370"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="269f81c2b2ac64219c65953bc56bd41317a8db0f"/>
+  <project name="meta-xilinx" path="layers/meta-xilinx" revision="faebb5c98aed8a1ad10b598858073ece6c7f7cdc"/>
+  <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="01dafcfbb1afa9a87a7d10310dfe959153069b85"/>
+</manifest>
