@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/foundriesio" name="fio"/>
+  <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors"/>
+
+  <default remote="lmp-mirrors" revision="master" sync-j="4"/>
+
+  <project name="bitbake" revision="fec2b85689bba1d26ad6f376bc11cc29bb27cbe5"/>
+  <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
+    <linkfile dest="setup-environment" src="setup-environment"/>
+  </project>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="cc58a549a709d52f096a98cb6cd5c857834e4ba0"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="f1adebb07e2de0d7949f8347560feabd10d19846"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="ac4ccd2fbbb599d75ca4051911fcbaca39dbe6d7"/>
+  <project name="meta-security" path="layers/meta-security" revision="e8c9e69c80ea2c525250e07db1024d8e34f1f0f8"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="075ca14b8800dcae1c2532389e5dd219f6e7c2dd"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="74e0b8d2acc6b9bbc0345a500a700932d70772f4"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="b1eb390bbcb995c0da70478e17f9170721c75341"/>
+</manifest>
