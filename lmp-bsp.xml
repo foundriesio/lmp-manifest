@@ -12,6 +12,6 @@
   <project name="meta-riscv" path="layers/meta-riscv" revision="9a75ffbb21ebee61782576d524a454d04a9f91e2"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="ccf8cdc0e2282cf3989d35504989dc404bbe1370"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="269f81c2b2ac64219c65953bc56bd41317a8db0f"/>
-  <project name="meta-xilinx" path="layers/meta-xilinx" revision="faebb5c98aed8a1ad10b598858073ece6c7f7cdc"/>
+  <project name="meta-xilinx" path="layers/meta-xilinx" revision="c4df43e8b4b965a6deb13ed108fb6da96cdaffb4"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="01dafcfbb1afa9a87a7d10310dfe959153069b85"/>
 </manifest>
