@@ -80,6 +80,7 @@ Supported **MACHINE** targets (officially tested by FIO):
 * imx7ulpea-ucom
 * imx8mmevk
 * intel-corei7-64
+* n1sdp
 * qemuarm
 * qemuarm64
 * qemuriscv64
