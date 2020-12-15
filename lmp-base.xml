@@ -13,7 +13,7 @@
   <project name="meta-clang" path="layers/meta-clang" revision="1dfc3a905ad0fed7a3b300aa51153365f9950fe7"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="b9dcf17700014dec679307dc1247882dccd439ca"/>
   <project name="meta-security" path="layers/meta-security" revision="4583ab9b08c1c582a9d7e8ab70d6685ed4720799"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="075ca14b8800dcae1c2532389e5dd219f6e7c2dd"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="14f693fc330812c289e2be24a338426f99e2a151"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="9fe997733d9bad4ac24dfb41e91a0e06b9e82791"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="af428fa2432279d24cdf2a62f9dee91b30d46c3a"/>
 </manifest>
