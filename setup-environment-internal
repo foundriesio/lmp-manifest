@@ -167,8 +167,8 @@ if [ ! -f "conf/keys/dev.key" -a ! -f "conf/keys/dev.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/dev.crt conf/keys/dev.crt
 fi
 # Link default iMX HAB4 development keys and certificate if not set by the user
-if [ ! -e "conf/imx_hab4" ]; then
-    ln -sf "${MANIFESTS}"/conf/imx_hab4 conf/keys/imx_hab4
+if [ ! -e "conf/keys/imx_hab4" ]; then
+    ln -sf ${OEROOT}/tools/lmp-tools/security/imx_hab4 conf/keys/imx_hab4
 fi
 ln -sf "${MANIFESTS}"/conf/bblayers.conf conf/bblayers.conf
 ln -sf "${MANIFESTS}"/conf/bblayers-base.inc conf/bblayers-base.inc
