@@ -1,2 +1,0 @@
-#!/bin/sh
-hexdump -e '/4 "0x"' -e '/4 "%X""\n"' SRK_1_2_3_4_fuse.bin
