@@ -16,5 +16,6 @@ BSPLAYERS = " \
   ${OEROOT}/layers/meta-yocto/meta-yocto-bsp \
   ${OEROOT}/layers/meta-xilinx/meta-xilinx-bsp \
   ${OEROOT}/layers/meta-xilinx-tools \
+  ${OEROOT}/layers/meta-ti \
   ${OEROOT}/layers/meta-lmp/meta-lmp-bsp \
 "
