@@ -14,4 +14,5 @@
   <project name="meta-yocto" path="layers/meta-yocto" revision="ac4a956f606d9cb4e025af80e6f4dcb74cbfd941"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" revision="eb4ba06eb1bc7743dba2412b0c903ec5d5628cae"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="37e0988018e95cdcf2684a77d4e9e8cd5610ccaf"/>
+  <project name="meta-ti" path="layers/meta-ti" revision="9ad8bc7fa3828dd9a48336e6847b782ac7018cf6"/>
 </manifest>
