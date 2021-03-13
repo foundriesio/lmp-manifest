@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
@@ -8,7 +9,7 @@
   <project name="meta-freescale" path="layers/meta-freescale" revision="d05c5c6654a64188422f88cdc82b6b97610d5591"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="b6da6dd9ce80db442cbc8737641f3ee54ee98312"/>
   <project name="meta-intel" path="layers/meta-intel" revision="8e72e716c96d3480c3e1cf2096a8e64c51b9f24b"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="09a3c11696c75593f8e475da5dfb401016c6aaca"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" remote="fio" revision="b710a409e01c99c3da1d69c33e0c355999f33a97"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="b022614bc4a2ddc744ab976d87295758710382d2"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="ccf8cdc0e2282cf3989d35504989dc404bbe1370"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="ac4a956f606d9cb4e025af80e6f4dcb74cbfd941"/>
