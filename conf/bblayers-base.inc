@@ -12,4 +12,5 @@ BASELAYERS = " \
   ${OEROOT}/layers/meta-clang \
   ${OEROOT}/layers/meta-updater \
   ${OEROOT}/layers/meta-security \
+  ${OEROOT}/layers/meta-security/meta-tpm \
 "
