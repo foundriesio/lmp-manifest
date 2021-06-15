@@ -15,6 +15,7 @@ BSPLAYERS = " \
   ${OEROOT}/layers/meta-intel \
   ${OEROOT}/layers/meta-yocto/meta-yocto-bsp \
   ${OEROOT}/layers/meta-xilinx/meta-xilinx-bsp \
+  ${OEROOT}/layers/meta-xilinx/meta-xilinx-standalone \
   ${OEROOT}/layers/meta-xilinx-tools \
   ${OEROOT}/layers/meta-ti \
   ${OEROOT}/layers/meta-st-stm32mp \
