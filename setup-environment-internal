@@ -171,6 +171,11 @@ if [ ! -f "conf/keys/ubootdev.key" -a ! -f "conf/keys/ubootdev.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/ubootdev.key conf/keys/ubootdev.key
     ln -sf "${MANIFESTS}"/conf/keys/ubootdev.crt conf/keys/ubootdev.crt
 fi
+# Copy default optee development keys if not set by the user
+if [ ! -f "conf/keys/opteedev.key" -a ! -f "opteedev.crt" ]; then
+    ln -sf "${MANIFESTS}"/conf/keys/opteedev.key conf/keys/opteedev.key
+    ln -sf "${MANIFESTS}"/conf/keys/opteedev.crt conf/keys/opteedev.crt
+fi
 # Link default iMX HAB4 development keys and certificate if not set by the user
 if [ ! -e "conf/keys/imx_hab4" ]; then
     ln -sf ${OEROOT}/tools/lmp-tools/security/imx_hab4 conf/keys/imx_hab4
