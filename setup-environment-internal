@@ -166,6 +166,11 @@ if [ ! -f "conf/keys/dev.key" -a ! -f "conf/keys/dev.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/dev.key conf/keys/dev.key
     ln -sf "${MANIFESTS}"/conf/keys/dev.crt conf/keys/dev.crt
 fi
+# Copy default u-boot development keys if not set by the user
+if [ ! -f "conf/keys/ubootdev.key" -a ! -f "conf/keys/ubootdev.crt" ]; then
+    ln -sf "${MANIFESTS}"/conf/keys/ubootdev.key conf/keys/ubootdev.key
+    ln -sf "${MANIFESTS}"/conf/keys/ubootdev.crt conf/keys/ubootdev.crt
+fi
 # Link default iMX HAB4 development keys and certificate if not set by the user
 if [ ! -e "conf/keys/imx_hab4" ]; then
     ln -sf ${OEROOT}/tools/lmp-tools/security/imx_hab4 conf/keys/imx_hab4
