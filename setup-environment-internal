@@ -176,6 +176,11 @@ if [ ! -f "conf/keys/opteedev.key" -a ! -f "opteedev.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/opteedev.key conf/keys/opteedev.key
     ln -sf "${MANIFESTS}"/conf/keys/opteedev.crt conf/keys/opteedev.crt
 fi
+# Copy default module kernel development keys if not set by the user
+if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "x509_modsign.crt" ]; then
+    ln -sf "${MANIFESTS}"/conf/keys/privkey_modsign.pem conf/keys/privkey_modsign.pem
+    ln -sf "${MANIFESTS}"/conf/keys/x509_modsign.crt conf/keys/x509_modsign.crt
+fi
 # Link default iMX HAB4 development keys and certificate if not set by the user
 if [ ! -e "conf/keys/imx_hab4" ]; then
     ln -sf ${OEROOT}/tools/lmp-tools/security/imx_hab4 conf/keys/imx_hab4
