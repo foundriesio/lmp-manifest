@@ -24,7 +24,7 @@ RUN apt-get update \
 		chrpath cpio diffstat file gawk g++ iproute2 iputils-ping less libmagickwand-dev \
 		libmath-prime-util-perl libsdl1.2-dev libssl-dev locales \
 		openjdk-11-jre openssh-client perl-modules python3 python3-requests \
-		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs \
+		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs screen \
 		socket corkscrew curl xz-utils tcl libtinfo5 device-tree-compiler python3-pip python3-dev \
 	&& pip3 --no-cache-dir install jsonFormatter \
 	&& apt-get autoremove -y \
