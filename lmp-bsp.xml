@@ -8,7 +8,7 @@
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="537cb85e4db17d1f6b356a92112b32ae2e39b235"/>
   <project name="meta-intel" path="layers/meta-intel" revision="d8bf86ae6288ae520b8ddd7209a0b448b9693f48"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="bc7a06604d5232c57545bc7b2f57b9cce2699575"/>
-  <project name="meta-riscv" path="layers/meta-riscv" revision="5cc6fe363256120fe5e7ed4170147ebac187c9c8"/>
+  <project name="meta-riscv" path="layers/meta-riscv" revision="6f039004c2fa2be041c73d6ff711c86ae139faca"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="7b556aa2265cfc41e6e5fda7085619436fe9a385"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="432b365f48f58ec0d9692a93607b65edd098ca1a"/>
 </manifest>
