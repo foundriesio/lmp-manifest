@@ -172,12 +172,12 @@ if [ ! -f "conf/keys/ubootdev.key" -a ! -f "conf/keys/ubootdev.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/ubootdev.crt conf/keys/ubootdev.crt
 fi
 # Copy default optee development keys if not set by the user
-if [ ! -f "conf/keys/opteedev.key" -a ! -f "opteedev.crt" ]; then
+if [ ! -f "conf/keys/opteedev.key" -a ! -f "conf/keys/opteedev.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/opteedev.key conf/keys/opteedev.key
     ln -sf "${MANIFESTS}"/conf/keys/opteedev.crt conf/keys/opteedev.crt
 fi
 # Copy default module kernel development keys if not set by the user
-if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "x509_modsign.crt" ]; then
+if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "conf/keys/x509_modsign.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/privkey_modsign.pem conf/keys/privkey_modsign.pem
     ln -sf "${MANIFESTS}"/conf/keys/x509_modsign.crt conf/keys/x509_modsign.crt
 fi
