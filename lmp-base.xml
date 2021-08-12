@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
+  <remote fetch="https://github.com/ricardosalveti" name="rsalveti"/>
   <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
@@ -9,7 +10,7 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="23c85c11395dddf1ed975bc30aa3ad76927024d8"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="rsalveti" revision="master"/>
   <project name="meta-clang" path="layers/meta-clang" revision="b0d805060791006d651efd3d7ae3dd5add8f70fe"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="7bd7e1da9034e72ca4262dba55f70b2b23499aae"/>
   <project name="meta-rust" path="layers/meta-rust" revision="1b59fd45906082c978d0a0a6e4e51a0ea4aa32c7"/>
