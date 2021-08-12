@@ -181,6 +181,27 @@ if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "conf/keys/x509_modsign.crt" ]
     ln -sf "${MANIFESTS}"/conf/keys/privkey_modsign.pem conf/keys/privkey_modsign.pem
     ln -sf "${MANIFESTS}"/conf/keys/x509_modsign.crt conf/keys/x509_modsign.crt
 fi
+
+# Factory specific keys (unique per factory)
+if [ -d "${MANIFESTS}"/factory-keys ]; then
+    mkdir -p conf/factory-keys
+    # Copy default factory u-boot development keys if not set by the user
+    if [ ! -f "conf/factory-keys/ubootdev.key" -a ! -f "conf/factory-keys/ubootdev.crt" ]; then
+        ln -sf "${MANIFESTS}"/factory-keys/ubootdev.key conf/factory-keys/ubootdev.key
+        ln -sf "${MANIFESTS}"/factory-keys/ubootdev.crt conf/factory-keys/ubootdev.crt
+    fi
+    # Copy default factory optee development keys if not set by the user
+    if [ ! -f "conf/factory-keys/opteedev.key" -a ! -f "conf/factory-keys/opteedev.crt" ]; then
+        ln -sf "${MANIFESTS}"/factory-keys/opteedev.key conf/factory-keys/opteedev.key
+        ln -sf "${MANIFESTS}"/factory-keys/opteedev.crt conf/factory-keys/opteedev.crt
+    fi
+    # Copy default factory module kernel development keys if not set by the user
+    if [ ! -f "conf/factory-keys/privkey_modsign.pem" -a ! -f "conf/factory-keys/x509_modsign.crt" ]; then
+        ln -sf "${MANIFESTS}"/factory-keys/privkey_modsign.pem conf/factory-keys/privkey_modsign.pem
+        ln -sf "${MANIFESTS}"/factory-keys/x509_modsign.crt conf/factory-keys/x509_modsign.crt
+    fi
+fi
+
 # Link default iMX HAB4 development keys and certificate if not set by the user
 if [ ! -e "conf/keys/imx_hab4" ]; then
     ln -sf ${OEROOT}/tools/lmp-tools/security/imx_hab4 conf/keys/imx_hab4
