@@ -12,7 +12,7 @@
   <project name="meta-riscv" path="layers/meta-riscv" revision="69f38710a01fc5c8de35d69601a5d5bb1044886b"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="98b2b2c34f186050e6092bc4f17ecb69aef6148a"/>
   <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="d9834b916ebd2831b2137d4c2a25d79ac3afb0e0"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="d9c00aa32a544d515e72b4e37991cc48b9e6c144"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="aaeea8c91a51a6f65f05ffecb970358a7b2378ef"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" revision="19088ae658f668847b30efcb9e113d048973de07"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="ba75a71f64f2e31c2d585011076382683bdbba0b"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="67c02c5a94ed151c769d03904423a916ef2ba339"/>
