@@ -67,22 +67,26 @@ repo sync -j1
 Setup Environment
 -----------------
 
-Supported **MACHINE** targets (officially tested by FIO):
-* a5ds
+Supported **MACHINE** targets (officially tested by Foundries):
+* am64xx-evm
 * apalis-imx6
+* apalis-imx6-sec
 * apalis-imx8
 * beaglebone-yocto
-* colibri-imx7-emmc
-* corstone700-fvp
 * corstone700-mps3
 * freedom-u540
+* generic-arm64
 * imx6ullevk
+* imx6ullevk-sec
 * imx7ulpea-ucom
-* imx8mmevk
+* imx8mm-lpddr4-evk
+* imx8mm-lpddr4-evk-sec
+* imx8mq-evk
 * intel-corei7-64
+* jetson-agx-xavier-devkit
 * n1sdp
 * qemuarm
-* qemuarm64
+* qemuarm64-secureboot
 * qemuriscv64
 * raspberrypi3-64
 * raspberrypi4-64
