@@ -212,6 +212,9 @@ ln -sf "${MANIFESTS}"/conf/bblayers-bsp.inc conf/bblayers-bsp.inc
 if [ -f "${MANIFESTS}"/conf/bblayers-factory.inc ]; then
     ln -sf "${MANIFESTS}"/conf/bblayers-factory.inc conf/bblayers-factory.inc
 fi
+if [ -f "${MANIFESTS}"/conf/bblayers-partner.inc ]; then
+    ln -sf "${MANIFESTS}"/conf/bblayers-partner.inc conf/bblayers-partner.inc
+fi
 ln -sf "${MANIFESTS}"/README.md README.md
 
 ln -sf "${MANIFESTS}" "${OEROOT}"/layers/
