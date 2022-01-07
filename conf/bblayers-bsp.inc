@@ -20,5 +20,6 @@ BSPLAYERS = " \
   ${OEROOT}/layers/meta-ti \
   ${OEROOT}/layers/meta-st-stm32mp \
   ${OEROOT}/layers/meta-tegra \
+  ${OEROOT}/layers/meta-sunxi \
   ${OEROOT}/layers/meta-lmp/meta-lmp-bsp \
 "
