@@ -6,7 +6,7 @@
 
   <project name="meta-freescale" path="layers/meta-freescale" revision="6d2922bee372157454e422df518b6cf0bfcf6700"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="c52f64973cd4043a5e8be1c7e29bb9690eb4c3e5"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="d8bf86ae6288ae520b8ddd7209a0b448b9693f48"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="87984115eb6ed1a4c17204629dcb100f6b76fe82"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="bc7a06604d5232c57545bc7b2f57b9cce2699575"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="6f039004c2fa2be041c73d6ff711c86ae139faca"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="934fa3afddcbf1beb35417b915daac22701736e9"/>
