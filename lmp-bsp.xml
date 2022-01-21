@@ -17,5 +17,5 @@
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="21d784e17a67ec994934c68f2a15e9bede63c16f"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="c5f8aab09cee437d4db565ac042481dd2ce72432"/>
   <project name="meta-sunxi" path="layers/meta-sunxi" revision="02df9114b17ddce95aee41aa630aa40ef8fcbf5d"/>
-  <project name="meta-ti" path="layers/meta-ti" revision="f56051c9a8cf09f54c43b81301073eed71bbda97"/>
+  <project name="meta-ti" path="layers/meta-ti" revision="75ff5168d39aa05cd918cfd36dd8695ee17a065d"/>
 </manifest>
