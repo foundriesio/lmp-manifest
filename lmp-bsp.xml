@@ -13,7 +13,7 @@
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="98b2b2c34f186050e6092bc4f17ecb69aef6148a"/>
   <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="35177be3df1c28225d9017022772e8d0c1d797cc"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="50bf6f003226b5a2320b163c49e1ee93db23f176"/>
-  <project name="meta-xilinx" path="layers/meta-xilinx" revision="d1985a4bc65ea77a19d00ccb36dda49d6eff6c4c"/>
+  <project name="meta-xilinx" path="layers/meta-xilinx" revision="294482da9a3dffbbe503e0ed281952659dea4da6"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="b62c77d48c1c48db297560e9ba8de7c23ccb7e90"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="314431ffe86b7428e478e0936336869ffdfc0cd7"/>
   <project name="meta-sunxi" path="layers/meta-sunxi" revision="612de90a00fbd89762e3d85d85c6846fdc1f9ef6"/>
