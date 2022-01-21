@@ -11,7 +11,7 @@
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="1584bddcf31f4bf3acc2304aa8dae927e8bec970"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="9fb725c93549849bcf5623325f6ac256fcd56e1e"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="98b2b2c34f186050e6092bc4f17ecb69aef6148a"/>
-  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="d9834b916ebd2831b2137d4c2a25d79ac3afb0e0"/>
+  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="35177be3df1c28225d9017022772e8d0c1d797cc"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="f927800f0b379a48bce06857b2d5c8313a8feb3f"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" revision="d1985a4bc65ea77a19d00ccb36dda49d6eff6c4c"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="b62c77d48c1c48db297560e9ba8de7c23ccb7e90"/>
