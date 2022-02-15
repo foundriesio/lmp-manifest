@@ -166,6 +166,11 @@ if [ ! -f "conf/keys/dev.key" -a ! -f "conf/keys/dev.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/dev.key conf/keys/dev.key
     ln -sf "${MANIFESTS}"/conf/keys/dev.crt conf/keys/dev.crt
 fi
+# Copy default SPL development keys if not set by the user
+if [ ! -f "conf/keys/spldev.key" -a ! -f "conf/keys/spldev.crt" ]; then
+    ln -sf "${MANIFESTS}"/conf/keys/spldev.key conf/keys/spldev.key
+    ln -sf "${MANIFESTS}"/conf/keys/spldev.crt conf/keys/spldev.crt
+fi
 # Copy default u-boot development keys if not set by the user
 if [ ! -f "conf/keys/ubootdev.key" -a ! -f "conf/keys/ubootdev.crt" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/ubootdev.key conf/keys/ubootdev.key
@@ -185,6 +190,11 @@ fi
 # Factory specific keys (unique per factory)
 if [ -d "${MANIFESTS}"/factory-keys ]; then
     mkdir -p conf/factory-keys
+    # Copy default factory SPL development keys if not set by the user
+    if [ ! -f "conf/factory-keys/spldev.key" -a ! -f "conf/factory-keys/spldev.crt" ]; then
+        ln -sf "${MANIFESTS}"/factory-keys/spldev.key conf/factory-keys/spldev.key
+        ln -sf "${MANIFESTS}"/factory-keys/spldev.crt conf/factory-keys/spldev.crt
+    fi
     # Copy default factory u-boot development keys if not set by the user
     if [ ! -f "conf/factory-keys/ubootdev.key" -a ! -f "conf/factory-keys/ubootdev.crt" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/ubootdev.key conf/factory-keys/ubootdev.key
