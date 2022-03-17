@@ -9,7 +9,7 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="13ee5f00b76265762a0aa63fcb2f5e8de20c388d"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="7b8ff2b9a140446c35ebf463841f1aa25b2f6db9"/>
   <project name="meta-clang" path="layers/meta-clang" revision="088904d40231d9e099c2f5039cd3c2bc47d332d1"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="c05ae80ba680887ac924c21536091be7a1173427"/>
   <project name="meta-security" path="layers/meta-security" revision="fb77606aef461910db4836bad94d75758cc2688c"/>
