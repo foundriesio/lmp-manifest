@@ -26,7 +26,7 @@ RUN apt-get update \
 		openjdk-11-jre openssh-client perl-modules python3 python3-requests \
 		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs screen \
 		socket corkscrew curl xz-utils tcl libtinfo5 device-tree-compiler python3-pip python3-dev \
-		tmux libncurses-dev vim zstd liblz4-tool \
+		tmux libncurses-dev vim zstd lz4 liblz4-tool \
 	&& ln -s /usr/bin/python3 /usr/bin/python \
 	&& pip3 --no-cache-dir install jsonFormatter \
 	&& apt-get autoremove -y \
