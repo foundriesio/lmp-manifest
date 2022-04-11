@@ -1,3 +1,16 @@
+# Build ostreeuploader, aka fiopush/fiocheck
+FROM ubuntu:20.04 AS fiotools
+RUN apt-get update
+RUN apt-get install -y wget git gcc make -y
+RUN wget -P /tmp https://go.dev/dl/go1.18.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf /tmp/go1.18.linux-amd64.tar.gz
+ENV PATH /usr/local/go/bin:$PATH
+
+RUN git clone https://github.com/foundriesio/ostreeuploader.git /ostreeuploader && \
+    cd /ostreeuploader && git checkout -q 2022.4 && \
+    cd /ostreeuploader && make
+
+
 FROM ubuntu:20.04
 
 # bitbake requires a utf8 filesystem encoding
@@ -47,3 +60,9 @@ RUN echo $DEV_USER:$DEV_USER_PASSWD | chpasswd
 
 # Initialize development environment for $DEV_USER.
 RUN sudo -u $DEV_USER -H git config --global credential.helper 'cache --timeout=3600'
+
+# Install ostreeuploader, aka fiopush/fiocheck
+COPY --from=fiotools /ostreeuploader/bin/fiopush /usr/bin/
+COPY --from=fiotools /ostreeuploader/bin/fiocheck /usr/bin/
+ENV FIO_PUSH_CMD /usr/bin/fiopush
+ENV FIO_CHECK_CMD /usr/bin/fiocheck
