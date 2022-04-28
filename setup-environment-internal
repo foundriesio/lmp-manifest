@@ -265,7 +265,7 @@ fi
 # that might (or not) come with a EULA. If a machine has a EULA, we
 # assume that its corresponding layers has conf/EULA/$MACHINE file
 # with the EULA text, which we will display to the user and request
-# for acceptance. If accepted, the variable ACCEPT_EULA_$MACHINE is
+# for acceptance. If accepted, the variable ACCEPT_EULA:$MACHINE is
 # set to 1 in auto.conf, which can later be used by the BSP.
 # If the env variable EULA_$MACHINE is set it is used by default,
 # without prompting the user.
@@ -281,8 +281,8 @@ if [ -n "$EULA" ]; then
     # NOTE: indirect reference / dynamic variable
     if [ -n "${!EULA_MACHINE}" ]; then
         # the EULA_$MACHINE variable is set in the environment, so we just
-        # configure # ACCEPT_EULA_$MACHINE in auto.conf
-        echo "ACCEPT_EULA_$MACHINE = \"${!EULA_MACHINE}\"" >> conf/auto.conf
+        # configure # ACCEPT_EULA:$MACHINE in auto.conf
+        echo "ACCEPT_EULA:$MACHINE = \"${!EULA_MACHINE}\"" >> conf/auto.conf
     else
         # so we need to ask user if he/she accepts the EULA:
         cat <<EOF
@@ -321,7 +321,7 @@ EOF
                 case "$REPLY" in
                     y|Y)
                         echo "EULA has been accepted."
-                        echo "ACCEPT_EULA_$MACHINE = \"1\"" >> conf/auto.conf
+                        echo "ACCEPT_EULA:$MACHINE = \"1\"" >> conf/auto.conf
                         ;;
                     n|N)
                         echo "EULA has not been accepted."
