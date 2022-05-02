@@ -10,7 +10,7 @@
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="b86e4b46c056ac3124f22082f563a5501ac78a48"/>
-  <project name="meta-clang" path="layers/meta-clang" revision="088904d40231d9e099c2f5039cd3c2bc47d332d1"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="85d956d95401479ca666139e31f662f60c156d5f"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="a19d1802b15fe07e9b1e7584ff9af7c33bfe642a"/>
   <project name="meta-security" path="layers/meta-security" revision="fb77606aef461910db4836bad94d75758cc2688c"/>
   <project name="extra/meta-updater" path="layers/meta-updater" revision="bbbc6409ab5322bc130417bfb34ab9c41a783095"/>
