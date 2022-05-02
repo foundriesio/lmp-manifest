@@ -7,7 +7,7 @@
   <project name="meta-arm" path="layers/meta-arm" revision="50b34c5cc9496441152ad28bf1022e5fc5ab0a7e"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="ecbcb80555c470887b9389be803bdc27ab140e1d"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="d323df3f5c651fc17ce0d37cf9de8bbc04dde67a"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="daf5c125a744d45d8fa395b576147edd5a714f5c"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="33421d8a0f74f1d879f6228fcdedce39eb34420b"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="378d4b6e7ba64b6a9a701457cc3780fa896ba5dc"/>
   <project name="meta-riscv" path="layers/meta-riscv" revision="9561639c61663a10d8c9c23d26173db499f4c39b"/>
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="98b2b2c34f186050e6092bc4f17ecb69aef6148a"/>
