@@ -66,31 +66,41 @@ Setup Environment
 
 Supported **MACHINE** targets (officially tested by Foundries):
 
+* am62xx-evm
 * am64xx-evm
 * apalis-imx6
 * apalis-imx6-sec
 * apalis-imx8
+* apalis-imx8-sec
 * beaglebone-yocto
-* corstone700-mps3
-* freedom-u540
 * generic-arm64
+* imx6ulevk
 * imx6ullevk
 * imx6ullevk-sec
 * imx7ulpea-ucom
 * imx8mm-lpddr4-evk
 * imx8mm-lpddr4-evk-sec
+* imx8mn-ddr4-evk
+* imx8mn-ddr4-evk-sec
 * imx8mp-lpddr4-evk
+* imx8mp-lpddr4-evk-sec
 * imx8mq-evk
+* imx8qm-mek
+* imx8qm-mek-sec
 * intel-corei7-64
+* jetson-agx-orin-devkit
 * jetson-agx-xavier-devkit
-* n1sdp
 * qemuarm
 * qemuarm64-secureboot
 * qemuriscv64
-* raspberrypi3-64
 * raspberrypi4-64
-* stm32mp1-disco
+* stm32mp15-disco
+* stm32mp15-eval
+* stm32mp15-eval-sec
+* kv260
+* vck190-versal
 * uz3eg-iocc
+* uz3eg-iocc-sec
 
 Supported image targets:
 
@@ -98,6 +108,8 @@ Supported image targets:
 * lmp-base-console-image  - mini-image + Docker container runtime
 * lmp-gateway-image       - base-console-image + edge gateway related utilities
 * lmp-factory-image       - default (and only available) for a FoundriesFactory
+* mfgtool-files           - (**only for DISTRO=lmp-mfgtool**) image flasher via
+                            USB SDP/FastBoot for i.MX-based machines
 
 The default distribution (DISTRO) variable is automatically set to `lmp`,
 which is provided by the `meta-lmp` layer.
