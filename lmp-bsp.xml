@@ -14,7 +14,7 @@
   <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="7f8742c1e0cb848067e4b52ca78333ae70b79181"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="926a514ddb62d638d05ee94714d4186db26d318e"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" revision="4017b1fb18dc59d108e880315c28f10d93058f8c"/>
-  <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="fa689ad7e2b97951f12f3ef7a52685f9555d162d"/>
+  <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="6ae050e052fca5cb55b741d00ca42160978d584e"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="e28a08d63c66563cc41ba57d0bb58b6be2c5d32c"/>
   <project name="meta-sunxi" path="layers/meta-sunxi" revision="7dcc9a0069f30d99f5ec9cec9a3b7d9064f8c3f7"/>
   <project name="meta-ti" path="layers/meta-ti" revision="ea5b431bdac13759d1dab20a8d6e3d26a16a5501"/>
