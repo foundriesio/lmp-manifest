@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
@@ -13,7 +14,7 @@
   <project name="meta-rtlwifi" path="layers/meta-rtlwifi" revision="98b2b2c34f186050e6092bc4f17ecb69aef6148a"/>
   <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="7f8742c1e0cb848067e4b52ca78333ae70b79181"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="fa0884372892d43e76c4d3b4486f1851e39edac3"/>
-  <project name="meta-xilinx" path="layers/meta-xilinx" revision="4017b1fb18dc59d108e880315c28f10d93058f8c"/>
+  <project name="meta-xilinx" path="layers/meta-xilinx" remote="fio" revision="531a6d3fda872a342dd9ac9d5619c7f544012355"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" revision="6ae050e052fca5cb55b741d00ca42160978d584e"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="bd08f8450581882c5ae39de27869637c18f616cd"/>
   <project name="meta-sunxi" path="layers/meta-sunxi" revision="fdce4f86744d21dfa53e1e3c9b4eb6302a8edf98"/>
