@@ -11,6 +11,10 @@ BSPLAYERS = " \
   ${OEROOT}/layers/meta-riscv \
   ${OEROOT}/layers/meta-intel \
   ${OEROOT}/layers/meta-yocto/meta-yocto-bsp \
+  ${OEROOT}/layers/meta-xilinx/meta-xilinx-core \
+  ${OEROOT}/layers/meta-xilinx/meta-xilinx-bsp \
+  ${OEROOT}/layers/meta-xilinx/meta-xilinx-standalone \
+  ${OEROOT}/layers/meta-xilinx-tools \
   ${OEROOT}/layers/meta-tegra \
   ${OEROOT}/layers/meta-ti/meta-ti-bsp \
   ${OEROOT}/layers/meta-sunxi \
@@ -19,8 +23,4 @@ BSPLAYERS = " \
 # ${OEROOT}/layers/meta-freescale
 # ${OEROOT}/layers/meta-freescale-3rdparty
 # ${OEROOT}/layers/meta-rtlwifi
-# ${OEROOT}/layers/meta-xilinx/meta-xilinx-core
-# ${OEROOT}/layers/meta-xilinx/meta-xilinx-bsp
-# ${OEROOT}/layers/meta-xilinx/meta-xilinx-standalone
-# ${OEROOT}/layers/meta-xilinx-tools
 # ${OEROOT}/layers/meta-st-stm32mp
