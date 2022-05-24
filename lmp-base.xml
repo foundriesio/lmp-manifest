@@ -5,7 +5,7 @@
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="bitbake" revision="c212b0f3b542efa19f15782421196b7f4b64b0b9"/>
+  <project name="bitbake" revision="59c16ae6c55c607c56efd2287537a1b97ba2bf52"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
