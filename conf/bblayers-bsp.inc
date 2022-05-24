@@ -23,4 +23,3 @@ BSPLAYERS = " \
 "
 # ${OEROOT}/layers/meta-freescale
 # ${OEROOT}/layers/meta-freescale-3rdparty
-# ${OEROOT}/layers/meta-rtlwifi
