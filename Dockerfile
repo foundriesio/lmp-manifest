@@ -1,3 +1,19 @@
+# Build container tools
+FROM ubuntu:20.04 AS container-tools
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y wget git make \
+	libgpgme-dev libassuan-dev libbtrfs-dev libdevmapper-dev pkg-config
+
+RUN wget -P /tmp https://go.dev/dl/go1.18.linux-amd64.tar.gz && \
+	tar -C /usr/local -xzf /tmp/go1.18.linux-amd64.tar.gz
+ENV PATH /usr/local/go/bin:$PATH
+
+# Build skopeo
+RUN git clone https://github.com/containers/skopeo.git /skopeo && \
+	cd /skopeo && git checkout -q v1.8.0 && \
+	GO_DYN_FLAGS= CGO_ENABLED=0 BUILDTAGS=containers_image_openpgp DISABLE_DOCS=1 make
+
 # Build ostreeuploader, aka fiopush/fiocheck
 FROM ubuntu:20.04 AS fiotools
 RUN apt-get update
@@ -40,6 +56,7 @@ RUN apt-get update \
 		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs screen \
 		socket corkscrew curl xz-utils tcl libtinfo5 device-tree-compiler python3-pip python3-dev \
 		tmux libncurses-dev vim zstd lz4 liblz4-tool libc6-dev-i386 \
+		awscli docker-compose \
 	&& ln -s /usr/bin/python3 /usr/bin/python \
 	&& pip3 --no-cache-dir install jsonFormatter \
 	&& apt-get autoremove -y \
@@ -66,3 +83,6 @@ COPY --from=fiotools /ostreeuploader/bin/fiopush /usr/bin/
 COPY --from=fiotools /ostreeuploader/bin/fiocheck /usr/bin/
 ENV FIO_PUSH_CMD /usr/bin/fiopush
 ENV FIO_CHECK_CMD /usr/bin/fiocheck
+
+# Install skopeo
+COPY --from=container-tools /skopeo/bin/skopeo /usr/bin
