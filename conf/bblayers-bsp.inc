@@ -8,7 +8,6 @@ BSPLAYERS = " \
   ${OEROOT}/layers/meta-arm/meta-arm-toolchain \
   ${OEROOT}/layers/meta-arm/meta-arm-bsp \
   ${OEROOT}/layers/meta-raspberrypi \
-  ${OEROOT}/layers/meta-riscv \
   ${OEROOT}/layers/meta-intel \
   ${OEROOT}/layers/meta-yocto/meta-yocto-bsp \
   ${OEROOT}/layers/meta-xilinx/meta-xilinx-core \
