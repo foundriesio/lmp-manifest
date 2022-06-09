@@ -186,6 +186,10 @@ if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "conf/keys/x509_modsign.crt" ]
     ln -sf "${MANIFESTS}"/conf/keys/privkey_modsign.pem conf/keys/privkey_modsign.pem
     ln -sf "${MANIFESTS}"/conf/keys/x509_modsign.crt conf/keys/x509_modsign.crt
 fi
+# Link default UEFI development keys and certificates if not set by the user
+if [ ! -d "conf/keys/uefi" ]; then
+    ln -sf "${MANIFESTS}"/conf/keys/uefi conf/keys/uefi
+fi
 
 # Factory specific keys (unique per factory)
 if [ -d "${MANIFESTS}"/factory-keys ]; then
