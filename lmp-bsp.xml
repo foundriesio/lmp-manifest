@@ -5,7 +5,7 @@
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="meta-arm" path="layers/meta-arm" revision="50b34c5cc9496441152ad28bf1022e5fc5ab0a7e"/>
+  <project name="meta-arm" path="layers/meta-arm" revision="a8cb33d5139e30b4a643da9a277487299c0e658f"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="2fb1ce365338126aad365012ebb913b3e4a9f1be"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="de0eb1408150d77f9cce97c559f9a5a3c71e5d6c"/>
   <project name="meta-intel" path="layers/meta-intel" revision="fb23bc3e661685383edd3026e21ca25825c48bc4"/>
