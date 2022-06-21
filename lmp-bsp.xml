@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
-  <remote fetch="https://source.foundries.io/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
