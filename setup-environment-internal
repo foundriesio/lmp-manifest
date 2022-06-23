@@ -200,6 +200,11 @@ if [ -d "${MANIFESTS}"/factory-keys ]; then
         ln -sf "${MANIFESTS}"/factory-keys/privkey_modsign.pem conf/factory-keys/privkey_modsign.pem
         ln -sf "${MANIFESTS}"/factory-keys/x509_modsign.crt conf/factory-keys/x509_modsign.crt
     fi
+
+    # Link custom UEFI development keys and certificates set by the user
+    if [ -d "${MANIFESTS}"/factory-keys/uefi -a ! -d "conf/factory-keys/uefi" ]; then
+        ln -sf "${MANIFESTS}"/factory-keys/uefi conf/factory-keys/uefi
+    fi
 fi
 
 # Link default iMX HAB4 development keys and certificate if not set by the user
