@@ -58,7 +58,7 @@ RUN apt-get update \
 		tmux libncurses-dev vim zstd lz4 liblz4-tool libc6-dev-i386 \
 		awscli docker-compose \
 	&& ln -s /usr/bin/python3 /usr/bin/python \
-	&& pip3 --no-cache-dir install jsonFormatter \
+	&& pip3 --no-cache-dir install expandvars jsonFormatter \
 	&& apt-get autoremove -y \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
