@@ -5,15 +5,15 @@
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="bitbake" revision="b8fd6f5d9959d27176ea016c249cf6d35ac8ba03"/>
+  <project name="bitbake" revision="master"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="63c0a59cc819ebeae850bc61f8dc7bd19e364690"/>
-  <project name="meta-clang" path="layers/meta-clang" revision="d669d873edf68dc7440bb07096737203bb7ec505"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="a47ef046619d639dfbd3be2a13ef6d5b40fd40a1"/>
-  <project name="meta-security" path="layers/meta-security" revision="c79262a30bd385f5dbb009ef8704a1a01644528e"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="03fc4eb32bccc43f6aa386408dad30205efa5b8e"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="b70d6bb35734c3863051098eb2dd3c2dbe11c92f"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="2bc86c029fb82ae572f6a89407ccfe332972568c"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="main-next"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="master"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="master"/>
+  <project name="meta-security" path="layers/meta-security" revision="master"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="master"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="master"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="master"/>
 </manifest>
