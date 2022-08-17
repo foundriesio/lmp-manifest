@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/foundriesio" name="fio"/>
+  <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+
+  <default remote="lmp-mirrors" revision="master" sync-j="4"/>
+
+  <project name="bitbake" revision="master"/>
+  <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
+    <linkfile dest="setup-environment" src="setup-environment"/>
+  </project>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="main-next"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="master"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="master"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="kirkstone/go"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="kirkstone/rust"/>
+  <project name="meta-security" path="layers/meta-security" revision="master"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="master"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="master"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="master"/>
+</manifest>
