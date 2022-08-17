@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/foundriesio" name="fio"/>
+  <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+
+  <default remote="lmp-mirrors" revision="master" sync-j="4"/>
+
+  <project name="meta-arm" path="layers/meta-arm" revision="master"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="master"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="master"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="master"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="master"/>
+  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="mickledore"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="master"/>
+  <project name="meta-xilinx" path="layers/meta-xilinx" remote="fio" revision="kirkstone-next"/>
+  <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" remote="fio" revision="kirkstone-next"/>
+  <project name="meta-tegra" path="layers/meta-tegra" revision="master"/>
+  <project name="meta-ti" path="layers/meta-ti" revision="master"/>
+</manifest>
