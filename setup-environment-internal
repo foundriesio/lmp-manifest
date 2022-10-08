@@ -186,6 +186,10 @@ if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "conf/keys/x509_modsign.crt" ]
     ln -sf "${MANIFESTS}"/conf/keys/privkey_modsign.pem conf/keys/privkey_modsign.pem
     ln -sf "${MANIFESTS}"/conf/keys/x509_modsign.crt conf/keys/x509_modsign.crt
 fi
+# Link default TF-A development keys if not set by the user
+if [ ! -d "conf/keys/tf-a" ]; then
+    ln -sf "${MANIFESTS}"/conf/keys/tf-a conf/keys/tf-a
+fi
 # Link default UEFI development keys and certificates if not set by the user
 if [ ! -d "conf/keys/uefi" ]; then
     ln -sf "${MANIFESTS}"/conf/keys/uefi conf/keys/uefi
@@ -214,7 +218,10 @@ if [ -d "${MANIFESTS}"/factory-keys ]; then
         ln -sf "${MANIFESTS}"/factory-keys/privkey_modsign.pem conf/factory-keys/privkey_modsign.pem
         ln -sf "${MANIFESTS}"/factory-keys/x509_modsign.crt conf/factory-keys/x509_modsign.crt
     fi
-
+    # Link custom TF-A development keys set by the user
+    if [ -d "${MANIFESTS}"/factory-keys/tf-a -a ! -d "conf/factory-keys/tf-a" ]; then
+        ln -sf "${MANIFESTS}"/factory-keys/tf-a conf/factory-keys/tf-a
+    fi
     # Link custom UEFI development keys and certificates set by the user
     if [ -d "${MANIFESTS}"/factory-keys/uefi -a ! -d "conf/factory-keys/uefi" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/uefi conf/factory-keys/uefi
