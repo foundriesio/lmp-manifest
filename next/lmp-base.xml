@@ -5,8 +5,7 @@
   <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
-
-  <project name="bitbake" revision="master"/>
+  <project name="bitbake" remote="quaresmajose" revision="lockfiles"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
