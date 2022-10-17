@@ -17,5 +17,5 @@
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" remote="fio" revision="kirkstone-next"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="master"/>
   <project name="meta-sunxi" path="layers/meta-sunxi" revision="master"/>
-  <project name="meta-ti" path="layers/meta-ti" revision="master"/>
+  <project name="meta-ti" path="layers/meta-ti" remote="quaresmajose" revision="binutils-rxw"/>
 </manifest>
