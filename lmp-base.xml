@@ -3,6 +3,9 @@
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
 
+  <remote fetch="https://github.com/MrCry0" name="cryo"/>
+  <remote fetch="https://github.com/igoropaniuk" name="igor"/>
+
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
   <project name="bitbake" revision="ac576d6fad6bba0cfea931883f25264ea83747ca"/>
