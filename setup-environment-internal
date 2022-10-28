@@ -275,6 +275,31 @@ DEPLOY_DIR = "${BUILDDIR}/deploy"
 # Go through the Firewall
 #HTTP_PROXY = "http://${PROXYHOST}:${PROXYPORT}/"
 _EOF
+
+# LmP default mirrors cache location
+LMP_LOCAL_SSTATE_MIRRORS="${LMP_LOCAL_SSTATE_MIRRORS:-/yocto/lmp/cache/sstate-mirrors}"
+LMP_LOCAL_PRE_MIRRORS="${LMP_LOCAL_PRE_MIRRORS:-/yocto/lmp/cache/downloads-mirrors}"
+
+if [ -d "${LMP_LOCAL_SSTATE_MIRRORS}" ]; then
+    cat >> conf/site.conf <<_EOF
+
+# State cache mirror is available locally on the file system
+SSTATE_MIRRORS += "file://.* file://${LMP_LOCAL_SSTATE_MIRRORS}/PATH"
+_EOF
+fi
+
+if [ -d "${LMP_LOCAL_PRE_MIRRORS}" ]; then
+    cat >> conf/site.conf <<_EOF
+
+# Download mirror is available locally on the file system
+PREMIRRORS += " \
+    git://.*/.* file://${LMP_LOCAL_PRE_MIRRORS} \
+    ftp://.*/.* file://${LMP_LOCAL_PRE_MIRRORS} \
+    http://.*/.* file://${LMP_LOCAL_PRE_MIRRORS} \
+    https://.*/.* file://${LMP_LOCAL_PRE_MIRRORS} \
+    "
+_EOF
+fi
 fi
 
 # Handle EULA , if needed. This is a generic method to handle BSPs
