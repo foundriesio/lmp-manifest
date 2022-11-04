@@ -56,7 +56,7 @@ RUN apt-get update \
 		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs screen \
 		socket corkscrew curl xz-utils tcl libtinfo5 device-tree-compiler python3-pip python3-dev \
 		tmux libncurses-dev vim zstd lz4 liblz4-tool libc6-dev-i386 \
-		awscli docker-compose \
+		awscli docker-compose gosu \
 	&& ln -s /usr/bin/python3 /usr/bin/python \
 	&& pip3 --no-cache-dir install expandvars jsonFormatter \
 	&& apt-get autoremove -y \
@@ -72,8 +72,14 @@ RUN useradd -c $DEV_USER_NAME \
 		-s /bin/bash \
 		$DEV_USER
 
+# Add entrypoint to run gosu
+COPY entrypoint /
+ENTRYPOINT ["/entrypoint"]
+
 # Add default password for the SDK user (useful with sudo)
-RUN echo $DEV_USER:$DEV_USER_PASSWD | chpasswd
+# and replace entrypoint with dev user name
+RUN echo $DEV_USER:$DEV_USER_PASSWD | chpasswd && \
+	sed "s/@@DOCKER_USER@@/$DEV_USER/g" -i /entrypoint
 
 # Initialize development environment for $DEV_USER.
 RUN sudo -u $DEV_USER -H git config --global credential.helper 'cache --timeout=3600'
