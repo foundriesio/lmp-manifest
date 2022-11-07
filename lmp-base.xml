@@ -2,6 +2,7 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/MrCry0" name="cryo"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
@@ -9,7 +10,7 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="c27d752edae0af8bf98da5d2c47b9628d09949b3"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="cryo" revision="main-nxp-bsp-imx6u"/>
   <project name="meta-clang" path="layers/meta-clang" revision="013b5eeb580bc13b156aaf77d0c1175f75b89671"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="744a4b6eda88b9a9ca1cf0df6e18be384d9054e3"/>
   <project name="meta-security" path="layers/meta-security" revision="c79262a30bd385f5dbb009ef8704a1a01644528e"/>
