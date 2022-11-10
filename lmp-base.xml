@@ -2,6 +2,7 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
@@ -9,11 +10,11 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="6b3d28a6628c49aa5ab1d05ab35cfdc4b0fc4e34"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="quaresmajose" revision="setscene-fixes"/>
   <project name="meta-clang" path="layers/meta-clang" revision="013b5eeb580bc13b156aaf77d0c1175f75b89671"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="744a4b6eda88b9a9ca1cf0df6e18be384d9054e3"/>
   <project name="meta-security" path="layers/meta-security" revision="c79262a30bd385f5dbb009ef8704a1a01644528e"/>
   <project name="meta-updater" path="layers/meta-updater" revision="c74a06710818bbac3079eb1f3b370625ea1ba494"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="8c5f038cb92fa4b02246d2d1479a003eecf5fe93"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="555fd2848b970fd38c20651b5e98cabb7f31287c"/>
+  <project name="openembedded-core" path="layers/openembedded-core" remote="quaresmajose" revision="setscene-fixes"/>
 </manifest>
