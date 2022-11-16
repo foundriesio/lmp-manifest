@@ -394,9 +394,20 @@ Your build environment has been configured with:
 You can now run 'bitbake <target>'
 
 Some common targets are:
+EOF
+
+if [ "${DISTRO}" = 'lmp-mfgtool' ]; then
+        cat <<EOF
+    mfgtool-files           - MFGTOOL Support Files and Binaries for board flashing and provisioning
+
+EOF
+else
+
+        cat <<EOF
     lmp-mini-image          - minimal OSTree + OTA capable image
     lmp-base-console-image  - mini-image + Docker container runtime
     lmp-gateway-image       - base-console-image + edge gateway related utilities
     lmp-factory-image       - default (and only available) at FoundriesFactory
 
 EOF
+fi
