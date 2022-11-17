@@ -254,6 +254,7 @@ SDKMACHINE ?= "${SDKMACHINE}"
 
 # Extra options that can be changed by the user
 INHERIT += "rm_work"
+INHERIT += "buildstats buildstats-summary"
 EOF
 
 if [ ! -e conf/site.conf ]; then
