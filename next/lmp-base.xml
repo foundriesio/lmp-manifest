@@ -18,5 +18,5 @@
   <project name="meta-security" path="layers/meta-security" revision="master"/>
   <project name="meta-updater" path="layers/meta-updater" revision="master"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="master"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="master"/>
+  <project name="openembedded-core" path="layers/openembedded-core" remote="quaresmajose" revision="next"/>
 </manifest>
