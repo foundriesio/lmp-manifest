@@ -247,10 +247,10 @@ ln -sf "${MANIFESTS}" "${OEROOT}"/layers/
 
 DISTRO_DIRNAME=$(echo "${DISTRO}" | sed 's#[.-]#_#g')
 
-LMP_VER=$(git --git-dir ${MANIFESTS}/.git describe HEAD --tags --abbrev=0)
-if [ -v LMP_VER_DEV ]; then
+LMP_VERSION_CACHE="${LMP_VERSION_CACHE:-$(git --git-dir ${MANIFESTS}/.git describe HEAD --tags --abbrev=0)}"
+if [ -v LMP_VERSION_CACHE_DEV ]; then
     # to use the development version of the cache the user need to define the LMP_VER_DEV env
-    LMP_VER=$(( $LMP_VER + 1 ))
+    LMP_VERSION_CACHE=$(( $LMP_VERSION_CACHE + 1 ))
 fi
 
 cat > conf/auto.conf <<EOF
@@ -259,7 +259,7 @@ MACHINE ?= "${MACHINE}"
 SDKMACHINE ?= "${SDKMACHINE}"
 
 # Use public state cache mirror if no other is defined
-SSTATE_MIRRORS ??= "file://.* https://storage.googleapis.com/lmp-cache/v$LMP_VER-sstate-cache/PATH"
+SSTATE_MIRRORS ??= "file://.* https://storage.googleapis.com/lmp-cache/v$LMP_VERSION_CACHE-sstate-cache/PATH"
 
 # Extra options that can be changed by the user
 INHERIT += "rm_work"
