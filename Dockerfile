@@ -50,7 +50,7 @@ RUN apt-get update \
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		android-sdk-libsparse-utils android-sdk-ext4-utils ca-certificates \
-		chrpath cpio diffstat file gawk g++ iproute2 iputils-ping less libmagickwand-dev \
+		chrpath cpio diffstat file gawk g++ iproute2 iputils-ping less libgcc1 libmagickwand-dev \
 		libmath-prime-util-perl libsdl1.2-dev libssl-dev locales \
 		openjdk-11-jre openssh-client perl-modules python3 python3-requests \
 		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs screen \
