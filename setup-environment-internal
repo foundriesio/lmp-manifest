@@ -247,10 +247,12 @@ ln -sf "${MANIFESTS}" "${OEROOT}"/layers/
 
 DISTRO_DIRNAME=$(echo "${DISTRO}" | sed 's#[.-]#_#g')
 
-LMP_VERSION_CACHE="${LMP_VERSION_CACHE:-$(git --git-dir ${MANIFESTS}/.git describe HEAD --tags --abbrev=0)}"
-if [ -v LMP_VERSION_CACHE_DEV ]; then
-    # to use the development version of the cache the user need to define the LMP_VER_DEV env
-    LMP_VERSION_CACHE=$(( $LMP_VERSION_CACHE + 1 ))
+if [ -z "$LMP_VERSION_CACHE" ]; then
+    LMP_VERSION_CACHE="$(git --git-dir ${MANIFESTS}/.git describe HEAD --tags --abbrev=0)"
+    if [ -v LMP_VERSION_CACHE_DEV ]; then
+        # to use the development version of the cache the user need to define the LMP_VERSION_CACHE_DEV env
+        LMP_VERSION_CACHE=$(( $LMP_VERSION_CACHE + 1 ))
+    fi
 fi
 
 cat > conf/auto.conf <<EOF
