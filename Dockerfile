@@ -104,3 +104,6 @@ RUN mkdir -p /etc/apt/keyrings \
 RUN mkdir -p /usr/lib/docker/cli-plugins \
 	&& wget https://github.com/docker/compose/releases/download/v2.6.0/docker-compose-linux-x86_64 -O /usr/lib/docker/cli-plugins/docker-compose \
 	&& chmod +x /usr/lib/docker/cli-plugins/docker-compose
+
+WORKDIR /build/lmp
+
