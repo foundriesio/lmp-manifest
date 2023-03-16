@@ -8,7 +8,7 @@
   <project name="meta-arm" path="layers/meta-arm" revision="a0216a41bde3f191037332a9238648bedfbc61bd"/>
   <project name="meta-freescale" path="layers/meta-freescale" revision="d9f77788e1902a7d999958575a955e701c1c1b61"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="f6fa0fd8783ce69d07feaad0b7ca6759b5a4d5d6"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="64e8ccb47e11fc021a2a679f2e05d849b7518461"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="4c6cc14669d0e9de36e1a050ce4084ca14181722"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="dacad9302a92b0b7edf8546cdcad1f8ef753e462"/>
   <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="ca501bd7dbe023682903ceedddaacd940b0898f4"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="2903a4ac643f390bc0ca0899187b89ecd346d294"/>
