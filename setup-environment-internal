@@ -404,7 +404,6 @@ Your build environment has been configured with:
 
     MACHINE = ${MACHINE}
     DISTRO = ${DISTRO}
-    $(bitbake-getvar SSTATE_MIRRORS | tail -n1)
 
 You can now run 'bitbake <target>'
 
