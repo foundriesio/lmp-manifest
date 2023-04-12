@@ -12,7 +12,7 @@
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="17f4662d1416a61337016809b7c08829246c8a74"/>
   <project name="meta-clang" path="layers/meta-clang" revision="7e3f2a4126d1bfacda497dfa6b59f3f471f1a984"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="571e36e20e9d1f27af0eb4545291beeb64f280e2"/>
-  <project name="meta-lts-mixins" path="layers/meta-lts-mixins" revision="067f1a4108d2df2db89724404abb56ec7e6f169d"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins" revision="7161f2f7be64b42f0247e3f2255cb7dc57281b6d"/>
   <project name="meta-security" path="layers/meta-security" revision="cc20e2af2ae1c74e306f6c039c4963457c4cbd0f"/>
   <project name="meta-updater" path="layers/meta-updater" revision="dc9374589a8d05fde18654d5bbc75c205065e0e1"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="a7413c5d7568ce91b809ed11f84305b1afb468bb"/>
