@@ -404,25 +404,10 @@ Your build environment has been configured with:
 
     MACHINE = ${MACHINE}
     DISTRO = ${DISTRO}
+    $(bitbake-getvar SSTATE_MIRRORS | tail -n1)
 
 You can now run 'bitbake <target>'
 
-EOF
-
-if [ -z "$LMP_VERSION_CACHE" ]; then
-	cat <<EOF
-LMP state cache mirror is disabled.
-
-EOF
-else
-	cat <<EOF
-LMP state cache mirror is enabled, mirror url:
-    https://storage.googleapis.com/lmp-cache/v$LMP_VERSION_CACHE-sstate-cache
-
-EOF
-fi
-
-cat <<EOF
 Some common targets are:
 EOF
 
