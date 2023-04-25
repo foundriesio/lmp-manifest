@@ -87,6 +87,8 @@ Supported **MACHINE** targets (officially tested by Foundries):
 * imx8mq-evk
 * imx8qm-mek
 * imx8qm-mek-sec
+* imx8ulp-lpddr4-evk
+* imx93-11x11-lpddr4x-evk
 * intel-corei7-64
 * jetson-agx-orin-devkit
 * jetson-agx-xavier-devkit
