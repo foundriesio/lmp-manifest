@@ -18,12 +18,12 @@ RUN git clone https://github.com/containers/skopeo.git /skopeo && \
 FROM ubuntu:20.04 AS fiotools
 RUN apt-get update
 RUN apt-get install -y wget git gcc make -y
-RUN wget -P /tmp https://go.dev/dl/go1.18.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf /tmp/go1.18.linux-amd64.tar.gz
+RUN wget -P /tmp https://go.dev/dl/go1.19.9.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf /tmp/go1.19.9.linux-amd64.tar.gz
 ENV PATH /usr/local/go/bin:$PATH
 
 RUN git clone https://github.com/foundriesio/ostreeuploader.git /ostreeuploader && \
-    cd /ostreeuploader && git checkout -q 2022.12 && \
+    cd /ostreeuploader && git checkout -q 2023.5 && \
     cd /ostreeuploader && make
 
 
