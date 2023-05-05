@@ -14,7 +14,7 @@
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="df452d9d98659b49888fa8a5428a0a8bd3e3aaec"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins" revision="691dde801b009d928fbf8a820dace69dca91eb29"/>
   <project name="meta-security" path="layers/meta-security" revision="cc20e2af2ae1c74e306f6c039c4963457c4cbd0f"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="1cf05e3fb09ea97baa6c6e206021419ecb11a2b1"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="be1217764c926e46acdaf9e8d1fa6404090723f5"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="a7413c5d7568ce91b809ed11f84305b1afb468bb"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="b67e714b367a08fdeeeff68c2d9495ec9bc07304"/>
 </manifest>
