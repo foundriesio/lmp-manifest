@@ -11,6 +11,7 @@ BASELAYERS = " \
   ${OEROOT}/layers/meta-virtualization \
   ${OEROOT}/layers/meta-clang \
   ${OEROOT}/layers/meta-lts-mixins-go \
+  ${OEROOT}/layers/meta-lts-mixins-rust \
   ${OEROOT}/layers/meta-updater \
   ${OEROOT}/layers/meta-security \
   ${OEROOT}/layers/meta-security/meta-tpm \
