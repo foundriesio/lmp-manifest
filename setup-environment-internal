@@ -143,7 +143,7 @@ export BB_ENV_PASSTHROUGH_ADDITIONS="MACHINE DISTRO TCLIBC TCMODE GIT_PROXY_COMM
 
 mkdir -p "${BUILDDIR}"/conf && cd "${BUILDDIR}"
 if [ -f "conf/auto.conf" ]; then
-    oldmach=$(egrep "^MACHINE" "conf/auto.conf" |
+    oldmach=$(grep -E "^MACHINE" "conf/auto.conf" |
              sed -e 's%^MACHINE ?= %%' | sed -e 's/^"//' -e 's/"$//')
 fi
 
