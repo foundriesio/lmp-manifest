@@ -2,6 +2,7 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
@@ -9,7 +10,7 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="97c1e279ad96840a28a2c06a282f371c2aec3373"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="quaresmajose" revision="ti"/>
   <project name="meta-clang" path="layers/meta-clang" revision="71321ddf78ea522b87a6b4bffefb14c988a6d921"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="bdad2a789e30703a825b876279665720d06d55dc"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="315d2d288fdcd2768f189101d980f40b0f2c9b0d"/>
