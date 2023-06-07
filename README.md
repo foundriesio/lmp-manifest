@@ -66,43 +66,33 @@ Setup Environment
 
 Supported **MACHINE** targets (officially tested by Foundries):
 
+* intel-corei7-64
 * am62xx-evm
 * am64xx-evm
-* apalis-imx6
-* apalis-imx6-sec
-* apalis-imx8
-* apalis-imx8-sec
 * beaglebone-yocto
 * generic-arm64
-* imx6ulevk
 * imx6ullevk
 * imx6ullevk-sec
-* imx7ulpea-ucom
 * imx8mm-lpddr4-evk
 * imx8mm-lpddr4-evk-sec
-* imx8mn-ddr4-evk
-* imx8mn-ddr4-evk-sec
 * imx8mp-lpddr4-evk
 * imx8mp-lpddr4-evk-sec
+* imx8mn-ddr4-evk
+* imx8mn-ddr4-evk-sec
+* imx8mn-lpddr4-evk
+* imx8mn-lpddr4-evk-sec
 * imx8mq-evk
-* imx8qm-mek
-* imx8qm-mek-sec
 * imx8ulp-lpddr4-evk
 * imx93-11x11-lpddr4x-evk
-* intel-corei7-64
 * jetson-agx-orin-devkit
 * jetson-agx-xavier-devkit
-* qemuarm
 * qemuarm64-secureboot
-* qemuriscv64
 * raspberrypi4-64
 * stm32mp15-disco
 * stm32mp15-eval
 * stm32mp15-eval-sec
 * kv260
 * vck190-versal
-* uz3eg-iocc
-* uz3eg-iocc-sec
 
 Supported image targets:
 
