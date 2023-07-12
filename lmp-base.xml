@@ -17,5 +17,5 @@
   <project name="meta-security" path="layers/meta-security" revision="d398cc6ea6716afd3a3a6e88ad8fbdc89510ef23"/>
   <project name="meta-updater" path="layers/meta-updater" revision="9f7fe77932671751f3c7201d164ffbabd0cb2faf"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="b3b3dbc67504e8cd498d6db202ddcf5a9dd26a9d"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="f20a12ead2d5890e88e7f4ce149a777de47edc48"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="cef730284b8616ba07c1b062c992c36af730580e"/>
 </manifest>
