@@ -15,7 +15,7 @@
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="6e9008a6765d7059414494b794c503ddc0965ef0"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="feed1bb0eb4aefb701d582156d7defb0c1fc0473"/>
   <project name="meta-security" path="layers/meta-security" revision="d398cc6ea6716afd3a3a6e88ad8fbdc89510ef23"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="be1217764c926e46acdaf9e8d1fa6404090723f5"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="9f7fe77932671751f3c7201d164ffbabd0cb2faf"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="a7413c5d7568ce91b809ed11f84305b1afb468bb"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="f20a12ead2d5890e88e7f4ce149a777de47edc48"/>
 </manifest>
