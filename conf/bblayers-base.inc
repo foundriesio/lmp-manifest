@@ -18,3 +18,6 @@ BASELAYERS = " \
   ${OEROOT}/layers/meta-security/meta-parsec \
   ${OEROOT}/layers/meta-security/meta-integrity \
 "
+
+BASELAYERS:remove = "${OEROOT}/layers/meta-lts-mixins-go"
+BASELAYERS:remove = "${OEROOT}/layers/meta-lts-mixins-rust"
