@@ -411,10 +411,17 @@ Some common targets are:
 EOF
 
 if [ "${DISTRO}" = 'lmp-mfgtool' ]; then
+    if [[ "${MACHINE}" == *"stm32mp1"* ]]; then
+        cat <<EOF
+    stm32-mfgtool-files           - MFGTOOL Support Files and Binaries for board flashing and provisioning (STM32MP1 machines)
+
+EOF
+    else
         cat <<EOF
     mfgtool-files           - MFGTOOL Support Files and Binaries for board flashing and provisioning
 
 EOF
+    fi
 else
 
         cat <<EOF
