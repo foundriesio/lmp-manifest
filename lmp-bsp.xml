@@ -11,7 +11,7 @@
   <project name="meta-intel" path="layers/meta-intel" revision="e3911bc45ee2a210408cfbc5217199ee6b7569a4"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="43683cb14b6afc144619335b3a2353b70762ff3e"/>
   <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="ca501bd7dbe023682903ceedddaacd940b0898f4"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="c0435b61978e431974628a052ce2812fbd8e7196"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="464204a5e52a3f3ae5d7ec9e36c143ca06fed3eb"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="fio" revision="f8d8efab12040712df32436643621b2756de1f76"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" remote="fio" revision="9acf9d1d02f465b3c435283f92557b632becc72a"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="3c429b60115600ddf3adaa7be28d6c2c0bfa1019"/>
