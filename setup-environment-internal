@@ -160,39 +160,42 @@ sha512sum "${MANIFESTS}"/setup-environment-internal 2>&1 > conf/checksum
 if [ ! -f "conf/local.conf" ]; then
     cp "${MANIFESTS}"/conf/local.conf conf/local.conf
 fi
+
 # Copy default development keys if not set by the user
-mkdir -p conf/keys
-if [ ! -f "conf/keys/dev.key" -a ! -f "conf/keys/dev.crt" ]; then
-    ln -sf "${MANIFESTS}"/conf/keys/dev.key conf/keys/dev.key
-    ln -sf "${MANIFESTS}"/conf/keys/dev.crt conf/keys/dev.crt
-fi
-# Copy default SPL development keys if not set by the user
-if [ ! -f "conf/keys/spldev.key" -a ! -f "conf/keys/spldev.crt" ]; then
-    ln -sf "${MANIFESTS}"/conf/keys/spldev.key conf/keys/spldev.key
-    ln -sf "${MANIFESTS}"/conf/keys/spldev.crt conf/keys/spldev.crt
-fi
-# Copy default u-boot development keys if not set by the user
-if [ ! -f "conf/keys/ubootdev.key" -a ! -f "conf/keys/ubootdev.crt" ]; then
-    ln -sf "${MANIFESTS}"/conf/keys/ubootdev.key conf/keys/ubootdev.key
-    ln -sf "${MANIFESTS}"/conf/keys/ubootdev.crt conf/keys/ubootdev.crt
-fi
-# Copy default optee development keys if not set by the user
-if [ ! -f "conf/keys/opteedev.key" -a ! -f "conf/keys/opteedev.crt" ]; then
-    ln -sf "${MANIFESTS}"/conf/keys/opteedev.key conf/keys/opteedev.key
-    ln -sf "${MANIFESTS}"/conf/keys/opteedev.crt conf/keys/opteedev.crt
-fi
-# Copy default module kernel development keys if not set by the user
-if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "conf/keys/x509_modsign.crt" ]; then
-    ln -sf "${MANIFESTS}"/conf/keys/privkey_modsign.pem conf/keys/privkey_modsign.pem
-    ln -sf "${MANIFESTS}"/conf/keys/x509_modsign.crt conf/keys/x509_modsign.crt
-fi
-# Link default TF-A development keys if not set by the user
-if [ ! -d "conf/keys/tf-a" ]; then
-    ln -sf "${MANIFESTS}"/conf/keys/tf-a conf/keys/tf-a
-fi
-# Link default UEFI development keys and certificates if not set by the user
-if [ ! -d "conf/keys/uefi" ]; then
-    ln -sf "${MANIFESTS}"/conf/keys/uefi conf/keys/uefi
+if [ -d "${MANIFESTS}"/conf/keys ]; then
+    mkdir -p conf/keys
+    if [ ! -f "conf/keys/dev.key" -a ! -f "conf/keys/dev.crt" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/dev.key conf/keys/dev.key
+        ln -sf "${MANIFESTS}"/conf/keys/dev.crt conf/keys/dev.crt
+    fi
+    # Copy default SPL development keys if not set by the user
+    if [ ! -f "conf/keys/spldev.key" -a ! -f "conf/keys/spldev.crt" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/spldev.key conf/keys/spldev.key
+        ln -sf "${MANIFESTS}"/conf/keys/spldev.crt conf/keys/spldev.crt
+    fi
+    # Copy default u-boot development keys if not set by the user
+    if [ ! -f "conf/keys/ubootdev.key" -a ! -f "conf/keys/ubootdev.crt" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/ubootdev.key conf/keys/ubootdev.key
+        ln -sf "${MANIFESTS}"/conf/keys/ubootdev.crt conf/keys/ubootdev.crt
+    fi
+    # Copy default optee development keys if not set by the user
+    if [ ! -f "conf/keys/opteedev.key" -a ! -f "conf/keys/opteedev.crt" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/opteedev.key conf/keys/opteedev.key
+        ln -sf "${MANIFESTS}"/conf/keys/opteedev.crt conf/keys/opteedev.crt
+    fi
+    # Copy default module kernel development keys if not set by the user
+    if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "conf/keys/x509_modsign.crt" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/privkey_modsign.pem conf/keys/privkey_modsign.pem
+        ln -sf "${MANIFESTS}"/conf/keys/x509_modsign.crt conf/keys/x509_modsign.crt
+    fi
+    # Link default TF-A development keys if not set by the user
+    if [ ! -d "conf/keys/tf-a" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/tf-a conf/keys/tf-a
+    fi
+    # Link default UEFI development keys and certificates if not set by the user
+    if [ ! -d "conf/keys/uefi" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/uefi conf/keys/uefi
+    fi
 fi
 
 # Factory specific keys (unique per factory)
