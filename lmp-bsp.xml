@@ -10,7 +10,7 @@
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="b3be00d8c8cd80d89b04b4dc81bf008025d0c53a"/>
   <project name="meta-intel" path="layers/meta-intel" revision="12154d59fd0c5eec7911a66e0b56e70104346823"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="43683cb14b6afc144619335b3a2353b70762ff3e"/>
-  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="b9ac4cf691e35819c29d5a85c23d51b91ce529dc"/>
+  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="6d84bde08c03ec0184af08c2d3875fe5a334587e"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="8b50fe692a24a80b5c3cd1f816bcdd3e0b00418a"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="fio" revision="f8d8efab12040712df32436643621b2756de1f76"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" remote="fio" revision="9acf9d1d02f465b3c435283f92557b632becc72a"/>
