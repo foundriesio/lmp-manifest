@@ -255,10 +255,15 @@ if [ -z "$LMP_VERSION_CACHE" ]; then
     fi
 fi
 
+if [ -z "$LMP_ROLLBACK_PROTECTION_ENABLE" ]; then
+	LMP_ROLLBACK_PROTECTION_ENABLE="0"
+fi
+
 cat > conf/auto.conf <<EOF
 DISTRO ?= "${DISTRO}"
 MACHINE ?= "${MACHINE}"
 SDKMACHINE ?= "${SDKMACHINE}"
+LMP_ROLLBACK_PROTECTION_ENABLE ?= "${LMP_ROLLBACK_PROTECTION_ENABLE}"
 
 # Use public state cache mirror if no other is defined
 SSTATE_MIRRORS ??= "file://.* https://storage.googleapis.com/lmp-cache/v$LMP_VERSION_CACHE-sstate-cache/PATH"
