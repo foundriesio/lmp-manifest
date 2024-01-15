@@ -11,7 +11,7 @@
   </project>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="cd3351f994d2b1f9de0d8ae4b09d88949afc5d0d"/>
   <project name="meta-clang" path="layers/meta-clang" revision="312ff1c39b1bf5d35c0321e873417eb013cea477"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="402affcc073db39f782c1ebfd718edd5f11eed4c"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="730e44900a0a86265bad93a16b5a5ff344a07266"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="a0384aea22a3ddfc70202a26ee1372c91b1fcfc9"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="6b3a208f7e14138728a6e581ac75e8973ab48ef3"/>
   <project name="meta-security" path="layers/meta-security" revision="1a3e42cedbd94ca73be45800d0e902fec35d0f0f"/>
