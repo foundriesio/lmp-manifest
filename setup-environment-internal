@@ -277,6 +277,9 @@ INHERIT += "buildhistory"
 BUILDHISTORY_COMMIT = "1"
 EOF
 
+# we don't need this anymore
+unset LMP_VERSION_CACHE
+
 if [ ! -e conf/site.conf ]; then
     cat > conf/site.conf <<_EOF
 SCONF_VERSION = "1"
