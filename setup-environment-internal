@@ -228,10 +228,6 @@ if [ -d "${MANIFESTS}"/factory-keys ]; then
     fi
 fi
 
-# Link default iMX HAB4 development keys and certificate if not set by the user
-if [ ! -e "conf/keys/imx_hab4" ]; then
-    ln -sf ${OEROOT}/tools/lmp-tools/security/imx_hab4 conf/keys/imx_hab4
-fi
 ln -sf "${MANIFESTS}"/conf/bblayers.conf conf/bblayers.conf
 ln -sf "${MANIFESTS}"/conf/bblayers-base.inc conf/bblayers-base.inc
 ln -sf "${MANIFESTS}"/conf/bblayers-bsp.inc conf/bblayers-bsp.inc
