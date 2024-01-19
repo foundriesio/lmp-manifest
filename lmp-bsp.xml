@@ -14,6 +14,6 @@
   <project name="meta-yocto" path="layers/meta-yocto" revision="77c2830ae0c3e7370f7c816796981932ba0ec99a"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="fio" revision="f8d8efab12040712df32436643621b2756de1f76"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" remote="fio" revision="9acf9d1d02f465b3c435283f92557b632becc72a"/>
-  <project name="meta-tegra" path="layers/meta-tegra" revision="30cdeef2e8c7d0dfa6b5c4bb929636ee02ae347a"/>
+  <project name="meta-tegra" path="layers/meta-tegra" revision="f8cb5c6ad2617755f5cb74f85a1b0b2cd6380f6c"/>
   <project name="meta-ti" path="layers/meta-ti" revision="155218f03ee8222eeb02f11ea9bc41135cf28e38"/>
 </manifest>
