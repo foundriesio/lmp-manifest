@@ -277,8 +277,14 @@ INHERIT += "buildhistory"
 BUILDHISTORY_COMMIT = "1"
 EOF
 
-# we don't need this anymore
-unset LMP_VERSION_CACHE
+# LMP_VERSION_CACHE was required in some other places on CI so
+# we need to proper check for the existence of LMP_VERSION,
+# which is only available on CI, to safely remove the LMP_VERSION_CACHE
+# on local builds
+if [ ! -v LMP_VERSION ]; then
+    # we don't need this anymore
+    unset LMP_VERSION_CACHE
+fi
 
 if [ ! -e conf/site.conf ]; then
     cat > conf/site.conf <<_EOF
