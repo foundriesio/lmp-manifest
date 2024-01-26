@@ -147,7 +147,7 @@ if [ -f "conf/auto.conf" ]; then
              sed -e 's%^MACHINE ?= %%' | sed -e 's/^"//' -e 's/"$//')
 fi
 
-if [ -e conf/checksum -a "${MACHINE}" = "$oldmach" ]; then
+if [ -e conf/checksum ] && [ "${MACHINE}" = "$oldmach" ]; then
     sha512sum --quiet -c conf/checksum > /dev/null 2>&1
     if [ $? -eq 0 ]; then
        return
@@ -164,27 +164,27 @@ fi
 # Copy default development keys if not set by the user
 if [ -d "${MANIFESTS}"/conf/keys ]; then
     mkdir -p conf/keys
-    if [ ! -f "conf/keys/dev.key" -a ! -f "conf/keys/dev.crt" ]; then
+    if [ ! -f "conf/keys/dev.key" ] && [ ! -f "conf/keys/dev.crt" ]; then
         ln -sf "${MANIFESTS}"/conf/keys/dev.key conf/keys/dev.key
         ln -sf "${MANIFESTS}"/conf/keys/dev.crt conf/keys/dev.crt
     fi
     # Copy default SPL development keys if not set by the user
-    if [ ! -f "conf/keys/spldev.key" -a ! -f "conf/keys/spldev.crt" ]; then
+    if [ ! -f "conf/keys/spldev.key" ] && [ ! -f "conf/keys/spldev.crt" ]; then
         ln -sf "${MANIFESTS}"/conf/keys/spldev.key conf/keys/spldev.key
         ln -sf "${MANIFESTS}"/conf/keys/spldev.crt conf/keys/spldev.crt
     fi
     # Copy default u-boot development keys if not set by the user
-    if [ ! -f "conf/keys/ubootdev.key" -a ! -f "conf/keys/ubootdev.crt" ]; then
+    if [ ! -f "conf/keys/ubootdev.key" ] && [ ! -f "conf/keys/ubootdev.crt" ]; then
         ln -sf "${MANIFESTS}"/conf/keys/ubootdev.key conf/keys/ubootdev.key
         ln -sf "${MANIFESTS}"/conf/keys/ubootdev.crt conf/keys/ubootdev.crt
     fi
     # Copy default optee development keys if not set by the user
-    if [ ! -f "conf/keys/opteedev.key" -a ! -f "conf/keys/opteedev.crt" ]; then
+    if [ ! -f "conf/keys/opteedev.key" ] && [ ! -f "conf/keys/opteedev.crt" ]; then
         ln -sf "${MANIFESTS}"/conf/keys/opteedev.key conf/keys/opteedev.key
         ln -sf "${MANIFESTS}"/conf/keys/opteedev.crt conf/keys/opteedev.crt
     fi
     # Copy default module kernel development keys if not set by the user
-    if [ ! -f "conf/keys/privkey_modsign.pem" -a ! -f "conf/keys/x509_modsign.crt" ]; then
+    if [ ! -f "conf/keys/privkey_modsign.pem" ] && [ ! -f "conf/keys/x509_modsign.crt" ]; then
         ln -sf "${MANIFESTS}"/conf/keys/privkey_modsign.pem conf/keys/privkey_modsign.pem
         ln -sf "${MANIFESTS}"/conf/keys/x509_modsign.crt conf/keys/x509_modsign.crt
     fi
@@ -206,35 +206,35 @@ fi
 if [ -d "${MANIFESTS}"/factory-keys ]; then
     mkdir -p conf/factory-keys
     # Copy default factory SPL development keys if not set by the user
-    if [ ! -f "conf/factory-keys/spldev.key" -a ! -f "conf/factory-keys/spldev.crt" ]; then
+    if [ ! -f "conf/factory-keys/spldev.key" ] && [ ! -f "conf/factory-keys/spldev.crt" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/spldev.key conf/factory-keys/spldev.key
         ln -sf "${MANIFESTS}"/factory-keys/spldev.crt conf/factory-keys/spldev.crt
     fi
     # Copy default factory u-boot development keys if not set by the user
-    if [ ! -f "conf/factory-keys/ubootdev.key" -a ! -f "conf/factory-keys/ubootdev.crt" ]; then
+    if [ ! -f "conf/factory-keys/ubootdev.key" ] && [ ! -f "conf/factory-keys/ubootdev.crt" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/ubootdev.key conf/factory-keys/ubootdev.key
         ln -sf "${MANIFESTS}"/factory-keys/ubootdev.crt conf/factory-keys/ubootdev.crt
     fi
     # Copy default factory optee development keys if not set by the user
-    if [ ! -f "conf/factory-keys/opteedev.key" -a ! -f "conf/factory-keys/opteedev.crt" ]; then
+    if [ ! -f "conf/factory-keys/opteedev.key" ] && [ ! -f "conf/factory-keys/opteedev.crt" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/opteedev.key conf/factory-keys/opteedev.key
         ln -sf "${MANIFESTS}"/factory-keys/opteedev.crt conf/factory-keys/opteedev.crt
     fi
     # Copy default factory module kernel development keys if not set by the user
-    if [ ! -f "conf/factory-keys/privkey_modsign.pem" -a ! -f "conf/factory-keys/x509_modsign.crt" ]; then
+    if [ ! -f "conf/factory-keys/privkey_modsign.pem" ] && [ ! -f "conf/factory-keys/x509_modsign.crt" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/privkey_modsign.pem conf/factory-keys/privkey_modsign.pem
         ln -sf "${MANIFESTS}"/factory-keys/x509_modsign.crt conf/factory-keys/x509_modsign.crt
     fi
     # Link custom TF-A development keys set by the user
-    if [ -d "${MANIFESTS}"/factory-keys/tf-a -a ! -d "conf/factory-keys/tf-a" ]; then
+    if [ -d "${MANIFESTS}"/factory-keys/tf-a ] && [ ! -d "conf/factory-keys/tf-a" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/tf-a conf/factory-keys/tf-a
     fi
     # Link custom UEFI development keys and certificates set by the user
-    if [ -d "${MANIFESTS}"/factory-keys/uefi -a ! -d "conf/factory-keys/uefi" ]; then
+    if [ -d "${MANIFESTS}"/factory-keys/uefi ] && [ ! -d "conf/factory-keys/uefi" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/uefi conf/factory-keys/uefi
     fi
     # Link default TI K3 RoT keys if not set by the user
-    if [ -d "${MANIFESTS}"/factory-keys/platform -a ! -d "conf/factory-keys/platform" ]; then
+    if [ -d "${MANIFESTS}"/factory-keys/platform ] && [ ! -d "conf/factory-keys/platform" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/platform conf/factory-keys/platform
     fi
 fi
