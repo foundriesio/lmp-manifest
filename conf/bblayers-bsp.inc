@@ -27,3 +27,10 @@ BBMASK:append = " /meta-lmp/meta-lmp-bsp/recipes-bsp/alsa/alsa-state-stm32mp1.bb
 BSPLAYERS:remove = "\
   ${OEROOT}/layers/meta-st-stm32mp \
 "
+
+BSPLAYERS:remove = "\
+  ${OEROOT}/layers/meta-xilinx/meta-xilinx-core \
+  ${OEROOT}/layers/meta-xilinx/meta-xilinx-bsp \
+  ${OEROOT}/layers/meta-xilinx/meta-xilinx-standalone \
+  ${OEROOT}/layers/meta-xilinx-tools \
+"
