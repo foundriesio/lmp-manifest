@@ -38,6 +38,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ARG DEV_USER_NAME=Builder
 ARG DEV_USER=builder
 ARG DEV_USER_PASSWD=builder
+ARG DEV_USER_ID=1000
 
 # FIO PPA for additional dependencies and newer packages
 RUN apt-get update \
@@ -63,14 +64,6 @@ RUN apt-get update \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& locale-gen en_US.UTF-8
-
-# Create the user which will run the SDK binaries.
-RUN useradd -c $DEV_USER_NAME \
-		-d /home/$DEV_USER \
-		-G sudo,dialout,floppy,plugdev,users \
-		-m \
-		-s /bin/bash \
-		$DEV_USER
 
 # Add entrypoint to run gosu
 COPY entrypoint /
@@ -104,3 +97,14 @@ RUN mkdir -p /etc/apt/keyrings \
 RUN mkdir -p /usr/lib/docker/cli-plugins \
 	&& wget https://github.com/docker/compose/releases/download/v2.6.0/docker-compose-linux-x86_64 -O /usr/lib/docker/cli-plugins/docker-compose \
 	&& chmod +x /usr/lib/docker/cli-plugins/docker-compose
+
+# Create the user which will run the SDK binaries.
+RUN useradd -c $DEV_USER_NAME \
+		-d /home/$DEV_USER \
+		-G sudo,dialout,floppy,plugdev,users \
+		-m \
+		-s /bin/bash \
+		-u $DEV_USER_ID
+		$DEV_USER
+
+
