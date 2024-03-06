@@ -102,7 +102,7 @@ RUN useradd -c $DEV_USER_NAME \
 		-G sudo,dialout,floppy,plugdev,users \
 		-m \
 		-s /bin/bash \
-		-u $DEV_USER_ID
+		-u $DEV_USER_ID \
 		$DEV_USER
 
 
