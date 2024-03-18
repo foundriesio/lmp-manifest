@@ -15,7 +15,7 @@
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="master"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="kirkstone/go"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="kirkstone/rust-1.68"/>
-  <project name="meta-security" path="layers/meta-security" revision="master"/>
+  <project name="meta-security" path="layers/meta-security" remote="quaresmajose" revision="scarthgap"/>
   <project name="meta-updater" path="layers/meta-updater" revision="master"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="master"/>
   <project name="openembedded-core" path="layers/openembedded-core" remote="quaresmajose" revision="next"/>
