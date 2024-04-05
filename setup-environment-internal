@@ -200,6 +200,10 @@ if [ -d "${MANIFESTS}"/conf/keys ]; then
     if [ ! -d "conf/keys/platform" ]; then
         ln -sf "${MANIFESTS}"/conf/keys/platform conf/keys/platform
     fi
+    # Link Composefs keys
+    if [ ! -d "conf/keys/cfs" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/cfs conf/keys/cfs
+    fi
 fi
 
 # Factory specific keys (unique per factory)
@@ -236,6 +240,10 @@ if [ -d "${MANIFESTS}"/factory-keys ]; then
     # Link default TI K3 RoT keys if not set by the user
     if [ -d "${MANIFESTS}"/factory-keys/platform ] && [ ! -d "conf/factory-keys/platform" ]; then
         ln -sf "${MANIFESTS}"/factory-keys/platform conf/factory-keys/platform
+    fi
+    # Link Composefs keys if not set by the user
+    if [ -d "${MANIFESTS}"/factory-keys/cfs ] && [ ! -d "conf/factory-keys/cfs" ]; then
+        ln -sf "${MANIFESTS}"/conf/keys/cfs conf/keys/cfs
     fi
 fi
 
