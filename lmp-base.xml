@@ -9,7 +9,7 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="4662f1c424ffb87dbeaa801d86d4147c066522c0"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="5e6c4068091e432ad7bc4b5c9a65cadc5bec106a"/>
   <project name="meta-clang" path="layers/meta-clang" revision="312ff1c39b1bf5d35c0321e873417eb013cea477"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="8bb16533532b6abc2eded7d9961ab2a108fd7a5b"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="0dea41cd1a8eec04257a97214545c1afd1fe2aeb"/>
