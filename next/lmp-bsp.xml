@@ -5,15 +5,15 @@
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="meta-arm" path="layers/meta-arm" revision="master"/>
-  <project name="meta-freescale" path="layers/meta-freescale" revision="master"/>
-  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="master"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="master"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="master"/>
-  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="mickledore"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="master"/>
+  <project name="meta-arm" path="layers/meta-arm" revision="scarthgap"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="scarthgap"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="scarthgap"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="scarthgap"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="scarthgap"/>
+  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="scarthgap"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="scarthgap"/>
   <project name="meta-xilinx" path="layers/meta-xilinx" remote="fio" revision="kirkstone-next"/>
   <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" remote="fio" revision="kirkstone-next"/>
-  <project name="meta-tegra" path="layers/meta-tegra" revision="master"/>
-  <project name="meta-ti" path="layers/meta-ti" revision="master"/>
+  <project name="meta-tegra" path="layers/meta-tegra" revision="scarthgap-l4t-r35.x"/>
+  <project name="meta-ti" path="layers/meta-ti" revision="scarthgap"/>
 </manifest>
