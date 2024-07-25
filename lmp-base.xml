@@ -5,17 +5,17 @@
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="bitbake" revision="5a90927f31c4f9fccbe5d9d07d08e6e69485baa8"/>
+  <project name="bitbake" revision="2.8"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="fc2108ec7edd5745c5f278dd64c06395c0cd26f7"/>
-  <project name="meta-clang" path="layers/meta-clang" revision="557663d9e9fa34fa2b860696ce5a5d8744ade8f6"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="6ff0748a4741517519a281985fc3cd95dadb633e"/>
-  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="6b10782a1e5760d1dd5d33d561e6367b5f971d8e"/>
-  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="1a6746a81da4d5bf2e5640fd2fa8f3ea453d40bf"/>
-  <project name="meta-security" path="layers/meta-security" revision="353078bc06c8b471736daab6ed193e30d533d1f1"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="6c4feab2db70cb0c8ddce7e18dc7b851ad475b32"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="8b356b91ed0d4bcab72350a2ddcef880f4fa5c26"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="8e650506885bc4465f9569b3ccdc327eb83d90db"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="scarthgap-next"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="scarthgap"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="scarthgap"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="kirkstone/go"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="kirkstone/rust"/>
+  <project name="meta-security" path="layers/meta-security" revision="scarthgap"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="scarthgap"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="scarthgap"/>
+  <project name="openembedded-core" path="layers/openembedded-core" remote="fio" revision="scarthgap-next"/>
 </manifest>
