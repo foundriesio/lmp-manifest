@@ -35,7 +35,7 @@ if [ "$(whoami)" = "root" ]; then
     return
 fi
 
-OEROOT=$(readlink -f pwd)
+OEROOT=$(readlink -f $(pwd))
 cd "$OEROOT"
 if [ -n "$ZSH_VERSION" ]; then
     setopt sh_word_split
