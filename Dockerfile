@@ -23,7 +23,7 @@ RUN wget -P /tmp https://go.dev/dl/go1.19.9.linux-amd64.tar.gz && \
 ENV PATH /usr/local/go/bin:$PATH
 
 RUN git clone https://github.com/foundriesio/ostreeuploader.git /ostreeuploader && \
-    cd /ostreeuploader && git checkout -q 2024.10 && \
+    cd /ostreeuploader && git checkout -q 2024.10.1 && \
     cd /ostreeuploader && make
 
 
