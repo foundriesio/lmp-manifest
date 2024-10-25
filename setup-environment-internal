@@ -262,13 +262,35 @@ ln -sf "${MANIFESTS}" "${OEROOT}"/layers/
 
 DISTRO_DIRNAME=$(echo "${DISTRO}" | sed 's#[.-]#_#g')
 
+LMP_TAG="$(git --git-dir ${MANIFESTS}/.git describe HEAD --tags --abbrev=0)"
+# We want to truncate the value and still use the major version cache
+# (e.g. for 94.1 use 94. The .1 part of the sstate cache is
+# actually in the 95 bucket. 94.1 is small enough so this doesn't matter).
+# If we ever have a minor release that causes sufficient cache
+# invalidation, then we'll need to re-think how to produce the cache better.
+LMP_TAG="$(echo $LMP_TAG | sed 's/\.[0-9]*$//')"
+
+if [[ ! $LMP_TAG =~ ^[[:digit:]] ]]; then
+    LMP_TAG_ARR=(${LMP_TAG//-/ })
+    LMP_PARTNER_NAME="${LMP_TAG_ARR[0]}"
+    LMP_VERSION_CACHE_TMP="${LMP_TAG_ARR[1]}"
+else
+    LMP_VERSION_CACHE_TMP="${LMP_TAG}"
+fi
+
 if [ -z "$LMP_VERSION_CACHE" ]; then
-    LMP_VERSION_CACHE="$(git --git-dir ${MANIFESTS}/.git describe HEAD --tags --abbrev=0)"
-    LMP_VERSION_CACHE="$(echo $LMP_VERSION_CACHE | sed 's/\.[0-9]*$//')"
+    LMP_VERSION_CACHE="${LMP_VERSION_CACHE_TMP}"
+
     if [ -v LMP_VERSION_CACHE_DEV ]; then
         # to use the development version of the cache the user need to define the LMP_VERSION_CACHE_DEV env
         LMP_VERSION_CACHE=$(( $LMP_VERSION_CACHE + 1 ))
     fi
+fi
+
+if [[ ! -z "$LMP_PARTNER_NAME" ]]; then
+    SSTATE_MIRRORS="file://.* https://storage.googleapis.com/lmp-cache/$LMP_PARTNER_NAME/v$LMP_VERSION_CACHE-sstate-cache/PATH"
+else
+    SSTATE_MIRRORS="file://.* https://storage.googleapis.com/lmp-cache/v$LMP_VERSION_CACHE-sstate-cache/PATH"
 fi
 
 cat > conf/auto.conf <<EOF
@@ -277,7 +299,7 @@ MACHINE ?= "${MACHINE}"
 SDKMACHINE ?= "${SDKMACHINE}"
 
 # Use public state cache mirror if no other is defined
-SSTATE_MIRRORS ??= "file://.* https://storage.googleapis.com/lmp-cache/v$LMP_VERSION_CACHE-sstate-cache/PATH"
+SSTATE_MIRRORS ??= "$SSTATE_MIRRORS"
 
 # Extra options that can be changed by the user
 INHERIT += "rm_work"
