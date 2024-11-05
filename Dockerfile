@@ -3,10 +3,15 @@ FROM ubuntu:20.04 AS container-tools
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y wget git make \
-	libgpgme-dev libassuan-dev libbtrfs-dev libdevmapper-dev pkg-config
+	libgpgme-dev libassuan-dev libbtrfs-dev libdevmapper-dev pkg-config \
+        file
 
-RUN wget -P /tmp https://go.dev/dl/go1.18.linux-amd64.tar.gz && \
-	tar -C /usr/local -xzf /tmp/go1.18.linux-amd64.tar.gz
+# Detect host architecture
+RUN file /bin/bash | grep -q x86-64 && echo amd64 > /tmp/arch || true
+RUN file /bin/bash | grep -q aarch64 && echo arm64 > /tmp/arch || true
+
+RUN wget -P /tmp https://go.dev/dl/go1.18.linux-$(cat /tmp/arch).tar.gz && \
+	tar -C /usr/local -xzf /tmp/go1.18.linux-$(cat /tmp/arch).tar.gz
 ENV PATH /usr/local/go/bin:$PATH
 
 # Build skopeo
@@ -17,9 +22,14 @@ RUN git clone https://github.com/containers/skopeo.git /skopeo && \
 # Build ostreeuploader, aka fiopush/fiocheck
 FROM ubuntu:20.04 AS fiotools
 RUN apt-get update
-RUN apt-get install -y wget git gcc make
-RUN wget -P /tmp https://go.dev/dl/go1.19.9.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf /tmp/go1.19.9.linux-amd64.tar.gz
+RUN apt-get install -y wget git gcc make file
+
+# Detect host architecture
+RUN file /bin/bash | grep -q x86-64 && echo amd64 > /tmp/arch || true
+RUN file /bin/bash | grep -q aarch64 && echo arm64 > /tmp/arch || true
+
+RUN wget -P /tmp https://go.dev/dl/go1.19.9.linux-$(cat /tmp/arch).tar.gz && \
+    tar -C /usr/local -xzf /tmp/go1.19.9.linux-$(cat /tmp/arch).tar.gz
 ENV PATH /usr/local/go/bin:$PATH
 
 RUN git clone https://github.com/foundriesio/ostreeuploader.git /ostreeuploader && \
