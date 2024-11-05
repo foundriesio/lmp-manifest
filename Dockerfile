@@ -17,7 +17,7 @@ RUN git clone https://github.com/containers/skopeo.git /skopeo && \
 # Build ostreeuploader, aka fiopush/fiocheck
 FROM ubuntu:20.04 AS fiotools
 RUN apt-get update
-RUN apt-get install -y wget git gcc make -y
+RUN apt-get install -y wget git gcc make
 RUN wget -P /tmp https://go.dev/dl/go1.19.9.linux-amd64.tar.gz && \
     tar -C /usr/local -xzf /tmp/go1.19.9.linux-amd64.tar.gz
 ENV PATH /usr/local/go/bin:$PATH
