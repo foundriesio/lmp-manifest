@@ -3,10 +3,15 @@ FROM ubuntu:20.04 AS container-tools
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y wget git make \
-	libgpgme-dev libassuan-dev libbtrfs-dev libdevmapper-dev pkg-config
+	libgpgme-dev libassuan-dev libbtrfs-dev libdevmapper-dev pkg-config \
+        file
 
-RUN wget -P /tmp https://go.dev/dl/go1.18.linux-amd64.tar.gz && \
-	tar -C /usr/local -xzf /tmp/go1.18.linux-amd64.tar.gz
+# Detect host architecture
+RUN file /bin/bash | grep -q x86-64 && echo amd64 > /tmp/arch || true
+RUN file /bin/bash | grep -q aarch64 && echo arm64 > /tmp/arch || true
+
+RUN wget -P /tmp https://go.dev/dl/go1.18.linux-$(cat /tmp/arch).tar.gz && \
+	tar -C /usr/local -xzf /tmp/go1.18.linux-$(cat /tmp/arch).tar.gz
 ENV PATH /usr/local/go/bin:$PATH
 
 # Build skopeo
@@ -17,9 +22,14 @@ RUN git clone https://github.com/containers/skopeo.git /skopeo && \
 # Build ostreeuploader, aka fiopush/fiocheck
 FROM ubuntu:20.04 AS fiotools
 RUN apt-get update
-RUN apt-get install -y wget git gcc make -y
-RUN wget -P /tmp https://go.dev/dl/go1.19.9.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf /tmp/go1.19.9.linux-amd64.tar.gz
+RUN apt-get install -y wget git gcc make file
+
+# Detect host architecture
+RUN file /bin/bash | grep -q x86-64 && echo amd64 > /tmp/arch || true
+RUN file /bin/bash | grep -q aarch64 && echo arm64 > /tmp/arch || true
+
+RUN wget -P /tmp https://go.dev/dl/go1.19.9.linux-$(cat /tmp/arch).tar.gz && \
+    tar -C /usr/local -xzf /tmp/go1.19.9.linux-$(cat /tmp/arch).tar.gz
 ENV PATH /usr/local/go/bin:$PATH
 
 RUN git clone https://github.com/foundriesio/ostreeuploader.git /ostreeuploader && \
@@ -55,7 +65,7 @@ RUN apt-get update \
 		openjdk-11-jre openssh-client perl-modules python3 python3-requests \
 		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs screen \
 		socket corkscrew curl xz-utils tcl libtinfo5 device-tree-compiler python3-pip python3-dev \
-		tmux libncurses-dev vim zstd lz4 liblz4-tool libc6-dev-i386 \
+		tmux libncurses-dev vim zstd lz4 liblz4-tool libc6-dev \
 		awscli docker-compose gosu xvfb python3-cairo python3-gi-cairo yaru-theme-icon tree rsync \
 	&& ln -s /usr/bin/python3 /usr/bin/python \
 	&& pip3 --no-cache-dir install expandvars jsonFormatter \
