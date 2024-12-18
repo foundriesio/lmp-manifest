@@ -14,7 +14,7 @@
   <project name="meta-freescale" path="layers/meta-freescale" revision="62bd604f7575a1b272f0ab7f4cdb6ee9f12e76eb"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="2602df3c730d970b8a4aa685b9f43d7ccd2c5d0f"/>
   <project name="meta-intel" path="layers/meta-intel" revision="db4f44628642244c9880771d29fe0ce6531a406f"/>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="c1b303bd2b5222a92b3bf6d1a4fd99ed7fdd354c"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="afd2bd06cb6453990c563ff534d674edf2c51644"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="b8a6349ec476c0a38436be7503ef963f49c2c461"/>
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="6a13fff3bd2945dee63e9515db11ef69cbe9daec"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="2e3126c9c16bb3df0560f6b3896d01539a3bfad7"/>
