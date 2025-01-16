@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <include name="lmp-base.xml" />
-  <include name="lmp-bsp.xml" />
+  <remote name="fio" fetch="https://github.com/foundriesio"/>
+  <remote name="lmp-mirrors" fetch="https://github.com/lmp-mirrors"/>
+  
+  <default remote="lmp-mirrors" revision="master" sync-j="4"/>
+  
+  <project name="bitbake" revision="5a90927f31c4f9fccbe5d9d07d08e6e69485baa8"/>
+  <project name="lmp-tools" path="tools/lmp-tools" remote="fio" revision="7ea4e85fdbda0c0141297745d9b0c398be7b5a0a">
+    <linkfile src="setup-environment" dest="setup-environment"/>
+  </project>
+  <project name="meta-arm" path="layers/meta-arm" revision="260e3adc2bf322f52d81c0642c825088a88bb051"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="2ed384c64e206016c628451672c688e59944381b"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="84be484645cdcc12bc12591874bfebd24cc0c9a6"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="8b61684f0b1ba8bacdf3a69d993445e9791d4932"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="5cfefd9a8ff1f5a3534c1ba9d7d7f6971ed5d56f"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="3d00fce2f185f5efe0aaa0cf393008a12c4165f3"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="4052c97dc83d0c88fc277d6fc1815e0699020daa"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="e6d2ff0b0cbb925157c95b07327c2a7dc145fabe"/>
+  <project name="meta-security" path="layers/meta-security" revision="353078bc06c8b471736daab6ed193e30d533d1f1"/>
+  <project name="meta-tegra" path="layers/meta-tegra" revision="d47fa3649b6155b9c01e06087917ddca341e7cf1"/>
+  <project name="meta-ti" path="layers/meta-ti" revision="1de40ea7ee8ff136dce163b4ad1c1eddf35852a7"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="6c4feab2db70cb0c8ddce7e18dc7b851ad475b32"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="8b356b91ed0d4bcab72350a2ddcef880f4fa5c26"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="c4c74d1e575217ddc4b74759cd83186a70940ef9"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="f6de96c9fa8d0b6c81c32016f342ad93c8940d9e"/>
 </manifest>
