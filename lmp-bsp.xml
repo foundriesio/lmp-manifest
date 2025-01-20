@@ -12,5 +12,5 @@
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="e6d2ff0b0cbb925157c95b07327c2a7dc145fabe"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="c4c74d1e575217ddc4b74759cd83186a70940ef9"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="d47fa3649b6155b9c01e06087917ddca341e7cf1"/>
-  <project name="meta-ti" path="layers/meta-ti" revision="1de40ea7ee8ff136dce163b4ad1c1eddf35852a7"/>
+  <project name="meta-ti" path="layers/meta-ti" revision="4213a71a8eaed4a57562c0608f9ba29efc39eede"/>
 </manifest>
