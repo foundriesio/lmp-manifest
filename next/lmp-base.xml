@@ -10,11 +10,9 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="scarthgap"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="main"/>
   <project name="meta-clang" path="layers/meta-clang" revision="scarthgap"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="scarthgap"/>
-  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="kirkstone/go"/>
-  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="kirkstone/rust"/>
   <project name="meta-security" path="layers/meta-security" revision="scarthgap"/>
   <project name="meta-updater" path="layers/meta-updater" revision="scarthgap"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="scarthgap"/>
