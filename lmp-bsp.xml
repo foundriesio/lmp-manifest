@@ -10,7 +10,7 @@
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="1dfc65dd2006b51d156be5bcda0e3c72c936ad0a"/>
   <project name="meta-intel" path="layers/meta-intel" revision="0be954e82f09d235d2b5e5ea01bb62ffa8d0b5f7"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="6df7e028a2b7b2d8cab0745dc0ed2eebc3742a17"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="bd166d1fb8dc1bed7e71bd06b970a3da9149203e"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="03c7935bcdb15fd903d26828085d49c00267b8d9"/>
   <project name="meta-tegra" path="layers/meta-tegra" revision="eae16b56ccf4f761a39bfa4381ada8a4e8f952bd"/>
   <project name="meta-ti" path="layers/meta-ti" revision="4213a71a8eaed4a57562c0608f9ba29efc39eede"/>
 </manifest>
