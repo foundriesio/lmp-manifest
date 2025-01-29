@@ -11,7 +11,7 @@
   </project>
   <project name="meta-arm" path="layers/meta-arm" revision="a8fe9d22eaefc294f91096c6a32663e2f4ab3b10"/>
   <project name="meta-clang" path="layers/meta-clang" revision="8c77b427408db01b8de4c04bd3d247c13c154f92"/>
-  <project name="meta-freescale" path="layers/meta-freescale" revision="be9267fca85959c79b19ab65e48c8f3d7faf2b40"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="049b40e503c03c5f86f93c14cf59445c1b29cd2e"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="1dfc65dd2006b51d156be5bcda0e3c72c936ad0a"/>
   <project name="meta-intel" path="layers/meta-intel" revision="0be954e82f09d235d2b5e5ea01bb62ffa8d0b5f7"/>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="27e74bfce8c42a5de1b27f45db1949b2c3d61dd5"/>
