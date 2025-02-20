@@ -2,18 +2,19 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="bitbake" revision="aa0e540fc31a1c26839efd2c7785a751ce24ebfb"/>
+  <project name="bitbake" revision="2.8"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="7657b41046ff745ce5fe61a64f615623ebb098e0"/>
-  <project name="meta-clang" path="layers/meta-clang" revision="8c77b427408db01b8de4c04bd3d247c13c154f92"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="4f11a12b2352bbdfafb6b7d956bf424af4992977"/>
-  <project name="meta-security" path="layers/meta-security" revision="bc865c5276c2ab4031229916e8d7c20148dfbac3"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="92f0e7aa93966e184beb1ccdfea6c8fdb27d2b18"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="79673f5c67b022e7aadeb231872470295e5b9188"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="62cb12967391db709315820d48853ffa4c6b4740"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="main"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="scarthgap"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="scarthgap"/>
+  <project name="meta-security" path="layers/meta-security" revision="scarthgap"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="scarthgap"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="scarthgap"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="scarthgap"/>
 </manifest>
