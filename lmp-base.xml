@@ -11,7 +11,7 @@
   </project>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="c9ec5ef7b9641c176388e2e8b30eb3381ba5a471"/>
   <project name="meta-clang" path="layers/meta-clang" revision="8c77b427408db01b8de4c04bd3d247c13c154f92"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="4f11a12b2352bbdfafb6b7d956bf424af4992977"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="6c9f1f8d4538119803bf793747b65e4d23c33544"/>
   <project name="meta-security" path="layers/meta-security" revision="bc865c5276c2ab4031229916e8d7c20148dfbac3"/>
   <project name="meta-updater" path="layers/meta-updater" revision="92f0e7aa93966e184beb1ccdfea6c8fdb27d2b18"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="79673f5c67b022e7aadeb231872470295e5b9188"/>
