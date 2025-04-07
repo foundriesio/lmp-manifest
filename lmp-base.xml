@@ -9,11 +9,11 @@
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="e3daa83ef34a37bbe82300ad232b1b128fc8fb45"/>
-  <project name="meta-clang" path="layers/meta-clang" revision="8c77b427408db01b8de4c04bd3d247c13c154f92"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="6c9f1f8d4538119803bf793747b65e4d23c33544"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="0b6a6c3a6697145e0bae0c13dd1969f7a2323df6"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="b9ef02282197380ef05edbd0eb852e1934ceb59b"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="67ad83dd7c2485dae0c90eac345007af6195b84d"/>
   <project name="meta-security" path="layers/meta-security" revision="bc865c5276c2ab4031229916e8d7c20148dfbac3"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="92f0e7aa93966e184beb1ccdfea6c8fdb27d2b18"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="94ee980814d7c5824449b2745a934664adbf3007"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="b00b0d744a1768843386cfd529b73cc17c88bec9"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="d57b19f885fe11916c91569e20288581eff512aa"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="52cf1d59c5af5b795a2efec6f6f33df78ce61c48"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="4003b5faa1e5acfa025e1d0df4e021e06cf8724c"/>
 </manifest>
