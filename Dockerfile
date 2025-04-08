@@ -1,5 +1,5 @@
 # Build container tools
-FROM ubuntu:20.04 AS container-tools
+FROM ubuntu:22.04 AS container-tools
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y wget git make \
@@ -20,7 +20,7 @@ RUN git clone https://github.com/containers/skopeo.git /skopeo && \
 	GO_DYN_FLAGS= CGO_ENABLED=0 BUILDTAGS=containers_image_openpgp DISABLE_DOCS=1 make
 
 # Build ostreeuploader, aka fiopush/fiocheck
-FROM ubuntu:20.04 AS fiotools
+FROM ubuntu:22.04 AS fiotools
 RUN apt-get update
 RUN apt-get install -y wget git gcc make file
 
@@ -37,7 +37,7 @@ RUN git clone https://github.com/foundriesio/ostreeuploader.git /ostreeuploader 
     cd /ostreeuploader && make
 
 
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 # bitbake requires a utf8 filesystem encoding
 ENV LANG en_US.UTF-8
@@ -53,20 +53,19 @@ ARG DEV_USER_PASSWD=builder
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 	   software-properties-common \
-	&& add-apt-repository ppa:fio-maintainers/ppa \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
-		android-sdk-libsparse-utils android-sdk-ext4-utils ca-certificates \
+		android-sdk-libsparse-utils ca-certificates \
 		chrpath cpio diffstat file gawk g++ iproute2 iputils-ping less libgcc1 libmagickwand-dev \
 		libmath-prime-util-perl libsdl1.2-dev libssl-dev locales \
 		openjdk-11-jre openssh-client perl-modules python3 python3-requests \
 		make patch repo sudo texinfo vim-tiny wget whiptail libelf-dev git-lfs screen \
 		socket corkscrew curl xz-utils tcl libtinfo5 device-tree-compiler python3-pip python3-dev \
 		tmux libncurses-dev vim zstd lz4 liblz4-tool libc6-dev \
-		awscli docker-compose gosu xvfb python3-cairo python3-gi-cairo yaru-theme-icon tree rsync \
+		awscli gosu xvfb python3-cairo python3-gi-cairo yaru-theme-icon tree rsync bzip2 \
 	&& ln -s /usr/bin/python3 /usr/bin/python \
 	&& pip3 --no-cache-dir install expandvars jsonFormatter \
 	&& apt-get autoremove -y \
@@ -103,14 +102,13 @@ ENV FIO_CHECK_CMD /usr/bin/fiocheck
 # Install skopeo
 COPY --from=container-tools /skopeo/bin/skopeo /usr/bin
 
-# Install docker CLI, v20.10.14, required by the oe-builtin App preload
+# Install docker, v28.0.4, required by the oe-builtin App preload, `docker compose config`
+# Install docker compose CLI plugin, v2.34.0, required by the oe-builtin App preload, `docker compose config`
+# https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/
 RUN mkdir -p /etc/apt/keyrings \
 	&& curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg \
 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null \
-	&& apt-get update && apt-get install -y docker-ce-cli=5:20.10.14~3-0~ubuntu-focal \
+	&& apt-get update && apt-get install -y \
+		docker-ce-cli=5:28.0.4-1~ubuntu.22.04~jammy \
+		docker-compose-plugin=2.34.0-1~ubuntu.22.04~jammy \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# Install docker compose CLI plugin, v2.6.0, required by the oe-builtin App preload, `docker compose config`
-RUN mkdir -p /usr/lib/docker/cli-plugins \
-	&& wget https://github.com/docker/compose/releases/download/v2.6.0/docker-compose-linux-x86_64 -O /usr/lib/docker/cli-plugins/docker-compose \
-	&& chmod +x /usr/lib/docker/cli-plugins/docker-compose
