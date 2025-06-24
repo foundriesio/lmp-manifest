@@ -17,6 +17,6 @@
   <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="kirkstone/rust"/>
   <project name="meta-security" path="layers/meta-security" revision="master"/>
   <project name="meta-updater" path="layers/meta-updater" revision="master"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="master"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="master-next"/>
   <project name="openembedded-core" path="layers/openembedded-core" revision="master"/>
 </manifest>
