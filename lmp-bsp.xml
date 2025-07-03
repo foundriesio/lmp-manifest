@@ -2,15 +2,19 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="meta-arm" path="layers/meta-arm" revision="f3640941c600d03ea53ce5b9254f0fead18f8bc0"/>
-  <project name="meta-freescale" path="layers/meta-freescale" revision="dd3733cd91f5c85db83e49edeb3c644f424b7c7a"/>
-  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="1dfc65dd2006b51d156be5bcda0e3c72c936ad0a"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="1a7ccdcaedc965f019a9263364437356b8a2ba29"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="3b27c95c163a042f8056066ec3d27edfcc42da7f"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="7f1be5a930554ea5036d2c806aa752ae0b2de826"/>
-  <project name="meta-tegra" path="layers/meta-tegra" revision="e836736de0a439c8893ede4cef6973bd6347affa"/>
-  <project name="meta-ti" path="layers/meta-ti" revision="71f4340b0ba3b50e2a51875df3a3e020e92b5b40"/>
+  <project name="meta-arm" path="layers/meta-arm" revision="master"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="master"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="master"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="master"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="master"/>
+  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="mickledore"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="master"/>
+  <project name="meta-xilinx" path="layers/meta-xilinx" remote="fio" revision="kirkstone-next"/>
+  <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" remote="fio" revision="kirkstone-next"/>
+  <project name="meta-tegra" path="layers/meta-tegra" revision="master"/>
+  <project name="meta-ti" path="layers/meta-ti" revision="master"/>
 </manifest>
