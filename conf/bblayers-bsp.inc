@@ -12,6 +12,5 @@ BSPLAYERS = " \
   ${OEROOT}/layers/meta-raspberrypi \
   ${OEROOT}/layers/meta-intel \
   ${OEROOT}/layers/meta-yocto/meta-yocto-bsp \
-  ${OEROOT}/layers/meta-tegra \
   ${OEROOT}/layers/meta-lmp/meta-lmp-bsp \
 "
