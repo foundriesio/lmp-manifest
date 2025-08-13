@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote fetch="https://github.com/qualcomm-linux" name="qcom"/>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
   <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
+  <project name="meta-qcom" path="layers/meta-qcom" remote="qcom" revision="master"/>
   <project name="meta-arm" path="layers/meta-arm" revision="master"/>
   <project name="meta-intel" path="layers/meta-intel" revision="master"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="master"/>

@@ -4,6 +4,7 @@
 # change bblayers-factory.inc instead.
 #
 BSPLAYERS = " \
+  ${OEROOT}/layers/meta-qcom \
   ${OEROOT}/layers/meta-arm/meta-arm \
   ${OEROOT}/layers/meta-arm/meta-arm-toolchain \
   ${OEROOT}/layers/meta-arm/meta-arm-bsp \
