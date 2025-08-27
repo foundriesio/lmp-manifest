@@ -9,6 +9,6 @@
   <project name="meta-freescale" path="layers/meta-freescale" revision="e9c4546c6dbb3039e282b6e2b2ea4a6de8e0a87d"/>
   <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="70c83e96c7f75e73245cb77f1b0cada9ed4bbc6d"/>
   <project name="meta-intel" path="layers/meta-intel" revision="b065676a83371b34559f2077d9b2f6a6ac5652f7"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="3b27c95c163a042f8056066ec3d27edfcc42da7f"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="c06ccd1897194c3a193ae1792fb0f7e7ae40763b"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="7f1be5a930554ea5036d2c806aa752ae0b2de826"/>
 </manifest>
