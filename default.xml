@@ -5,19 +5,19 @@
   
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
   
-  <project name="bitbake" revision="696c2c1ef095f8b11c7d2eff36fae50f58c62e5e"/>
+  <project name="bitbake" revision="ce90d59ff1c96d04856ca5e41a963af00d1783f1"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio" revision="b77a9ae7342716e0cdbbbcd0c5d5d4ab92c3bc9d">
     <linkfile src="setup-environment" dest="setup-environment"/>
   </project>
-  <project name="meta-arm" path="layers/meta-arm" revision="f3640941c600d03ea53ce5b9254f0fead18f8bc0"/>
-  <project name="meta-clang" path="layers/meta-clang" revision="eaa08939eaec9f620b14742ff3ac568553683034"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="1a7ccdcaedc965f019a9263364437356b8a2ba29"/>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="66f846b2cdf03fd9ffdad6488909ba48ad48c619"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="e92d0173a80ea7592c866618ef5293203c50544c"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="3b27c95c163a042f8056066ec3d27edfcc42da7f"/>
-  <project name="meta-security" path="layers/meta-security" revision="bc865c5276c2ab4031229916e8d7c20148dfbac3"/>
-  <project name="meta-updater" path="layers/meta-updater" revision="d57b19f885fe11916c91569e20288581eff512aa"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="9e040ee8dd6025558ea60ac9db60c41bfeddf221"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="7f1be5a930554ea5036d2c806aa752ae0b2de826"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="87cadf62ba0d6b0fc3dc0151a5d320919b7eb1ab"/>
+  <project name="meta-arm" path="layers/meta-arm" revision="5c8c508bb499d8af93de41a7afc70183ad2dca07"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="d0a67c76b7a3b585dbe2ba8ad509dc0fe0e58af2"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="af904290f574ee9b1f62aade9f55dacdd9fb6cdb"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="64b69280f1a23841f648f463b4f3cfdbd9f12686"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="cf4755a60d71c9cd9a38e49fc7943dec76e00e5b"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="161be949b9f54484f30e3da26f8ef166ae0f2056"/>
+  <project name="meta-security" path="layers/meta-security" revision="9f1d763bb17bf105cc313a95eb3b07496b34bacc"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="1af89d4a419e0651571133aa0401475bb3786979"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="c2185cd5ef225c6606341745ad9ffb02efe364d9"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="66ea31cee15309af07afeee8dec8a6fe1d92d28e"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="e556df28f47e754b53e1f46c97dde2b19fd8fad1"/>
 </manifest>
