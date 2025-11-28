@@ -9,7 +9,6 @@ BASELAYERS = " \
   ${OEROOT}/layers/meta-openembedded/meta-perl \
   ${OEROOT}/layers/meta-openembedded/meta-python \
   ${OEROOT}/layers/meta-virtualization \
-  ${OEROOT}/layers/meta-clang \
   ${OEROOT}/layers/meta-updater \
   ${OEROOT}/layers/meta-security \
   ${OEROOT}/layers/meta-security/meta-tpm \
