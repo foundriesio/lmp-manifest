@@ -6,7 +6,7 @@
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
   <project name="meta-arm" path="layers/meta-arm" revision="f3640941c600d03ea53ce5b9254f0fead18f8bc0"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="1a7ccdcaedc965f019a9263364437356b8a2ba29"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="af904290f574ee9b1f62aade9f55dacdd9fb6cdb"/>
   <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="b667e177b1e6642cb11301801db44d4515c1652d"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="b3b659263566c4d2f2813190e72d93f8598a4c47"/>
 </manifest>
