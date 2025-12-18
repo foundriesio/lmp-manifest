@@ -2,21 +2,24 @@
 <manifest>
   <remote name="fio" fetch="https://github.com/foundriesio"/>
   <remote name="lmp-mirrors" fetch="https://github.com/lmp-mirrors"/>
+  <remote name="qcom" fetch="https://github.com/qualcomm-linux"/>
+  <remote name="quaresmajose" fetch="https://github.com/quaresmajose"/>
   
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
   
-  <project name="bitbake" revision="0dde1a3ff852be057be40d17f233ecca19e7b389"/>
+  <project name="bitbake" revision="6e511d035a3d1e4129dab7b0dfbf216bd8e99b47"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio" revision="b77a9ae7342716e0cdbbbcd0c5d5d4ab92c3bc9d">
     <linkfile src="setup-environment" dest="setup-environment"/>
   </project>
   <project name="meta-arm" path="layers/meta-arm" revision="30d4078278d0eb5d477fdb0abd9502663bd3364a"/>
   <project name="meta-intel" path="layers/meta-intel" revision="af904290f574ee9b1f62aade9f55dacdd9fb6cdb"/>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="7cb80ea140f6c1c419fe4c77ee65455a0303fe20"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="54ddd92c9a1b2418680324355037a97ed609a000"/>
   <project name="meta-openembedded" path="layers/meta-openembedded" revision="b3de57b3391af2224ce328a99574a8b0b76ac45e"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="1a95484948d74f38e0839a46ba3e6ee9e78eb7b4"/>
+  <project name="meta-qcom" path="layers/meta-qcom" remote="qcom" revision="db2745842a6b99e73dbbcf2ab0d56512018041c7"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="44cb3ba79c736732b8d4a9311181055e18e863d3"/>
   <project name="meta-security" path="layers/meta-security" revision="a54650c743b7534f60fc6ee1df9b57a8f0150a4d"/>
   <project name="meta-updater" path="layers/meta-updater" revision="3068fc871402f2078461dbae873e5e0efdb6bea4"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="26e2b40b91f2424b0b9318b50dbb700a67714b6f"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="b3b659263566c4d2f2813190e72d93f8598a4c47"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="f63622bbec1cfaca6d0b3e05e11466e4c10fa86e"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="edb4bba8db32c69e8426af2f3f36537c33a6385f"/>
 </manifest>

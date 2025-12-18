@@ -2,17 +2,18 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="bitbake" revision="0dde1a3ff852be057be40d17f233ecca19e7b389"/>
+  <project name="bitbake" revision="master"/>
   <project name="lmp-tools" path="tools/lmp-tools" remote="fio">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="7cb80ea140f6c1c419fe4c77ee65455a0303fe20"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="b3de57b3391af2224ce328a99574a8b0b76ac45e"/>
-  <project name="meta-security" path="layers/meta-security" revision="a54650c743b7534f60fc6ee1df9b57a8f0150a4d"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="main-next"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="master"/>
+  <project name="meta-security" path="layers/meta-security" revision="master"/>
   <project name="meta-updater" path="layers/meta-updater" revision="3068fc871402f2078461dbae873e5e0efdb6bea4"/>
-  <project name="meta-virtualization" path="layers/meta-virtualization" revision="26e2b40b91f2424b0b9318b50dbb700a67714b6f"/>
-  <project name="openembedded-core" path="layers/openembedded-core" revision="f63622bbec1cfaca6d0b3e05e11466e4c10fa86e"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="master"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="master"/>
 </manifest>
