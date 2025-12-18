@@ -7,6 +7,6 @@
 
   <project name="meta-arm" path="layers/meta-arm" revision="30d4078278d0eb5d477fdb0abd9502663bd3364a"/>
   <project name="meta-intel" path="layers/meta-intel" revision="af904290f574ee9b1f62aade9f55dacdd9fb6cdb"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="b667e177b1e6642cb11301801db44d4515c1652d"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="1a95484948d74f38e0839a46ba3e6ee9e78eb7b4"/>
   <project name="meta-yocto" path="layers/meta-yocto" revision="b3b659263566c4d2f2813190e72d93f8598a4c47"/>
 </manifest>
