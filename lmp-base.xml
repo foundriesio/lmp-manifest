@@ -10,7 +10,7 @@
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
   <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="e793326fe5e43cd3072b229f35ab9d3a122ea1e9"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" revision="d56cd727c73a53627827080f664b31cfa19581fb"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="b3de57b3391af2224ce328a99574a8b0b76ac45e"/>
   <project name="meta-security" path="layers/meta-security" revision="a54650c743b7534f60fc6ee1df9b57a8f0150a4d"/>
   <project name="meta-updater" path="layers/meta-updater" revision="3068fc871402f2078461dbae873e5e0efdb6bea4"/>
   <project name="meta-virtualization" path="layers/meta-virtualization" revision="c2185cd5ef225c6606341745ad9ffb02efe364d9"/>
