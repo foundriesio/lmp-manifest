@@ -1,17 +1,18 @@
 Linux microPlatform Manifest
 ============================
 
-Foundries.io Linux microPlatform manifest.
+Foundries.io™ Linux® microPlatform manifest.
 
 This directory contains a Repo manifest and setup scripts for the
-Linux microPlatform (LmP) build system. If you want to modify, extend or port
-the LmP to a new hardware platform, this is the manifest repository to use.
+Linux microPlatform (LmP) build system.
+Use this repository if you want to modify,
+extend or port the LmP to a new hardware platform.
 
-The build system uses various components from the Yocto Project, most
+The build system uses components from the Yocto Project, most
 importantly the OpenEmbedded build system, the bitbake task executor, and
 various application and BSP layers.
 
-To configure the scripts and download the build metadata, do:
+To configure the scripts and download the build metadata:
 
 ```
 mkdir ~/bin
@@ -25,7 +26,7 @@ Run `repo init` to bring down the latest stable version of Repo. You must
 specify a URL for the manifest, which specifies the various repositories that
 will be placed within your working directory.
 
-To check out the latest LmP subscriber continuous release:
+To check out the latest LmP continuous release:
 
 ```
 repo init -u https://github.com/foundriesio/lmp-manifest
@@ -42,9 +43,8 @@ repositories as specified in the LmP manifest, run:
 repo sync
 ```
 
-When downloading from behind a proxy (which is common in some
-corporate environments), it might be necessary to explicitly specify the proxy
-that is then used by repo:
+When downloading from behind a proxy (common in corporate environments),
+it might be necessary to explicitly specify the proxy that is then used by repo:
 
 ```
 export HTTP_PROXY=http://<proxy_user_id>:<proxy_password>@<proxy_server>:<proxy_port>
@@ -64,44 +64,9 @@ repo sync -j1
 Setup Environment
 -----------------
 
-Supported **MACHINE** targets (officially tested by Foundries):
+[Available **MACHINE** targets](https://docs.foundries.io/latest/reference-manual/linux/linux-supported.html).
 
-* intel-corei7-64
-* am62xx-evm
-* am64xx-evm
-* beaglebone-yocto
-* generic-arm64
-* imx6ullevk
-* imx6ullevk-sec
-* imx8mm-lpddr4-evk
-* imx8mm-lpddr4-evk-sec
-* imx8mp-lpddr4-evk
-* imx8mp-lpddr4-evk-sec
-* imx8mn-ddr4-evk
-* imx8mn-ddr4-evk-sec
-* imx8mn-lpddr4-evk
-* imx8mn-lpddr4-evk-sec
-* imx8mq-evk
-* imx8ulp-lpddr4-evk
-* imx93-11x11-lpddr4x-evk
-* jetson-agx-orin-devkit
-* jetson-agx-xavier-devkit
-* qemuarm64-secureboot
-* raspberrypi4-64
-* stm32mp15-disco
-* stm32mp15-eval
-* stm32mp15-eval-sec
-* kv260
-* vck190-versal
-
-Supported image targets:
-
-* lmp-mini-image          - minimal OSTree + OTA capable image
-* lmp-base-console-image  - mini-image + Docker container runtime
-* lmp-gateway-image       - base-console-image + edge gateway related utilities
-* lmp-factory-image       - default (and only available) for a FoundriesFactory
-* mfgtool-files           - (**only for DISTRO=lmp-mfgtool**) image flasher via
-                            USB SDP/FastBoot for i.MX-based machines
+[Available Distros](https://docs.foundries.io/latest/reference-manual/linux/linux-distro.html).
 
 The default distribution (DISTRO) variable is automatically set to `lmp`,
 which is provided by the `meta-lmp` layer.
