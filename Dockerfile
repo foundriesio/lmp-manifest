@@ -92,6 +92,8 @@ RUN echo $DEV_USER:$DEV_USER_PASSWD | chpasswd && \
 
 # Initialize development environment for $DEV_USER.
 RUN sudo -u $DEV_USER -H git config --global credential.helper 'cache --timeout=3600'
+RUN sudo -u $DEV_USER -H git config --global user.email builder@foundries.io
+RUN sudo -u $DEV_USER -H git config --global user.name builder
 
 # Install ostreeuploader, aka fiopush/fiocheck
 COPY --from=fiotools /ostreeuploader/bin/fiopush /usr/bin/
