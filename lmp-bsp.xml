@@ -2,11 +2,15 @@
 <manifest>
   <remote fetch="https://github.com/foundriesio" name="fio"/>
   <remote fetch="https://github.com/lmp-mirrors" name="lmp-mirrors"/>
+  <remote fetch="https://github.com/qualcomm-linux" name="qcom"/>
+  <remote fetch="https://github.com/quaresmajose" name="quaresmajose"/>
 
   <default remote="lmp-mirrors" revision="master" sync-j="4"/>
 
-  <project name="meta-arm" path="layers/meta-arm" revision="37d31f41a8d5c47b1326cd0ae48b0032eb6d5e88"/>
-  <project name="meta-intel" path="layers/meta-intel" revision="413f4312cd1fe3684f5a19db1dd97d0550bbef54"/>
-  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="9720dc611cf38ff2990bdf0f6afa106645ca1f93"/>
-  <project name="meta-yocto" path="layers/meta-yocto" revision="d78ac7a82473df46336556149afaeac6c7fff1d3"/>
+  <project name="meta-arm" path="layers/meta-arm" revision="master"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="master"/>
+  <project name="meta-qcom" path="layers/meta-qcom" remote="qcom" revision="master"/>
+  <project name="meta-qcom-3rdparty" path="layers/meta-qcom-3rdparty" remote="qcom" revision="main"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="master"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="master"/>
 </manifest>
