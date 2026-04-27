@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <include name="lmp-base.xml" />
-  <include name="lmp-bsp.xml" />
+  <remote name="fio" fetch="https://github.com/foundriesio"/>
+  <remote name="lmp-mirrors" fetch="https://github.com/lmp-mirrors"/>
+  
+  <default remote="lmp-mirrors" revision="master" sync-j="4"/>
+  
+  <project name="bitbake" revision="112bddd8fc684fbdd71139429251b127739f863b"/>
+  <project name="lmp-tools" path="tools/lmp-tools" remote="fio" revision="068c4566306efbca6cc8749c07decc4a8e9a2625">
+    <linkfile src="setup-environment" dest="setup-environment"/>
+  </project>
+  <project name="meta-arm" path="layers/meta-arm" revision="37d31f41a8d5c47b1326cd0ae48b0032eb6d5e88"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="413f4312cd1fe3684f5a19db1dd97d0550bbef54"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="e30ccebf0173085f1af166363bd88bba7debefa9"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="79f39ce6c63231d38556971c5d8c46e3aca79cdf"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="9720dc611cf38ff2990bdf0f6afa106645ca1f93"/>
+  <project name="meta-security" path="layers/meta-security" revision="8028c573db6923525c2918724f2bd36d4a420e0b"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="399ca9f0b99a1b1fd38c27df7aa1bf21b232ba30"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="b8968685998a052e5bed0f68a546be800c6849ed"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="d78ac7a82473df46336556149afaeac6c7fff1d3"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="acf86cc2af1d08fdf191209f1462b2eafb53d3bb"/>
 </manifest>
